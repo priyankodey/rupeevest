@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<body>
+
+    <!-- ==== MODAL ==== -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                  <h4 class="modal-title text-center">Choose an investment goal to begin</h4>
+                                </div>
+                                <div class="modal-body">
+        <div class="container" id="id_modal_row">
+    <div class="row clearfix">
+        <div class="col-lg-7 text-center">        
+        
+        <div class="col-md-2 padding_reduce">
+          <div class="thumbnail">
+            <a href="#build_wealth" data-toggle="tab">
+            <%= image_tag("invest_build.ico",size:"50x50", alt: "Invest Better") %> 
+            <div class="caption" style="padding-left:0px;padding-right:0px">
+              <h5>
+                Build Wealth
+              </h5>
+            </div></a>
+          </div>
+        </div>
+
+        <div class="col-md-2 padding_reduce">
+          <div class="thumbnail">
+            <a href="#retirement" data-toggle="tab">
+            <%= image_tag("invest_retire.ico",size:"50x50", alt: "Invest Better") %>
+            <div class="caption">
+              <h5>
+                Retirement
+              </h5>
+              
+            </div> </a>
+          </div>
+        </div>
+
+        <div class="col-md-2 padding_reduce">
+          <div class="thumbnail">
+            <a href="#safety_net" data-toggle="tab">
+           <%= image_tag("invest_safety.ico",size:"50x50", alt: "Invest Better") %> 
+            <div class="caption">
+              <h5>
+                Safety Net
+              </h5>
+              
+            </div></a>
+          </div>
+        </div>
+
+        <div class="col-md-2 padding_reduce">
+          <div class="thumbnail">
+            <a href="#edu" data-toggle="tab">
+            <%= image_tag("invest_book.ico",size:"50x50", alt: "Invest Better") %> 
+            <div class="caption">
+              <h5>
+                Education
+              </h5>
+              
+            </div></a>
+          </div>
+        </div>
+
+        <div class="col-md-2 padding_reduce">
+          <div class="thumbnail">
+            <a href="#house" data-toggle="tab">
+            <%= image_tag("invest_house.ico",size:"50x50", alt: "Invest Better") %> 
+            <div class="caption">
+              <h5>
+                House
+              </h5>
+              
+            </div></a>
+          </div>
+        </div>
+            
+            
+        </div>
+    </div>  
+        </div>
+                                  
+                                </div>
+                                <hr>
+    <div class="row text-center">
+        <div class="col-lg-12">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+
+        <div class="tab-content">
+
+      <div  class="tab-pane fade in active" id="build_wealth">
+            <h3>Build Wealth</h3>
+         <h4>Allocation: 90% stocks / 10% bonds</h4>
+          <h5>Invest in an optimal portfolio to build wealth for the long run.</h5>
+      </div>
+
+      <div  class="tab-pane fade" id="retirement">
+            <h3>Retirement</h3>
+         <h4>Sample Allocation: 90% stocks / 10% bonds</h4>
+          <h5>Plan for independence and financial freedom post retirement.</h5>
+      </div>
+
+      <div  class="tab-pane fade" id="safety_net" >
+            <h3>Safety Net</h3>
+         <h4>Sample Allocation: 40% stocks / 60% bonds</h4>
+          <h5>We recommend that everyone have a ‘safety net’ or emergency fund to help keep other goals on track in case of unplanned financial situations.</h5>
+      </div>
+
+       <div  class="tab-pane fade" id="edu" >
+            <h3>Education</h3>
+         <h4>Sample Allocation: 50% stocks / 50% bonds</h4>
+          <h5>Your dream of higher education is just a few steps away.</h5>
+      </div>
+
+       <div  class="tab-pane fade" id="house">
+            <h3>House</h3>
+         <h4>Allocation: 60% stocks / 40% bonds</h4>
+          <h5>Start saving for your dream house.</h5>
+      </div>
+        </div>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+        <div class="row">
+            <div class="col-lg-12 pad-top-botm">
+            <span> <a href="/static_pages/sign_up"> <button class="btn btn-primary" type="button">TRY IT NOW!</button></a></span>
+            </div>
+        </div>
+    </div>
+
+                                <!-- <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div> -->
+                              </div>
+                         </div>
+                </div>
+
+
+    <div class="general-subhead">
+        <h1>START INVESTING</h1>
+    </div>
+    <!--./ Gereral Subhead End -->
+    
+
+    <section id="port-folio">
+        <div class="container">
+
+            <div class="row pad-row">
+
+                 <div class="allthumb text-center">
+
+    <div class="col-md-3" style="padding-right:1cm">
+    <div class="thumbnail" style="background:none;border:none;box-shadow:none;">
+      <%= image_tag("invest_build.ico",size:"150x150", alt: "Build Wealth") %>
+      <div class="caption">
+        <h4>Build Wealth</h4>
+        <p>Invest in an optimal portfolio to build wealth for the long run.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3" style="padding-right:1cm">
+     <div class="thumbnail" style="background:none;border:none;box-shadow:none;">
+      <%= image_tag("invest_time.ico",size:"150x150", alt: "Save Time") %>
+      <div class="caption">
+        <h4>Save Time</h4>
+        <p>Stop signing cheques. Stop trusting agents. Invest Online!</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-3" style="padding-right:1cm">
+     <div class="thumbnail" style="background:none;border:none;box-shadow:none;">
+     <%= image_tag("invest_tax.ico",size:"150x150", alt: "Save Tax") %>
+      <div class="caption">
+        <h4>Save Tax</h4>
+        <p>RupeeVest will help you tax efficient investments. Tax Saving was never easier.</p>
+        </div>
+      </div>
+    </div>
+
+     <div class="col-md-3" style="padding-right:1cm">
+     <div class="thumbnail" style="background:none;border:none;box-shadow:none;">
+     <%= image_tag("invest_better.ico",size:"150x150", alt: "Invest Better") %> 
+      <div class="caption">
+        <h4>Invest Better</h4>
+        <p>Financial and Math Experts have designed this super efficient way to invest.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>               
+
+                
+
+                <div class="col-lg-12 col-lg-push-5 col-sm-12 col-sm-push-5 pad-row">
+                    <a data-toggle="modal" href="#myModal"><button type="button"  class=" btn btn-primary"><span class="text">CLICK HERE TO TRY DEMO</span></button></a>
+                </div>
+
+            </div>           
+         
+        </div>
+    </section>
+      <!-- invest End-->
+    
+    <!--  Jquery Core Script -->
+    <script src="/assets/jquery-1.10.2.js"></script>
+    <!--  Core Bootstrap Script -->
+    <script src="/assets/bootstrap.js"></script>
+    <!--  PrettyPhoto Script -->
+    <script src="/assets/jquery.prettyPhoto.js"></script>
+    <!--  Custom Scripts -->
+    <script src="/assets/custom.js"></script>
+
+</body>
+</html>

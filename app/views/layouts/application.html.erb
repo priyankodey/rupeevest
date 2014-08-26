@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+    <link rel="icon" type="image/ico" href="/assets/favicon.ico">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+     <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>RupeeVest - Online investment, Tax filing, Mutual Fund investment</title>
+    <!--  Bootstrap Style -->
+    <link href="/assets/bootstrap.css" rel="stylesheet" />
+     <!--  Font-Awesome Style -->
+    <link href="/assets/font-awesome.min.css" rel="stylesheet" />
+     <!--  Font-Awesome Animation Style -->
+    <link href="/assets/font-awesome-animation.css" rel="stylesheet" />
+     <!--  Pretty Photo Style -->
+    <link href="/assets/prettyPhoto.css" rel="stylesheet" />
+        <!--  Google Font Style -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+     <!--  Custom Style -->
+    <link href="/assets/style.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+	<div class="navbar navbar-default navbar-fixed-top menu-back">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand" href="/">
+                    <img src="/assets/logo.png" class="navbar-brand-logo " alt="" />
+                </a>
+            </div>
+            <div class="navbar-collapse collapse" >
+                <ul class="nav navbar-nav navbar-right">
+                   
+                  
+                    <li class="dropdown">
+                        <a href="/">HOME PAGE<i class="fa fa-folder-open-o"></i></a>                       
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="/static_pages/team">ABOUT US<i class="fa fa-folder-open-o"></i></a>                  
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="/static_pages/invest">INVEST<i class="fa fa-image"></i></a>                      
+                    </li>
+
+                   
+                    <li class="dropdown">
+                        <a href="#">EXTRAS <i class="fa fa-bars"></i>
+                            
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-left">
+
+                            <li>
+                                <a href="/static_pages/vision">
+                                    <i class="fa fa-power-off"></i>Vision
+              
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="/static_pages/academics">
+                                    <i class="fa fa-power-off"></i>Academics
+              
+                                </a>
+
+                            </li>
+                             <li>
+                                <a href="/static_pages/pricing">
+                                    <i class="fa fa-tag"></i>Pricing Options
+              
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="/static_pages/blog_home">
+                                    <i class="fa fa-map-marker"></i>Blog Home
+              
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="/static_pages/blog_single">
+                                    <i class="fa fa-flask"></i>Blog Single              
+                                </a>
+                            </li>                           
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="/static_pages/contact">CONTACT <i class="fa fa-globe"></i></a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="/static_pages/sign_in">PROFILE<i class="fa fa-folder-open-o"></i></a>                  
+
+                       <ul class="dropdown-menu dropdown-menu-left">
+                            <li>
+                                <a href="/static_pages/sign_in">
+                                    <i class="fa fa-bullhorn"></i>LOGIN              
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="/static_pages/sign_up">
+                                    <i class="fa fa-edit"></i>REGISTER              
+                                </a>
+                            </li>                                           
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!--./ Top Menu End -->
+    
+
+<%= yield %>
+
+<div id="request-quote">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="text-center">
+                        <h3>GET IN TOUCH WITH US</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing  condimentum. </p>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <form>
+                        <div class="col-lg-12 col-md-12 ">
+                            <div class="form-group">
+                                <input type="text" class="form-control" required="required" placeholder="Name" />
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" required="required" placeholder="Email address" />
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" required="required" placeholder="Notes" />
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12">
+                            <button type="submit" class="btn btn-primary">SUBMIT REQUEST</button>
+
+                        </div>
+                    </form>
+
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <blockquote>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit onec molestie non sem vel condimentum. Consectetur adipiscing elit onec molestie non sem vel condimentum </p>
+                        <small>Consectetur adipiscing elit</small>
+                    </blockquote>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!--./ Request Quote End -->
+
+<div id="footer-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4" id="about-ftr">
+                    <i class="fa fa-building fa-2x"></i>
+                    <span>A Small Introduction</span>                    
+                    <p>Rupeevest helps you INVEST ONLINE in a simple, efficient and effective manner. Rupeevest helps retail investors make simple investment decisions. Whether it is to save tax, save money for your life goals, invest in equities, generate monthly income for family, or just track your investments, Rupeevest aims to be a one stop destination to manage money for every Indian.                  
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <i class="fa fa-paper-plane-o fa-2x"></i>
+                    <span>From the blog</span>
+                    <small>replace this dummy text with your text</small>
+                    <div id="blog-footer-div">
+                        <div class="media">
+                            <div class="pull-left">
+                                <img src="/assets/user2.png" class="img-circle" alt=""  />
+                            </div>
+                            <div class="media-body">
+                                <span class="media-heading"><a href="blog-home.html">Pellentesque habitant morbi tristique</a></span>
+                                <small class="muted">Posted 17 June 2014</small>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="pull-left">
+                                <img src="/assets/user.gif" class="img-circle" alt=""/>
+                            </div>
+                            <div class="media-body">
+                                <span class="media-heading"><a href="blog-home.html">Pellentesque habitant morbi tristique</a></span>
+                                <small class="muted">Posted 27 June 2014</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4">
+                    <i class="fa fa-sliders fa-2x"></i>
+                    <span>Our location</span>
+                    <br />    
+                    Room No:81, 5th Floor,
+                    <br />
+                    Stephen House, BBD Bag,
+                    <br />
+                    Kolkata-700001, India.                             
+                    <br />
+                    Call: +91 987 469 1177 ; +91-740-699-8067
+                     <br />
+                    mail: info@rupeevest.com
+                    <br />
+                    <br />
+                    <form role="form">
+                        <div class="input-group">
+                            <input type="text" class="form-control" autocomplete="off" placeholder="Enter your email" required />
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary" type="button">Subdcribe!</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+         </div>
+
+
+    <!--./ footer-sec  End -->
+
+    <div class="div-social-top">
+
+        <i class="fa fa-globe "></i>E-mail:  info@rupeevest.com   | <i class="fa fa-mobile "></i>Call: : +91 987 469 1177  |  <i class="fa fa-map-marker "></i>Country : INDIA &nbsp;
+              <a href="https://www.facebook.com/rupeevest" target="_blank">
+                  <i class="fa fa-facebook-square "></i>
+              </a>
+              <a href="https://www.twitter.com/RupeeVest" target="_blank">
+                  <i class="fa fa-twitter-square "></i>
+              </a>
+              <a href="https://plus.google.com/+Rupeevestdotcom" target="_blank">
+                  <i class="fa fa-google-plus-square "></i>
+              </a>
+              <a href="https://www.linkedin.com/company/rupeevest/" target="_blank">
+                  <i class="fa fa-linkedin-square "></i>
+              </a>
+              <a href=" https://www.pinterest.com/rupeevest/" target="_blank">
+                  <i class="fa fa-pinterest-square "></i>
+              </a>
+    </div>
+    <!--./ Social Div End -->
+
+    <div id="footser-end">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    2014 All Rights Reserved | by: <a href="http://rupeevest.com" style="color:#fff" >www.rupeevest.com</a>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--./ footer-end End -->
+
+</body>
+</html>
