@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <link href="/assets/style.css" rel="stylesheet" />
+    <!--  Jquery Core Script -->
+    <script src="/assets/jquery-1.10.2.js"></script>
+    <!--  Core Bootstrap Script -->
+    <script src="/assets/bootstrap.js"></script>
+        <!--  Custom Scripts -->
+    <script src="/assets/custom.js"></script>
+
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<!--   CHART FOR CONSERVATIVE   -->
+    
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 40],
+          ['MidCap ', 10],
+          ['FD ', 35],
+          ['Bonds ', 10],
+          ['Liquid ', 5]
+        ]);
+
+        var options = {
+          title: 'Age 18-30',
+          pieHole: 0.4,
+          colors: ['#003397','#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'  ],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_cons18'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 33],
+          ['MidCap ', 7],
+          ['FD ', 45],
+          ['Bonds ', 10],
+          ['Liquid ', 5]
+        ]);
+
+        var options = {
+          title: 'Age 31-50',
+          pieHole: 0.4,
+          colors: ['#035D0F', '#50891F', '#74B505','#96D366','#BCE578'],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_cons31'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 30],
+          ['MidCap ', 5],
+          ['FD ', 50],
+          ['Bonds ', 10],
+          ['Liquid ', 5]
+        ]);
+
+        var options = {
+          title: 'Age 51-65',
+          pieHole: 0.4,
+          colors: ['#003397','#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'  ],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_cons51'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 15],
+          ['FD ', 65],
+          ['Bonds ', 15],
+          ['Liquid ', 5]
+        ]);
+
+        var options = {
+          title: 'Age 65+',
+          pieHole: 0.4,
+          colors: ['#035D0F', '#50891F', '#74B505','#96D366','#BCE578'],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_cons65'));
+        chart.draw(data, options);
+      }
+    </script>
+  
+
+<!--   CHART FOR CONSERVATIVE END  -->
+
+<!--   CHART FOR MODERATELY CONSERVATIVE   -->
+
+<script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 43],
+          ['MidCap ', 12],
+          ['FD ', 25],
+          ['Bonds ', 15],
+          ['Liquid ', 5]
+        ]);
+
+        var options = {
+          title: 'Age 18-30',
+          pieHole: 0.4,
+          colors: ['#003397','#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'  ],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_mcons18'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 35],
+          ['MidCap ', 10],
+          ['FD ', 33],
+          ['Bonds ', 17],
+          ['Liquid ', 5]
+        ]);
+
+        var options = {
+          title: 'Age 31-50',
+          pieHole: 0.4,
+          colors: ['#035D0F', '#50891F', '#74B505','#96D366','#BCE578'],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_mcons31'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 35],
+          ['MidCap ', 5],
+          ['FD ', 35],
+          ['Bonds ', 20],
+          ['Liquid ', 5]
+        ]);
+
+        var options = {
+          title: 'Age 51-65',
+          pieHole: 0.4,
+          colors: ['#003397','#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'  ],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_mcons51'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 20],
+          ['FD ', 55],
+          ['Bonds ', 20],
+          ['Liquid ', 5]
+        ]);
+
+        var options = {
+          title: 'Age 65+',
+          pieHole: 0.4,
+          colors: ['#035D0F', '#50891F', '#74B505','#96D366','#BCE578'],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_mcons65'));
+        chart.draw(data, options);
+      }
+    </script>
+
+<!--   CHART FOR MODERATELY CONSERVATIVE END  -->
+
+<!--   CHART FOR MODERATELY AGGRESSIVE   -->
+
+
+<script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 45],
+          ['MidCap ', 10],
+          ['SmallCap', 5],
+          ['FD ', 25],
+          ['Bonds ', 10],
+          ['Liquid ', 5]
+        ]);
+
+        var options = {
+          title: 'Age 18-30',
+          pieHole: 0.4,
+          colors: ['#003397','#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'  ],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_maggr18'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 38],
+          ['MidCap ', 12],
+          ['FD ', 30],
+          ['Bonds ', 15],
+          ['Liquid ', 5]
+        ]);
+
+        var options = {
+          title: 'Age 31-50',
+          pieHole: 0.4,
+          colors: ['#035D0F', '#50891F', '#74B505','#96D366','#BCE578'],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_maggr31'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 35],
+          ['MidCap ', 10],
+          ['FD ', 35],
+          ['Bonds ', 15],
+          ['Liquid ', 5]
+        ]);
+
+        var options = {
+          title: 'Age 51-65',
+          pieHole: 0.4,
+          colors: ['#003397','#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'  ],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_maggr51'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 20],
+          ['MidCap ', 5],
+          ['FD ', 50],
+          ['Bonds ', 20],
+          ['Liquid ', 5]
+        ]);
+
+        var options = {
+          title: 'Age 65+',
+          pieHole: 0.4,
+          colors: ['#035D0F', '#50891F', '#74B505','#96D366','#BCE578'],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_maggr65'));
+        chart.draw(data, options);
+      }
+    </script>
+
+<!--   CHART FOR MODERATELY AGGRESSIVE END  -->
+
+<!--   CHART FOR AGGRESSIVE   -->
+
+<script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 45],
+          ['MidCap', 10],
+          ['SmallCap', 5],
+          ['Sectorial', 5],
+          ['FD', 23],
+          ['Bonds', 7],
+          ['Liquid', 5]
+        ]);
+
+        var options = {
+          title: 'Age 18-30',
+          pieHole: 0.4,
+          colors: ['#003397','#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'  ],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_aggr18'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 40],
+          ['MidCap', 10],
+          ['SmallCap or Sectorial', 5],
+          ['FD', 30],
+          ['Bonds', 10],
+          ['Liquid', 5]
+        ]);
+
+        var options = {
+          title: 'Age 31-50',
+          pieHole: 0.4,
+          colors: ['#035D0F', '#50891F', '#74B505','#96D366','#BCE578'],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_aggr31'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 35],
+          ['MidCap', 10],
+          ['Sectorial', 5],
+          ['FD', 35],
+          ['Bonds', 10],
+          ['Liquid', 5]
+        ]);
+
+        var options = {
+          title: 'Age 51-65',
+          pieHole: 0.4,
+          colors: ['#003397','#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'  ],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_aggr51'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 25],
+          ['MidCap', 5],
+          ['FD', 45],
+          ['Bonds', 20],
+          ['Liquid', 5]
+        ]);
+
+        var options = {
+          title: 'Age 65+',
+          pieHole: 0.4,
+          colors: ['#035D0F', '#50891F', '#74B505','#96D366','#BCE578'],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_aggr65'));
+        chart.draw(data, options);
+      }
+    </script>
+
+<!--   CHART FOR AGGRESSIVE END  -->
+
+<!--   CHART FOR VERY AGGRESSIVE   -->
+
+<script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 40],
+          ['MidCap', 20],
+          ['SmallCap', 7.5],
+          ['Sectorial', 7.5],
+          ['FD', 15],
+          ['Bonds', 5],
+          ['Liquid', 5]
+        ]);
+
+        var options = {
+          title: 'Age 18-30',
+          pieHole: 0.4,
+          colors: ['#003397','#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'  ],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_vaggr18'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 38],
+          ['MidCap', 17],
+          ['SmallCap or Sectorial', 10],
+          ['FD', 20],
+          ['Bonds', 10],
+          ['Liquid', 5]
+        ]);
+
+        var options = {
+          title: 'Age 31-50',
+          pieHole: 0.4,
+          colors: ['#035D0F', '#50891F', '#74B505','#96D366','#BCE578'],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_vaggr31'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 35],
+          ['MidCap', 15],
+          ['SmallCap or Sectorial', 10],
+          ['FD', 28],
+          ['Bonds', 7],
+          ['Liquid', 5]
+        ]);
+
+        var options = {
+          title: 'Age 51-65',
+          pieHole: 0.4,
+          colors: ['#003397','#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'  ],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_vaggr51'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['LargeCap', 27],
+          ['MidCap', 8],
+          ['FD', 43],
+          ['Bonds', 17],
+          ['Liquid', 5]
+        ]);
+
+        var options = {
+          title: 'Age 65+',
+          pieHole: 0.4,
+          colors: ['#035D0F', '#50891F', '#74B505','#96D366','#BCE578'],
+          backgroundColor: { fill:'transparent' }
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('highchart_vaggr65'));
+        chart.draw(data, options);
+      }
+    </script>
+
+
+<!--   CHART FOR VERY AGGRESSIVE END  -->
+ 
+       <script type="text/javascript">
+
+          var href = "myTabContent1";  
+              $("#myTabContent1").load(href);
+
+        </script>
+
+</head>
+<body>
+
+   <div class="general-subhead">
+       <h1>RISK PROFILING</h1>
+   </div>
+     <!-- Gereral Subhead End -->
+    
+    <section>
+    <div class="container">
+      <div class="row">
+          <div class="col-md-3">
+            <div class="well well-lg">
+            <ul id="myTab" class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#panel_conservative" data-toggle="tab">Conservative</a></li>
+                <li><a href="#panel_mconservative" data-toggle="tab">Moderately Conservative</a></li>
+                <li><a href="#panel_maggressive" data-toggle="tab">Moderately Aggressive</a></li>
+                <li><a href="#panel_aggressive" data-toggle="tab">Aggressive</a></li>
+                <li><a href="#panel_vaggressive" data-toggle="tab">Very Aggressive</a></li>   
+            </ul>
+            </div>
+          </div>
+
+
+          <div class="col-md-9" >
+
+          <div id="myTabContent" class="tab-content">      
+
+<!--  Conservative  -->
+              <div class="tab-pane fade in active" id="panel_conservative">
+                  <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Your primary investment goal is capital protection. You require stable growth and/or a high level of income, and access to your investment within 3 years.</div>                      
+
+                      <ul id="myTab1" class="nav nav-pills nav-justified">
+                          <li class="active"><a href="#cons18" data-toggle="tab">18-30 Age</a></li>
+                          <li><a href="#cons31" data-toggle="tab">31-50 Age</a></li>
+                          <li><a href="#cons51" data-toggle="tab">51-65 Age</a></li>
+                          <li><a href="#cons65" data-toggle="tab">65+ Age (Assume Retired)</a></li>
+   
+                      </ul>
+
+                        <div class="panel-heading">
+                            <div id="myTabContent1" class="tab-content">
+
+                                <div class="tab-pane fade in active" id="cons18">
+                                    <div class="row">
+                                      <div class="col-sm-4">                
+                                          <div class="well well-lg" align="center">
+                                            <div class="back_effect">                   
+                                                <h2>50%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>50%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                        <div class="well well-lg">
+                                            <div class="row pad_right">
+                        <div id="highchart_cons18" style = "height: 270px; width: 500px;"></div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="tab-pane fade" id="cons31">
+                                    <div class="row">
+                                      <div class="col-sm-4">                                        
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>40%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>60%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                        <div class="well well-lg">
+                                            <div class="row pad_right">               
+                      <div id="highchart_cons31" style="height: 270px; width: 500px;"></div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="cons51">
+                                   <div class="row">
+                                      <div class="col-sm-4">                                        
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>30%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>70%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                        <div class="well well-lg">
+                                            <div class="row pad_right">
+                      <div id="highchart_cons51" style="height: 270px; width: 500px;"></div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="cons65">
+                                    <div class="row">
+                                      <div class="col-sm-4">                                       
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                   
+                                                <h2>15%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>85%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                        <div class="well well-lg">
+                                            <div class="row pad_right">
+                      <div id="highchart_cons65" style="height: 270px; width: 500px;"></div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="well well-sm">
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Large Cap</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>UTI Opportunities Fund</li>
+                          <li>ICICI Prudential Focused Bluechip Equity Fund - Regular Plan</li>
+                          <li>Quantum Long Term Equity Fund</li>
+                      </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Mid And Small Cap</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>ICICI Prudential Value Discovery Fund - Regular Plan</li>
+                          <li>Franklin India Smaller Companies Fund</li>
+                      </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Liquid Ultra Short Term</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">                                            
+                          <li>Reliance Liquid Fund - Treasury Plan - Institutional Plan</li>
+                          <li>SBI Magnum InstaCash Fund</li>
+                      </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Debt - FD / Bonds</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">                      
+                          <li>DHFL , M&M, HDFC Ltd</li>
+                          <li>Rest on availability</li>
+                      </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>MF - Debt</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">                      
+                          <li>Franklin India Corporate Bond Opportunities Fund</li>
+                          <li>Birla Sun Life Monthly Income Plan II - Wealth 25 Plan</li>
+                          <li>UTI CRTS 81 Fund</li>
+                          <li>HDFC Multiple Yield Fund - Plan 2005</li>
+                      </ul>    
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                  </div>
+
+              </div>
+
+<!--  Moderately Conservative  -->
+
+              <div class="tab-pane fade" id="panel_mconservative">
+
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Your primary investment goal is capital protection. Investors in this risk profile require fairly stable growth and/or a moderate level of income. Your investment term is 3 years or more.</div>                      
+
+                      <ul id="myTab2" class="nav nav-pills nav-justified">
+                          <li class="active"><a href="#mcons18" data-toggle="tab">18-30 Age</a></li>
+                          <li><a href="#mcons31" data-toggle="tab">31-50 Age</a></li>
+                          <li><a href="#mcons51" data-toggle="tab">51-65 Age</a></li>
+                          <li><a href="#mcons65" data-toggle="tab">65+ Age (Assume Retired)</a></li>
+   
+                      </ul>
+
+                        <div class="panel-heading">
+                            <div id="myTabContent1" class="tab-content">
+
+                                <div class="tab-pane fade in active" id="mcons18">
+                                    <div class="row">
+                                      <div class="col-sm-4">                                        
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>55%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>45%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                        <div class="well well-lg">
+                                            <div class="row pad_right">
+                            <div id="highchart_mcons18" style="height: 270px; width: 500px;"></div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="tab-pane fade" id="mcons31">
+                                    <div class="row">
+                                      <div class="col-sm-4">                                        
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>45%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>55%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right">
+                          <div id="highchart_mcons31" style="height: 270px; width: 500px;"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="mcons51">
+                                   <div class="row">
+                                      <div class="col-sm-4">                                        
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>40%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>60%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right">
+                          <div id="highchart_mcons51" style="height: 270px; width: 500px;"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="mcons65">
+                                    <div class="row">
+                                      <div class="col-sm-4">                                       
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>20%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>80%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right">          
+                          <div id="highchart_mcons65" style="height: 270px; width: 500px;"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="well well-sm">
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Large Cap</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>ICICI Prudential Focused Bluechip Equity Fund - Regular Plan</li>
+                          <li>Quantum Long Term Equity Fund</li>
+                          <li>UTI Equity Fund</li>
+                      </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Mid And Small Cap</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">                        
+                          <li>Religare Invesco Mid N Small Cap Fund</li>
+                          <li>Franklin India Smaller Companies Fund</li>
+                      </ul>      
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Liquid</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>Reliance Liquid Fund - Treasury Plan - Institutional Plan</li>
+                          <li>SBI Magnum InstaCash Fund</li>
+                          <li>SBI Premier Liquid Fund</li>
+                      </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Debt - FD / Bonds</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>:- DHFL , M&M,HDFC Ltd</li>
+                          <li>Rest on availability</li>
+                      </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>MF - Debt</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>Franklin India Corporate Bond Opportunities Fund</li>
+                          <li>Birla Sun Life Monthly Income Plan II - Wealth 25 Plan</li>
+                          <li>UTI CRTS 81 Fund</li>
+                          <li>HDFC Multiple Yield Fund - Plan 2005</li>
+                      </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                  </div>
+                  
+              </div>
+
+<!--  Moderately Aggressive  -->
+
+              <div class="tab-pane fade" id="panel_maggressive">
+                  
+                  <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Your primary investment goal is capital growth. You can tolerate some fluctuations in the value of your investment in the anticipation of a higher return. You don't require an income and you are prepared to invest for 5 years or more.</div>                      
+
+                      <ul id="myTab2" class="nav nav-pills nav-justified">
+                          <li class="active"><a href="#maggr18" data-toggle="tab">18-30 Age</a></li>
+                          <li><a href="#maggr31" data-toggle="tab">31-50 Age</a></li>
+                          <li><a href="#maggr51" data-toggle="tab">51-65 Age</a></li>
+                          <li><a href="#maggr65" data-toggle="tab">65+ Age (Assume Retired)</a></li>
+   
+                      </ul>
+
+                        <div class="panel-heading">
+                            <div id="myTabContent1" class="tab-content">
+
+                                <div class="tab-pane fade in active" id="maggr18">
+                                    <div class="row">
+                                      <div class="col-sm-4">                                        
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>60%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>40%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right">
+                          <div id="highchart_maggr18" style="height: 270px; width: 500px;"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="tab-pane fade" id="maggr31">
+                                    <div class="row">
+                                      <div class="col-sm-4">                                        
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>50%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>50%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right">
+                          <div id="highchart_maggr31" style="height: 270px; width: 500px;"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="maggr51">
+                                   <div class="row">
+                                      <div class="col-sm-4">                                        
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>45%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>55%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right">
+                          <div id="highchart_maggr51" style="height: 270px; width: 500px;"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="maggr65">
+                                    <div class="row">
+                                      <div class="col-sm-4">                                       
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>25%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>75%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right">          
+                          <div id="highchart_maggr65" style="height: 270px; width: 500px;"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="well well-sm">
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Large Cap</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>Quantum Long Term Equity Fund</li>
+                          <li>UTI Equity Fund</li>
+                          <li>L&T Equity Fund</li>
+                      </ul>                    </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Mid And Small Cap</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>Religare Invesco Mid N Small Cap Fund</li>
+                          <li>Reliance Small Cap Fund</li>
+                      </ul>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Liquid</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>SBI Premier Liquid Fund</li>
+                          <li>Birla Sun Life Floating Rate Fund - Short Term Plan</li>
+                          <li>Taurus Liquid Fund - Super Institutional Plan</li>
+                      </ul>                    </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Debt - FD / Bonds</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>DHFL , M&M, HDFC Ltd</li>
+                          <li>Rest on availability</li>
+                      </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>MF - Debt</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>Franklin India Corporate Bond Opportunities Fund</li>
+                          <li>Birla Sun Life Monthly Income Plan II - Wealth 25 Plan</li>
+                          <li>UTI CRTS 81 Fund</li>
+                          <li>HDFC Multiple Yield Fund - Plan 2005</li>
+                      </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                  </div>
+
+
+              </div>
+
+<!--  Aggressive  --> 
+
+              <div class="tab-pane fade" id="panel_aggressive">
+                  
+                  <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Your primary investment goal is capital growth. Investors in this risk profile can tolerate a fair level of fluctuations in the value of you investment in anticipation of possible higher returns. You don't require an income and you are prepared to invest for 5 to 10 years.</div>                      
+
+                      <ul id="myTab2" class="nav nav-pills nav-justified">
+                          <li class="active"><a href="#aggr18" data-toggle="tab">18-30 Age</a></li>
+                          <li><a href="#aggr31" data-toggle="tab">31-50 Age</a></li>
+                          <li><a href="#aggr51" data-toggle="tab">51-65 Age</a></li>
+                          <li><a href="#aggr65" data-toggle="tab">65+ Age (Assume Retired)</a></li>
+   
+                      </ul>
+
+                        <div class="panel-heading">
+                            <div id="myTabContent1" class="tab-content">
+
+                                <div class="tab-pane fade in active" id="aggr18">
+                                    <div class="row">
+                                      <div class="col-sm-4">                                        
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>65%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>35%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right">
+                          <div id="highchart_aggr18" style="height: 270px; width: 500px;"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="tab-pane fade" id="aggr31">
+                                    <div class="row">
+                                      <div class="col-sm-4">                                        
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>55%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>45%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right">
+                          <div id="highchart_aggr31" style="height: 270px; width: 500px;"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="aggr51">
+                                   <div class="row">
+                                      <div class="col-sm-4">                                        
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>50%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>50%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right">
+                          <div id="highchart_aggr51" style="height: 270px; width: 500px;"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="aggr65">
+                                    <div class="row">
+                                      <div class="col-sm-4">                                       
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>70%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>30%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right">          
+                          <div id="highchart_aggr65" style="height: 270px; width: 500px;"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="well well-sm">
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Large Cap</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>UTI Equity Fund</li>
+                          <li>L&T Equity Fund</li>
+                          <li>Birla Sun Life Frontline Equity Fund</li>
+                      </ul>                    </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Mid And Small Cap</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>Reliance Small Cap Fund</li>
+                          <li>SBI Magnum Midcap Fund</li>
+                          <li>Birla Sun Life Pure Value Fund</li>
+                      </ul>                    </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Liquid</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>Birla Sun Life Floating Rate Fund - Short Term Plan</li>
+                          <li>Taurus Liquid Fund - Super Institutional Plan</li>
+                          <li>Escorts Liquid Fund</li>
+                      </ul>                    </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Debt - FD / Bonds</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>DHFL , M&M, HDFC Ltd</li>
+                          <li>Rest on availability</li>
+                      </ul>                    </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>MF - Debt</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>Franklin India Corporate Bond Opportunities Fund</li>
+                          <li>Birla Sun Life Monthly Income Plan II - Wealth 25 Plan</li>
+                          <li>UTI CRTS 81 Fund</li>
+                          <li>HDFC Multiple Yield Fund - Plan 2005</li>
+                      </ul>                    </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                  </div>
+
+
+              </div>
+
+<!--  Very Aggressive  --> 
+
+              <div class="tab-pane fade" id="panel_vaggressive">
+
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Your primary investment goal is long-term capital growth. You can tolerate substantial fluctuations in the value of your investment in the short-term in anticipation of the highest possible return over a period of 10 years or more.</div>                      
+
+                      <ul id="myTab2" class="nav nav-pills nav-justified">
+                          <li class="active"><a href="#vaggr18" data-toggle="tab">18-30 Age</a></li>
+                          <li><a href="#vaggr31" data-toggle="tab">31-50 Age</a></li>
+                          <li><a href="#vaggr51" data-toggle="tab">51-65 Age</a></li>
+                          <li><a href="#vaggr65" data-toggle="tab">65+ Age (Assume Retired)</a></li>
+   
+                      </ul>
+
+                        <div class="panel-heading">
+                            <div id="myTabContent1" class="tab-content">
+
+                                <div class="tab-pane fade in active" id="vaggr18">
+                                    <div class="row">
+                                      <div class="col-sm-4">                                        
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>75%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>25%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right">
+                          <div id="highchart_vaggr18" style="height: 270px; width: 500px;"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="tab-pane fade" id="vaggr31">
+                                    <div class="row">
+                                      <div class="col-sm-4">                                        
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>65%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>35%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right">
+                          <div id="highchart_vaggr31" style="height: 270px; width: 500px;"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="vaggr51">
+                                   <div class="row">
+                                      <div class="col-sm-4">                                        
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>60%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>40%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right">
+                          <div id="highchart_vaggr51" style="height: 270px; width: 500px;"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="vaggr65">
+                                    <div class="row">
+                                      <div class="col-sm-4">                                       
+                                          <div class="well well-lg" align="center" >
+                                            <div class="back_effect">                                            
+                                                <h2>35%</h2><h5>Equity</h5>
+                                            </div>
+                                            <div class="back_effect1">
+                                                <h2>65%</h2><h5>Debt</h5>
+                                            </div>
+                                          </div>
+                                      </div>
+                                      <div class="col-sm-8">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right">          
+                          <div id="highchart_vaggr65" style="height: 270px; width: 500px;"></div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="well well-sm">
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Large Cap</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>L&T Equity Fund</li>
+                          <li>Birla Sun Life Frontline Equity Fund</li>
+                          <li>HDFC Top 200 Fund</li>
+                      </ul>                    </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Mid And Small Cap</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>Birla Sun Life Pure Value Fund</li>
+                          <li>Canara Robeco Emerging Equities Fund - Regular Plan</li>
+                          <li>DSP BlackRock Micro Cap Fund - Regular Plan</li>
+                      </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Liquid</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>Taurus Liquid Fund - Super Institutional Plan</li>
+                          <li>Escorts Liquid Fund</li>
+                          <li>Peerless Liquid Fund - Super Institutional Plan</li>
+                      </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>Debt - FD / Bonds</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>DHFL , M&M, HDFC Ltd</li>
+                          <li>Rest on availability</li>
+                      </ul>                    </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+                              <div class="well well-sm">
+                                  <div class="row">
+                                      <div class="col-sm-12">                                    
+                                          <div class="row col-sm-5">
+                          <div class="list-group-item list-group-item-success">
+                            <h5>MF - Debt</h5>
+                          </div>
+                                          </div>
+                                          <div class="col-sm-7">
+                      <ul class="row">
+                          <li>Franklin India Corporate Bond Opportunities Fund</li>
+                          <li>Birla Sun Life Monthly Income Plan II - Wealth 25 Plan</li>
+                          <li>UTI CRTS 81 Fund</li>
+                          <li>HDFC Multiple Yield Fund - Plan 2005</li>
+                      </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                  </div>                  
+
+
+              </div>
+              <!-- end very aggr -->
+
+          </div>
+
+          </div>
+      </div>
+    </div>       
+    </section>
+
+
+  </body>
+</html>
+
+
+
+
+
+
+
+

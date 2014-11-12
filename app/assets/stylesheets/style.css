@@ -22,6 +22,7 @@ body {
 .text-center {
     text-align:center;
 }
+
 section {
     margin:70px 0px 70px 0px;
 }
@@ -41,6 +42,94 @@ section {
    padding: 2px !important;
    margin: 2px !important;
 }
+
+.pad_right {
+  padding-right: 1em;
+}
+
+
+.back_effect {
+    display: inline-block;
+    /*cursor: pointer;*/
+    margin: 15px;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    text-align: center;    
+    border: .1em solid rgb(200, 200, 216);
+    color: #ffffff;
+    background: #15355C;
+    box-shadow: 0 0 0 0.7em #5189BD, 0 0 0 0.5em #0098f9;
+    padding-top:0.20em;
+    position: relative;
+    z-index: 1;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration:2s;
+    -o-transition-duration:2s;
+}
+
+.back_effect:hover {
+    display: inline-block;
+    /*cursor: pointer;*/
+    margin: 15px;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    text-align: center;    
+    border: .1em solid rgb(200, 200, 216);
+    color: #ffffff;
+    background: #5189BD;
+    box-shadow: 0 0 0 0.7em #15355C, 0 0 0 0.5em #0098f9;
+    padding-top:0.20em;
+    position: relative;
+    z-index: 1;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration:2s;
+    -o-transition-duration:2s;
+}
+
+
+.back_effect1 {
+    display: inline-block;
+    /*cursor: pointer;*/
+    margin: 15px;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    text-align: center;    
+    border: .1em solid rgb(200, 200, 216);
+    color: #ffffff;
+    background: #143D07;
+    box-shadow: 0 0 0 0.7em #449239, 0 0 0 0.5em #0098f9;
+    padding-top:0.20em;
+    position: relative;
+    z-index: 1;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration:2s;
+    -o-transition-duration:2s;
+}
+
+.back_effect1:hover {
+    display: inline-block;
+    /*cursor: pointer;*/
+    margin: 15px;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    text-align: center;    
+    border: .1em solid rgb(200, 200, 216);
+    color: #ffffff;
+    background: #449239;
+    box-shadow: 0 0 0 0.7em #143D07, 0 0 0 0.5em #0098f9;
+    padding-top:0.20em;
+    position: relative;
+    z-index: 1;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration:2s;
+    -o-transition-duration:2s;
+}
+
+
 /*=====================================
    COLOR CODES
     ===================================*/
@@ -128,6 +217,53 @@ background-color: rgba(221, 221, 221, 0);
 
 .navbar-default .navbar-toggle {
 border-color: #A0761D;
+}
+
+
+/*=====================================
+   SUB-MENU STYLE SECTION
+    ===================================*/
+
+    #leftMenu .accordion-group {
+    margin-bottom: 0px;
+    border:0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}    
+
+#leftMenu .accordion-heading {
+    height: 34px;
+    border-top: 1px solid #717171; /* inner stroke */
+    border-bottom: 1px solid #5A5A5A; /* inner stroke */
+    background-color: #353535; /* layer fill content */
+    background-image: -moz-linear-gradient(90deg, #595b59 0%, #616161 100%); /* gradient overlay */
+    background-image: -o-linear-gradient(90deg, #595b59 0%, #616161 100%); /* gradient overlay */
+    background-image: -webkit-linear-gradient(90deg, #595b59 0%, #616161 100%); /* gradient overlay */
+    background-image: linear-gradient(90deg, #595b59 0%, #616161 100%); /* gradient overlay */
+    list-style-type:none;
+}  
+
+#leftMenu .accordion-heading  a {  
+    color: #cbcbcb; /* text color */
+    text-shadow: 0 1px 0 #3b3b3b; /* drop shadow */
+    text-decoration:none;
+    font-weight:bold;  
+}
+
+#leftMenu .accordion-heading  a:hover {  
+    color:#ccc     
+}
+
+#leftMenu .accordion-heading .active {
+    width: 182px;
+    height: 34px;
+    border: 1px solid #5b5b5b; /* inner stroke */
+    background-color: #353535; /* layer fill content */
+    background-image: -moz-linear-gradient(90deg, #4b4b4b 0%, #555 100%); /* gradient overlay */
+    background-image: -o-linear-gradient(90deg, #4b4b4b 0%, #555 100%); /* gradient overlay */
+    background-image: -webkit-linear-gradient(90deg, #4b4b4b 0%, #555 100%); /* gradient overlay */
+    background-image: linear-gradient(90deg, #4b4b4b 0%, #555 100%); /* gradient overlay */
 }
 
 /*=====================================
@@ -400,10 +536,6 @@ padding:30px;
     background-color:#15355C; 
    color:#fff;
    padding:10px;
-}
-
-#about-ftr p {
-  text-align: justify;
 }
 
 
@@ -743,3 +875,17 @@ padding: 1px;
    display:none!important;
   }
 }
+
+
+/* bootstrap hack: fix content width inside hidden tabs */
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+    display: block;     /* undo display:none          */
+    height: 0;          /* height:0 is also invisible */ 
+    overflow-x: hidden;
+    overflow-y: hidden; /* no-overflow                */
+}
+.tab-content > .active,
+.pill-content > .active {
+    height: auto;       /* let the content decide it  */
+} /* bootstrap hack end */

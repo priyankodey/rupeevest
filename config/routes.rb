@@ -8,11 +8,15 @@ RupeeVest::Application.routes.draw do
   get "static_pages/error"
   get "static_pages/pricing"
   get "static_pages/team"
-  get "static_pages/vision"
+  get "static_pages/risk_profiling"
+  get "static_pages/return_expectation"
   get "static_pages/academics"
   get "static_pages/sign_in"
   get "static_pages/sign_up"
   get "static_pages/dashboard"
+  get "static_pages/help"
+
+  #match '/index',    to: 'static_pages#index',    via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

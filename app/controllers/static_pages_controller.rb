@@ -23,7 +23,10 @@ class StaticPagesController < ApplicationController
   def team
   end
 
-  def vision    
+  def risk_profiling    
+  end
+
+  def return_expectation    
   end
 
   def academics    
@@ -36,5 +39,8 @@ class StaticPagesController < ApplicationController
   end
 
   def dashboard    
+  end
+
+  def help    
   end
 end
