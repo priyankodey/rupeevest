@@ -971,4 +971,5 @@ padding: 1px;
 .tab-content > .active,
 .pill-content > .active {
     height: auto;       /* let the content decide it  */
-} /* bootstrap hack end 
+}   
+/* bootstrap hack end  */
