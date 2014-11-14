@@ -29,15 +29,16 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
+                ['Type', 'Percentage'],
                 ['Liquid', 100]
             ]);
 
             var options = {
                 title: 'Less Than 10% Return',
+                chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
-                colors: ['#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'  ],
-                backgroundColor: { fill:'transparent' }
+                colors: ['#035D0F'],
+                backgroundColor: { fill:'transparent' },
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('google_chart_t1_10'));
@@ -53,15 +54,16 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
+                ['Type', 'Percentage'],
                 ['Large Cap', 60],
                 ['Mid Cap', 40]
             ]);
 
             var options = {
                 title: '10% To 15% Return',
+                chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
-                colors: ['#035D0F', '#74B505','#96D366','#BCE578'],
+                colors: ['#003397','#005CB9'],
                 backgroundColor: { fill:'transparent' }
             };
 
@@ -81,7 +83,7 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
+                ['Type', 'Percentage'],
                 ['Liquid', 10],
                 ['FD', 30],
                 ['Bond AAA', 60]
@@ -89,8 +91,9 @@
 
             var options = {
                 title: 'Less Than 10% Return',
+                chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
-                colors: ['#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'],
+                colors: ['#035D0F', '#50891F', '#74B505'],
                 backgroundColor: { fill:'transparent' }
             };
 
@@ -107,16 +110,17 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Bond AAA', 30],
+                ['Type', 'Percentage'],                
                 ['Large Cap', 50],
-                ['Mid Cap', 20]
+                ['Mid Cap', 20],
+                ['Bond AAA', 30]
             ]);
 
             var options = {
                 title: '10% To 15% Return',
+                chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
-                colors: ['#035D0F', '#74B505','#96D366','#BCE578'],
+                colors: ['#003397','#005CB9','#74B505'],
                 backgroundColor: { fill:'transparent' }
             };
 
@@ -133,15 +137,16 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
+                ['Type', 'Percentage'],
                 ['Large Cap', 50],
                 ['Mid Cap', 50]
             ]);
 
             var options = {
                 title: '15% To 20% Return',
+                chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
-                colors: ['#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'],
+                colors: ['#003397','#005CB9'],
                 backgroundColor: { fill:'transparent' }
             };
 
@@ -160,7 +165,7 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
+                ['Type', 'Percentage'],
                 ['Liquid', 5],
                 ['FD', 35],
                 ['Bond AAA', 60]
@@ -168,8 +173,9 @@
 
             var options = {
                 title: 'Less Than 10% Return',
+                chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
-                colors: ['#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'],
+                colors: ['#035D0F', '#50891F', '#74B505'],
                 backgroundColor: { fill:'transparent' }
             };
 
@@ -186,16 +192,17 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Bond AAA', 30],
+                ['Type', 'Percentage'],                
                 ['Large Cap', 50],
-                ['Mid Cap', 20]
+                ['Mid Cap', 20],
+                ['Bond AAA', 30]
             ]);
 
             var options = {
                 title: '10% To 15% Return',
+                chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
-                colors: ['#035D0F', '#74B505','#96D366','#BCE578'],
+                colors: ['#003397','#005CB9','#74B505'],
                 backgroundColor: { fill:'transparent' }
             };
 
@@ -212,16 +219,17 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Bond AAA', 20],
+                ['Type', 'Percentage'],                
                 ['Large Cap', 30],
-                ['Mid Cap', 50]
+                ['Mid Cap', 50],
+                ['Bond AAA', 20]
             ]);
 
             var options = {
                 title: '15% To 20% Return',
+                chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
-                colors: ['#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'],
+                colors: ['#003397','#005CB9','#74B505'],
                 backgroundColor: { fill:'transparent' }
             };
 
@@ -238,14 +246,15 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
+                ['Type', 'Percentage'],
                 ['Mid Cap', 100]
             ]);
 
             var options = {
                 title: '20% To 25% Return',
+                chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
-                colors: ['#035D0F', '#74B505','#96D366','#BCE578'],
+                colors: ['#005CB9'],
                 backgroundColor: { fill:'transparent' }
             };
 
@@ -265,7 +274,7 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
+                ['Type', 'Percentage'],
                 ['Liquid', 5],
                 ['FD', 35],
                 ['Bond AAA', 60]
@@ -273,8 +282,9 @@
 
             var options = {
                 title: 'Less Than 10% Return',
+                chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
-                colors: ['#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'],
+                colors: ['#035D0F', '#50891F', '#74B505'],
                 backgroundColor: { fill:'transparent' }
             };
 
@@ -291,16 +301,17 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Bond AAA', 40],
+                ['Type', 'Percentage'],                
                 ['Large Cap', 50],
-                ['Mid Cap', 10]
+                ['Mid Cap', 10],
+                ['Bond AAA', 40],
             ]);
 
             var options = {
                 title: '10% To 15% Return',
+                chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
-                colors: ['#035D0F', '#74B505','#96D366','#BCE578'],
+                colors: ['#003397','#005CB9','#74B505'],
                 backgroundColor: { fill:'transparent' }
             };
 
@@ -317,16 +328,17 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
-                ['Bond AAA', 20],
+                ['Type', 'Percentage'],                
                 ['Large Cap', 50],
-                ['Mid Cap', 30]
+                ['Mid Cap', 30],
+                ['Bond AAA', 20]
             ]);
 
             var options = {
                 title: '15% To 20% Return',
+                chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
-                colors: ['#005CB9', '#409BF8','#8BC5FD', '#ADD6FE'],
+                colors: ['#003397','#005CB9','#74B505'],
                 backgroundColor: { fill:'transparent' }
             };
 
@@ -343,15 +355,16 @@
 
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
-                ['Task', 'Hours per Day'],
+                ['Type', 'Percentage'],
                 ['Large Cap', 30],
                 ['Mid Cap', 70]
             ]);
 
             var options = {
                 title: '20% To 25% Return',
+                chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
-                colors: ['#035D0F', '#74B505','#96D366','#BCE578'],
+                colors: ['#003397','#005CB9'],
                 backgroundColor: { fill:'transparent' }
             };
 
@@ -418,12 +431,12 @@
                                       <div class="col-sm-4">                
                                           <div class="well well-lg" align="center">
                                             
-                                            <div class="back_effect1">
+                                            <div class="back_effect3">
                                                 <h2>100%</h2><h5>Debt</h5>
                                             </div>
-                                            <div class="back_effect">                   
+                                            <!-- <div class="back_effect">                   
                                                 <h2>50%</h2><h5>Equity</h5>
-                                            </div>
+                                            </div> -->
                                           </div>
                                       </div>
                                       <div class="col-sm-8">
@@ -463,12 +476,12 @@
                                     <div class="row">
                                       <div class="col-sm-4">                                        
                                           <div class="well well-lg" align="center" >
-                                            <div class="back_effect">                                            
-                                                <h2>40%</h2><h5>Equity</h5>
+                                            <div class="back_effect2">                                            
+                                                <h2>100%</h2><h5>Equity</h5>
                                             </div>
-                                            <div class="back_effect1">
-                                                <h2>60%</h2><h5>Debt</h5>
-                                            </div>
+                                            <!-- <div class="back_effect1">
+                                                <h2>0%</h2><h5>Debt</h5>
+                                            </div> -->
                                           </div>
                                       </div>
                                       <div class="col-sm-8">
@@ -553,12 +566,12 @@
                                     <div class="row">
                                       <div class="col-sm-4">                                        
                                           <div class="well well-lg" align="center" > 
-                                            <div class="back_effect1">
+                                            <div class="back_effect3">
                                                 <h2>100%</h2><h5>Debt</h5>
                                             </div>
-                                            <div class="back_effect">                                            
-                                                <h2>55%</h2><h5>Equity</h5>
-                                            </div>
+                                            <!-- <div class="back_effect">                                            
+                                                <h2>0%</h2><h5>Equity</h5>
+                                            </div> -->
                                           </div>
                                       </div>
                                       <div class="col-sm-8">
@@ -718,12 +731,12 @@
                                    <div class="row">
                                       <div class="col-sm-4">                                        
                                           <div class="well well-lg" align="center" >
-                                            <div class="back_effect">                                            
+                                            <div class="back_effect2">                                            
                                                 <h2>100%</h2><h5>Equity</h5>
                                             </div>
-                                            <div class="back_effect1">
-                                                <h2>60%</h2><h5>Debt</h5>
-                                            </div>
+                                            <!-- <div class="back_effect1">
+                                                <h2>0%</h2><h5>Debt</h5>
+                                            </div> -->
                                           </div>
                                       </div>
                                       <div class="col-sm-8">
@@ -809,12 +822,12 @@
                                     <div class="row">
                                       <div class="col-sm-4">                                        
                                           <div class="well well-lg" align="center" >
-                                            <div class="back_effect1">
+                                            <div class="back_effect3">
                                                 <h2>100%</h2><h5>Debt</h5>
                                             </div>
-                                            <div class="back_effect">                                            
-                                                <h2>60%</h2><h5>Equity</h5>
-                                            </div>                                            
+                                            <!-- <div class="back_effect">                                            
+                                                <h2>0%</h2><h5>Equity</h5>
+                                            </div>  -->                                           
                                           </div>
                                       </div>
                                       <div class="col-sm-8">
@@ -1051,12 +1064,12 @@
                                     <div class="row">
                                       <div class="col-sm-4">                                       
                                           <div class="well well-lg" align="center" >
-                                            <div class="back_effect">                                            
+                                            <div class="back_effect2">                                            
                                                 <h2>100%</h2><h5>Equity</h5>
                                             </div>
-                                            <div class="back_effect1">
-                                                <h2>75%</h2><h5>Debt</h5>
-                                            </div>
+                                            <!-- <div class="back_effect1">
+                                                <h2>0%</h2><h5>Debt</h5>
+                                            </div> -->
                                           </div>
                                       </div>
                                       <div class="col-sm-8">
@@ -1126,12 +1139,12 @@
                                     <div class="row">
                                       <div class="col-sm-4">                                        
                                           <div class="well well-lg" align="center" >
-                                            <div class="back_effect1">
+                                            <div class="back_effect3">
                                                 <h2>100%</h2><h5>Debt</h5>
                                             </div>
-                                            <div class="back_effect">                                            
-                                                <h2>65%</h2><h5>Equity</h5>
-                                            </div>                                            
+                                            <!-- <div class="back_effect">                                            
+                                                <h2>0%</h2><h5>Equity</h5>
+                                            </div> -->                                            
                                           </div>
                                       </div>
                                       <div class="col-sm-8">
@@ -1367,12 +1380,12 @@
                                     <div class="row">
                                       <div class="col-sm-4">                                       
                                           <div class="well well-lg" align="center" >
-                                            <div class="back_effect">                                            
+                                            <div class="back_effect2">                                            
                                                 <h2>100%</h2><h5>Equity</h5>
                                             </div>
-                                            <div class="back_effect1">
-                                                <h2>30%</h2><h5>Debt</h5>
-                                            </div>
+                                            <!-- <div class="back_effect1">
+                                                <h2>0%</h2><h5>Debt</h5>
+                                            </div> -->
                                           </div>
                                       </div>
                                       <div class="col-sm-8">
@@ -1452,11 +1465,3 @@
 
   </body>
 </html>
-
-
-
-
-
-
-
-

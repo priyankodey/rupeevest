@@ -1,12 +1,7 @@
-﻿/*=============================================================
-    Authour URI: www.binarytheme.com
-    License: Commons Attribution 3.0
-
-    http://creativecommons.org/licenses/by/3.0/
-
-    100% To use For Personal And Commercial Use.
-    IN EXCHANGE JUST GIVE US CREDITS AND TELL YOUR FRIENDS ABOUT US
-   
+﻿/* =============================================================
+    Authour : RupeeVest
+    URL: https://www.rupeevest.com/
+    Project Name: Rupee Vest    
     ========================================================  */
 
 /*=====================================
@@ -19,6 +14,7 @@ body {
     line-height:25px;
     background-color: #F7F7F7;
 }
+
 .text-center {
     text-align:center;
 }
@@ -47,7 +43,7 @@ section {
   padding-right: 1em;
 }
 
-
+/*Effect for Equity*/
 .back_effect {
     display: inline-block;
     /*cursor: pointer;*/
@@ -88,6 +84,7 @@ section {
     -o-transition-duration:2s;
 }
 
+/*Effect for Debt*/
 
 .back_effect1 {
     display: inline-block;
@@ -113,6 +110,89 @@ section {
     display: inline-block;
     /*cursor: pointer;*/
     margin: 15px;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    text-align: center;    
+    border: .1em solid rgb(200, 200, 216);
+    color: #ffffff;
+    background: #449239;
+    box-shadow: 0 0 0 0.7em #143D07, 0 0 0 0.5em #0098f9;
+    padding-top:0.20em;
+    position: relative;
+    z-index: 1;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration:2s;
+    -o-transition-duration:2s;
+}
+
+/*Effect for Equity 100% */
+.back_effect2 {
+    display: inline-block;
+    /*cursor: pointer;*/
+    margin: 5.9em 0;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    text-align: center;    
+    border: .1em solid rgb(200, 200, 216);
+    color: #ffffff;
+    background: #15355C;
+    box-shadow: 0 0 0 0.7em #5189BD, 0 0 0 0.5em #0098f9;
+    padding-top:0.20em;
+    position: relative;
+    z-index: 1;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration:2s;
+    -o-transition-duration:2s;
+}
+
+.back_effect2:hover {
+    display: inline-block;
+    /*cursor: pointer;*/
+    margin: 5.9em 0;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    text-align: center;    
+    border: .1em solid rgb(200, 200, 216);
+    color: #ffffff;
+    background: #5189BD;
+    box-shadow: 0 0 0 0.7em #15355C, 0 0 0 0.5em #0098f9;
+    padding-top:0.20em;
+    position: relative;
+    z-index: 1;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration:2s;
+    -o-transition-duration:2s;
+}
+
+/*Effect for Debt 100% */
+
+.back_effect3 {
+    display: inline-block;
+    /*cursor: pointer;*/
+    margin: 5.9em 0;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    text-align: center;    
+    border: .1em solid rgb(200, 200, 216);
+    color: #ffffff;
+    background: #143D07;
+    box-shadow: 0 0 0 0.7em #449239, 0 0 0 0.5em #0098f9;
+    padding-top:0.20em;
+    position: relative;
+    z-index: 1;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration:2s;
+    -o-transition-duration:2s;
+}
+
+.back_effect3:hover {
+    display: inline-block;
+    /*cursor: pointer;*/
+    margin: 5.9em 0;
     width: 105px;
     height: 105px;
     border-radius: 50%;
@@ -574,7 +654,7 @@ padding:30px;
  ===================================*/
 .general-subhead {
     background-color: #1c4474;
-    padding: 20px 100px 25px 100px;
+    padding: 25px 100px 25px 100px;
     color: #fff;
 }
  #request-quote {
@@ -877,6 +957,9 @@ padding: 1px;
 }
 
 
+
+
+/* For Chart's Position*/
 /* bootstrap hack: fix content width inside hidden tabs */
 .tab-content > .tab-pane,
 .pill-content > .pill-pane {
@@ -888,4 +971,4 @@ padding: 1px;
 .tab-content > .active,
 .pill-content > .active {
     height: auto;       /* let the content decide it  */
-} /* bootstrap hack end */
+} /* bootstrap hack end 

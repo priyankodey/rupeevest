@@ -43,4 +43,20 @@ class StaticPagesController < ApplicationController
 
   def help    
   end
+
+  def objective    
+  end
+
+  def portfolio    
+  end
+
+  def tax_efficient    
+  end
+
+  def safety    
+  end
+
+  def testimonials    
+  end
+
 end

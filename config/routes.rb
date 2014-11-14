@@ -1,4 +1,5 @@
 RupeeVest::Application.routes.draw do
+  
   root :to => 'static_pages#index'
   get "static_pages/index"
   get "static_pages/invest"
@@ -15,6 +16,11 @@ RupeeVest::Application.routes.draw do
   get "static_pages/sign_up"
   get "static_pages/dashboard"
   get "static_pages/help"
+  get "static_pages/objective"
+  get "static_pages/portfolio"
+  get "static_pages/tax_efficient"
+  get "static_pages/safety"
+  get "static_pages/testimonials"
 
   #match '/index',    to: 'static_pages#index',    via: 'get'
 
