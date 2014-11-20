@@ -51,102 +51,107 @@
             <div class="navbar-collapse collapse" >
                 <ul class="nav navbar-nav navbar-right">
 
-                    <li class="dropdown">
+                    <li class="dropdown pad_bot6p">
                         <a href="/static_pages/objective">WHY US<span class="caret"></span></a>
                         <ul class="dropdown-menu dropdown-menu-left">
                             <li>
-                                <a href="/static_pages/objective">Objective</a>
+                                <a href="/static_pages/objective">OBJECTIVE</a>
                             </li>
                             <li>
-                                <a href="/static_pages/portfolio">Our Portfolio</a>
+                                <a href="/static_pages/portfolio">OUR PORTFOLIO</a>
                             </li>
                             <li>
-                                <a href="/static_pages/tax_efficient">Tax Efficient Investing</a>
+                                <a href="/static_pages/tax_efficient">TAX EFFICIENT INVESTING</a>
                             </li>                    
                             <li>
-                                <a href="/static_pages/safety">Safety</a>
+                                <a href="/static_pages/safety">SAFETY</a>
                             </li>
                             <li>
-                                <a href="/static_pages/team">About Us</a>
+                                <a href="/static_pages/team">ABOUT US</a>
                             </li>
                             <li>
-                                <a href="/static_pages/testimonials">Testimonials</a>
+                                <a href="/static_pages/testimonials">TESTIMONIALS</a>
                             </li>                           
                         </ul>
                     </li>
 
-                    <li class="dropdown">
+                    <li class="dropdown pad_bot6p">
                         <a href="/">WHAT WE OFFER<span class="caret"></span></a>
                         <ul class="dropdown-menu dropdown-menu-left">
                             <li>
-                                <a href="/static_pages/index">Fixed Deposits</a>
+                                <a href="/static_pages/index">FIXED DEPOSITE</a>
                             </li>
                             <li>
-                                <a href="/static_pages/index">Bonds</a>
+                                <a href="/static_pages/index">BONDS</a>
                             </li>
                             <li>
-                                <a href="/static_pages/index">NCD's</a>
-                            </li>                    
-                            <li>
-                                <a href="/static_pages/index">MUTUAL FUNDS</a>
-                            </li>
-                            <li>
-                                <a href="/static_pages/index">EQUITY</a>
-                            </li>
-                            <li>
-                                <a href="/static_pages/index">DEBT</a>
+                                <a href="/static_pages/index">NCD'S</a>
+                            </li> 
+                                              
+                            <li class="dropdown">
+                                <a href="/static_pages/index">MUTUAL FUNDS<i class="right-caret"></i></a>
+                                <ul class="dropdown-menu sub-menu">                            
+                                    <li>
+                                        <a href="/static_pages/index">EQUITY</a>
+                                    </li>
+                                    <li>
+                                        <a href="/static_pages/index">DEBT</a>
+                                    </li>
+                                </ul>
                             </li>                           
                         </ul>
                     </li>
-                    
 
-                    <li class="dropdown">
+                    <li class="dropdown pad_bot6p">
                         <a href="/static_pages/invest">INVEST NOW</a>                      
                     </li>
 
-                   
-                    <li class="dropdown">
-                        <a href="/static_pages/risk_profiling">RESOURCES<span class="caret"></span>               
-                        </a>
+                    <li class="dropdown pad_bot6p">
+                        <a href="/">RESOURCES<span class="caret"></span></a>
                         <ul class="dropdown-menu dropdown-menu-left">
-                            <li>
-                                <a href="/static_pages/risk_profiling">Risk Profiling</a>
+                            <li class="dropdown">
+                                <a href="/static_pages/risk_profiling">RUPEE VEST TOOLS<i class="right-caret"></i></a>
+                                <ul class="dropdown-menu sub-menu">                            
+                                    <li>
+                                        <a href="/static_pages/risk_profiling">INVESTMENT STRATEGY</a>
+                                    </li>
+                                    <li>
+                                        <a href="/static_pages/return_expectation">GOAL DRIVEN</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/static_pages/index">RESEARCH<i class="right-caret"></i></a>
+                                <ul class="dropdown-menu sub-menu">                            
+                                    <li>
+                                        <a href="/static_pages/index">POSTS</a>
+                                    </li>                                    
+                                </ul>
                             </li>
                             <li>
-                                <a href="/static_pages/return_expectation">Return Expectation</a>
+                                <a href="/static_pages/academics">VIDEOS</a>
                             </li>
                             <li>
-                                <a href="/static_pages/academics">Gallery</a>
-                            </li>                    
-                            <li>
-                                <a href="/static_pages/blog_home">Blog Home</a>
-                            </li>
-                            <li>
-                                <a href="/static_pages/blog_single">Blog Single</a>
-                            </li>                           
+                                <a href="http://dhanhitmejari.in/" target = "_blank">BLOG</a>
+                            </li>                                                                       
+                                                     
                         </ul>
-                    </li>
+                    </li>            
 
-                    <li class="dropdown">
+
+                    <li class="dropdown pad_bot6p">
                         <a href="/static_pages/contact">CONTACT</a>
                     </li>
 
-                    <li class="dropdown">
-                        <a href="/static_pages/sign_in">LOGIN<span class="caret"></span></a>                  
-
-                       <ul class="dropup dropdown-menu dropdown-menu-left">
-                            <li>
-                                <a href="/static_pages/sign_in">
-                                    LOGIN              
-                                </a>
-                            </li> 
-                            <li>
-                                <a href="/static_pages/sign_up">
-                                    REGISTER              
-                                </a>
-                            </li>                                           
-                        </ul>
+                    <% if user_signed_in? %>
+                    <li class="dropdown pad_bot6p">
+                         <%= link_to "LOGOUT", destroy_user_session_path, :method => :delete %>                 
                     </li>
+                    <% else %>
+                    <li class="dropdown pad_bot6p"> 
+                        <a href="/users/sign_in">LOGIN</a>
+                    </li>
+                    <% end %>
 
                 </ul>
             </div>
@@ -155,6 +160,11 @@
     </div>
     <!--./ Top Menu End -->
     
+
+
+<!-- <p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p> -->
+
 
 <%= yield %>
 
