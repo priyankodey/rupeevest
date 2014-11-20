@@ -43,13 +43,10 @@ section {
    padding-right: 1em;
 }
 
-<<<<<<< HEAD
 .pad_bot6p {
     padding-bottom: 6px;
 }
 
-=======
->>>>>>> d84772fe604d8693763cb4c278947d3fb97c8ee4
 .image_responsive {
     display: inline-block;
     max-width: 100%;
@@ -276,7 +273,7 @@ section {
 }
 
 
-/* sub-menu */
+/*sub-menu*/
 .nav .dropdown-menu > li > a {
     padding: 10px 10px;
     border-bottom: 1px solid #565AB1;
@@ -286,7 +283,7 @@ section {
 
 .nav .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
     color: #fff;
-    background: #778899;
+    background: #778899 ;
 }
 
 .nav .dropdown-menu {
