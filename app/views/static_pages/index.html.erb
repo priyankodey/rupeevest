@@ -67,7 +67,11 @@ So, invest before its too late.
     <div id="welocme-note">
 
         <div class="welcome-div">
-            <i class="fa fa-sign-in fa-2x"></i><span>INDIA'S FIRST SELF-HELP INVESTMENT PLATFORM</span><span> <a href="/static_pages/sign_up"> <button class="btn btn-primary" type="button">TRY IT NOW!</button></a></span>
+            <% if user_signed_in? %>
+                <i class="fa fa-sign-in fa-2x"></i><span>INDIA'S FIRST SELF-HELP INVESTMENT PLATFORM</span><span> <a href="/invest"> <button class="btn btn-primary" type="button">TRY IT NOW!</button></a></span>
+            <% else %>
+                <i class="fa fa-sign-in fa-2x"></i><span>INDIA'S FIRST SELF-HELP INVESTMENT PLATFORM</span><span> <a href="/sign_in"> <button class="btn btn-primary" type="button">TRY IT NOW!</button></a></span>
+            <% end %>
         </div>
 
     </div>
@@ -211,7 +215,7 @@ So, invest before its too late.
                 <div class="col-lg-3 col-sm-3">
                     <div class="media">
                         <div class="pull-left">
-                            <a href="/static_pages/invest" class=" fa fa-university fa-4x "></a>
+                            <a href="/invest" class=" fa fa-university fa-4x "></a>
                         </div>
                         <div class="media-body">
                             <h3 class="media-heading">Build Wealth</h3>
@@ -224,7 +228,7 @@ So, invest before its too late.
                 <div class="col-lg-3 col-sm-3">
                     <div class="media">
                         <div class="pull-left">
-                            <a href="/static_pages/invest" class="fa fa-clock-o fa-4x "></a>
+                            <a href="/invest" class="fa fa-clock-o fa-4x "></a>
                         </div>
                         <div class="media-body">
                             <h3 class="media-heading">Save Time</h3>
@@ -238,7 +242,7 @@ So, invest before its too late.
                 <div class="col-lg-3 col-sm-3">
                     <div class="media">
                         <div class="pull-left">
-                            <a href="/static_pages/invest" class="fa fa-inr fa-4x "></a>
+                            <a href="/invest" class="fa fa-inr fa-4x "></a>
                         </div>
                         <div class="media-body">
                             <h3 class="media-heading">Save Tax</h3>
@@ -252,7 +256,7 @@ So, invest before its too late.
                 <div class="col-lg-3 col-sm-3">
                     <div class="media">
                         <div class="pull-left">
-                            <a href="/static_pages/invest" class="fa fa-lightbulb-o fa-4x "></a>
+                            <a href="/invest" class="fa fa-lightbulb-o fa-4x "></a>
                         </div>
                         <div class="media-body">
                             <h3 class="media-heading">Invest Better</h3>
