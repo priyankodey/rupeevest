@@ -28,6 +28,9 @@ class StaticPagesController < ApplicationController
     @investor = Investor.new
   end
 
+  def offer    
+  end
+
   def invest
   end
 
@@ -53,6 +56,9 @@ class StaticPagesController < ApplicationController
   end
 
   def return_expectation    
+  end
+
+  def research    
   end
 
   def academics    
@@ -83,6 +89,9 @@ class StaticPagesController < ApplicationController
   end
 
   def testimonials    
+  end
+
+  def details    
   end
 
   def investor_params

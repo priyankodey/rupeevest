@@ -27,6 +27,7 @@ RupeeVest::Application.routes.draw do
   # post "static_pages/invest_button"
   # post "static_pages/investor_details"
   match '/', to: 'static_pages#index', via: 'get'
+  match '/offer', to: 'static_pages#offer', via: 'get'
   match '/invest', to: 'static_pages#invest', via: 'get'
   match '/invest', to: 'static_pages#invest', via: 'post'
   match '/blog_home', to: 'static_pages#blog_home', via: 'get'
@@ -37,6 +38,7 @@ RupeeVest::Application.routes.draw do
   match '/team', to: 'static_pages#team', via: 'get'
   match '/risk_profiling', to: 'static_pages#risk_profiling', via: 'get'
   match '/return_expectation', to: 'static_pages#return_expectation', via: 'get'
+  match '/research', to: 'static_pages#research', via: 'get'
   match '/academics', to: 'static_pages#academics', via: 'get'
   match '/sign_in', to: 'static_pages#sign_in', via: 'get'
   match '/sign_up', to: 'static_pages#sign_up', via: 'get'
@@ -49,6 +51,7 @@ RupeeVest::Application.routes.draw do
   match '/testimonials', to: 'static_pages#testimonials', via: 'get'
   match '/invest_button', to: 'static_pages#invest_button', via: 'post'
   match '/investor_details', to: 'static_pages#investor_details', via: 'post'
+  match '/details', to: 'static_pages#details', via: 'get'
 
 
   #match '/index',    to: 'static_pages#index',    via: 'get'

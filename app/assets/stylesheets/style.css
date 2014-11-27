@@ -51,6 +51,14 @@ section {
     padding: 6em 3em 0 3em;
 }
 
+.fixed_top {
+    position: fixed;
+    top: 5.1em;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+}
+
 .image_responsive {
     display: inline-block;
     max-width: 100%;
@@ -583,6 +591,13 @@ background-size: cover;
               background: rgba(11, 9, 27, 0.7);        
         min-height:400px;
     }
+
+/*=====================================
+  DETAILS PAGE STYLES 
+    ===================================*/
+    #full_cont .well {
+        border :1px groove #e3e3e3;
+    }
 /*=====================================
   CLIENTS TESTIMONIALS STYLES 
     ===================================*/
@@ -1067,4 +1082,11 @@ padding: 1px;
 }   
 /* bootstrap hack end  */
 
+
+#o_fd::before, #o_bd::before, #o_nd::before, #o_md::before { 
+  content: "";
+  display: inline-block;
+  height: 225px; /* fixed header height*/
+  margin: -225px 0 0; /* negative fixed header height */
+}
 
