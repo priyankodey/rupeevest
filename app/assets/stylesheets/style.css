@@ -804,6 +804,59 @@ padding:30px;
      color:#cb2027;
 }
 
+
+/*==========================================
+   OBJECTIVE / PORTFOLIO STYLES
+=====================================================*/
+
+
+.divider1 {
+    background-image: url('../assets/obj_bg.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+.textdivider h1 {
+    padding-top: 40px;
+    color: white;
+    font-size: 40px;
+    font-style: tahoma;
+}
+
+.textdivider p {
+    color: white;
+    font-size: 20px;
+    font-style: tahoma;
+}
+
+.section-divider {
+    z-index: 999;
+    width: 100%;
+    display: block;
+    max-height: 450px;
+    /*border-bottom: 2px solid #E6EAED;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-position: center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: relative;    
+    text-align: center;
+}
+
+
   /*==========================================
    CONTACT STYLES
     =====================================================*/

@@ -79,9 +79,6 @@ class StaticPagesController < ApplicationController
   def objective    
   end
 
-  def portfolio    
-  end
-
   def tax_efficient    
   end
 

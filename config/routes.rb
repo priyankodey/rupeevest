@@ -45,7 +45,7 @@ RupeeVest::Application.routes.draw do
   match '/dashboard', to: 'static_pages#dashboard', via: 'get'
   match '/help', to: 'static_pages#help', via: 'get'
   match '/objective', to: 'static_pages#objective', via: 'get'
-  match '/portfolio', to: 'static_pages#portfolio', via: 'get'
+  #match '/portfolio', to: 'static_pages#portfolio', via: 'get'
   match '/tax_efficient', to: 'static_pages#tax_efficient', via: 'get'
   match '/safety', to: 'static_pages#safety', via: 'get'
   match '/testimonials', to: 'static_pages#testimonials', via: 'get'
