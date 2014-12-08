@@ -8,7 +8,7 @@
    GENERAL STYLE SECTION
 ===================================*/
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Tahoma, 'Open Sans', sans-serif;
     margin-top:70px;
     font-size:14px;
     line-height:25px;
@@ -28,6 +28,14 @@ section {
 }
 .pad-row {
     padding-top:20px;
+}
+
+.pad_top2 {
+    padding-top: 2em;
+}
+
+.pad_top4 {
+    padding-top: 4em;
 }
 
 .pad-bot {
@@ -822,13 +830,11 @@ padding:30px;
     padding-top: 40px;
     color: white;
     font-size: 40px;
-    font-style: tahoma;
 }
 
 .textdivider p {
     color: white;
     font-size: 20px;
-    font-style: tahoma;
 }
 
 .section-divider {
@@ -856,10 +862,30 @@ padding:30px;
     text-align: center;
 }
 
+/*==========================================
+  WHAT WE OFFER STYLES
+ =====================================================*/
 
-  /*==========================================
-   CONTACT STYLES
-    =====================================================*/
+    #offer_list span {
+        color: #428bca;
+    }
+
+    #offer_list a {
+        color: #fff;
+    }
+
+    #offer_body ul > li {
+        font-size: 12px;
+    }
+
+    #offer_body h3 {
+        text-transform:capitalize;
+        font-variant:small-caps;
+    }
+
+/*==========================================
+CONTACT STYLES
+=====================================================*/
 
 .cnt {
 width: 100%;
