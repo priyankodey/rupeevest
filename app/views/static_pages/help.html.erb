@@ -8,67 +8,41 @@
 <body style="margin-top: 225px">
 
    <div class="general-subhead fixed_top">
-       <h1>WHAT WE OFFER</h1>
+       <h2>WHAT WE OFFER</h2>
    </div>
      <!-- Gereral Subhead End -->
     
     <section>
-<div class="container">
-            <div class="row clearfix">
-              <div class="col-md-4 column">
-                <div class="list-group">
-                    <a href="#l1" class="list-group-item list-group-item-success">List1</a>
-                    <a href="#l2" class="list-group-item list-group-item-info">List2</a>
-                    <a href="#l3" class="list-group-item list-group-item-warning">List3</a>                    
-                </div>
-              </div>
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
 
-              <div id="scrollableDiv" class="col-md-8 column">
-                <div class="panel panel-default" id="l1">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">
-                      List 1 title
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    list1 content
-                  </div>
-                  <div class="panel-footer">
-                    list1 footer
-                  </div>
-                </div>
+        var options = {
+          title: 'My Daily Activities',
+          is3D: true,
+        };
 
-                <div class="panel panel-default" id="l2">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">
-                      List 2
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    List 2 content
-                  </div>
-                  <div class="panel-footer">
-                    List 2 footer
-                  </div>
-                </div>
-
-                <div class="panel panel-default" id="l3">
-                  <div class="panel-heading">
-                    <h3 class="panel-title">
-                      list3 title
-                    </h3>
-                  </div>
-                  <div class="panel-body">
-                    list3 content
-                  </div>
-                  <div class="panel-footer">
-                    list3 footer
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>     
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>  
     </section>
 
     

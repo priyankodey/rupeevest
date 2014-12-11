@@ -30,11 +30,11 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Type', 'Percentage'],
-                ['Liquid', 100]
+                ['Liquid Funds', 100]
             ]);
 
             var options = {
-                title: 'Less Than 10% Return',
+                // title: 'Less Than 10% Return',
                 chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
                 colors: ['#035D0F'],
@@ -55,12 +55,12 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Type', 'Percentage'],
-                ['Large Cap', 60],
-                ['Mid Cap', 40]
+                ['Large Cap Funds', 60],
+                ['Mid Cap Funds', 40]
             ]);
 
             var options = {
-                title: '10% To 15% Return',
+                //title: '10% To 15% Return',
                 chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
                 colors: ['#003397','#005CB9'],
@@ -84,17 +84,19 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Type', 'Percentage'],
-                ['Liquid', 10],
-                ['FD', 30],
-                ['Bond AAA', 60]
+                ['Liquid Funds', 10],
+                ['Fixed Deposit', 30],
+                ['Bonds/NCDs', 60]
             ]);
 
             var options = {
-                title: 'Less Than 10% Return',
+                //title: 'Less Than 10% Return',
                 chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
                 colors: ['#035D0F', '#50891F', '#74B505'],
-                backgroundColor: { fill:'transparent' }
+                backgroundColor: { fill:'transparent' },
+                tooltip: {text: 'percentage'},
+                legend:{textStyle:{fontSize:'10px', fontName:'tahoma', color:'grey'}}
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('google_chart_t2_10'));
@@ -111,13 +113,13 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Type', 'Percentage'],                
-                ['Large Cap', 50],
-                ['Mid Cap', 20],
-                ['Bond AAA', 30]
+                ['Large Cap Funds', 50],
+                ['Mid Cap Funds', 20],
+                ['Bonds/NCDs', 30]
             ]);
 
             var options = {
-                title: '10% To 15% Return',
+                //title: '10% To 15% Return',
                 chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
                 colors: ['#003397','#005CB9','#74B505'],
@@ -138,12 +140,12 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Type', 'Percentage'],
-                ['Large Cap', 50],
-                ['Mid Cap', 50]
+                ['Large Cap Funds', 50],
+                ['Mid Cap Funds', 50]
             ]);
 
             var options = {
-                title: '15% To 20% Return',
+                //title: '15% To 20% Return',
                 chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
                 colors: ['#003397','#005CB9'],
@@ -166,13 +168,13 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Type', 'Percentage'],
-                ['Liquid', 5],
-                ['FD', 35],
-                ['Bond AAA', 60]
+                ['Liquid Funds', 5],
+                ['Fixed Deposit', 35],
+                ['Bonds/NCDs', 60]
             ]);
 
             var options = {
-                title: 'Less Than 10% Return',
+                //title: 'Less Than 10% Return',
                 chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
                 colors: ['#035D0F', '#50891F', '#74B505'],
@@ -193,13 +195,13 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Type', 'Percentage'],                
-                ['Large Cap', 50],
-                ['Mid Cap', 20],
-                ['Bond AAA', 30]
+                ['Large Cap Funds', 50],
+                ['Mid Cap Funds', 20],
+                ['Bonds/NCDs', 30]
             ]);
 
             var options = {
-                title: '10% To 15% Return',
+                //title: '10% To 15% Return',
                 chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
                 colors: ['#003397','#005CB9','#74B505'],
@@ -220,13 +222,13 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Type', 'Percentage'],                
-                ['Large Cap', 30],
-                ['Mid Cap', 50],
-                ['Bond AAA', 20]
+                ['Large Cap Funds', 30],
+                ['Mid Cap Funds', 50],
+                ['Bonds/NCDs', 20]
             ]);
 
             var options = {
-                title: '15% To 20% Return',
+                //title: '15% To 20% Return',
                 chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
                 colors: ['#003397','#005CB9','#74B505'],
@@ -247,11 +249,11 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Type', 'Percentage'],
-                ['Mid Cap', 100]
+                ['Mid Cap Funds', 100]
             ]);
 
             var options = {
-                title: '20% To 25% Return',
+                //title: '20% To 25% Return',
                 chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
                 colors: ['#005CB9'],
@@ -275,13 +277,13 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Type', 'Percentage'],
-                ['Liquid', 5],
-                ['FD', 35],
-                ['Bond AAA', 60]
+                ['Liquid Funds', 5],
+                ['Fixed Deposit', 35],
+                ['Bonds/NCDs', 60]
             ]);
 
             var options = {
-                title: 'Less Than 10% Return',
+                //title: 'Less Than 10% Return',
                 chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
                 colors: ['#035D0F', '#50891F', '#74B505'],
@@ -302,13 +304,13 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Type', 'Percentage'],                
-                ['Large Cap', 50],
-                ['Mid Cap', 10],
-                ['Bond AAA', 40],
+                ['Large Cap Funds', 50],
+                ['Mid Cap Funds', 10],
+                ['Bonds/NCDs', 40],
             ]);
 
             var options = {
-                title: '10% To 15% Return',
+                //title: '10% To 15% Return',
                 chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
                 colors: ['#003397','#005CB9','#74B505'],
@@ -329,13 +331,13 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Type', 'Percentage'],                
-                ['Large Cap', 50],
-                ['Mid Cap', 30],
-                ['Bond AAA', 20]
+                ['Large Cap Funds', 50],
+                ['Mid Cap Funds', 30],
+                ['Bonds/NCDs', 20]
             ]);
 
             var options = {
-                title: '15% To 20% Return',
+                //title: '15% To 20% Return',
                 chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
                 colors: ['#003397','#005CB9','#74B505'],
@@ -356,12 +358,12 @@
         function drawChart() {
             var data = google.visualization.arrayToDataTable([
                 ['Type', 'Percentage'],
-                ['Large Cap', 30],
-                ['Mid Cap', 70]
+                ['Large Cap Funds', 30],
+                ['Mid Cap Funds', 70]
             ]);
 
             var options = {
-                title: '20% To 25% Return',
+                //title: '20% To 25% Return',
                 chartArea:{left:"10%",top:"10%",width:"85%",height:"85%"},
                 is3D: true,
                 colors: ['#003397','#005CB9'],
@@ -389,7 +391,7 @@
 <body>
 
    <div class="general-subhead">
-       <h1>RETURN EXPECTATION</h1>
+       <h2>RETURN EXPECTATION</h2>
    </div>
      <!-- Gereral Subhead End -->
     

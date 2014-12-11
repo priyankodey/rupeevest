@@ -30,6 +30,9 @@ section {
     padding-top:20px;
 }
 
+.pad_top1 {
+    padding-top: 1em;
+}
 .pad_top2 {
     padding-top: 2em;
 }
@@ -58,6 +61,15 @@ section {
 .pad_modal {
     padding: 6em 3em 0 3em;
 }
+
+.font_1p5 {
+    font-size: 1.5em;
+}
+
+.font_1p2 {
+    font-size: 1.2em;
+}
+
 
 .fixed_top {
     position: fixed;
