@@ -630,6 +630,20 @@ background-color:rgba(158, 158, 158, 0.15);
      min-height: 300px
 }
 
+.slide1_cap {
+    color: grey;
+    text-shadow: none;
+    font-family: tahoma;
+
+}
+
+.slide3_cap {
+    color: #ffffff;
+    text-shadow: none;
+    font-family: tahoma;
+    
+}
+
 /*=====================================
   HOME PAGE TWO STYLES GENERAL
     ===================================*/
@@ -937,12 +951,12 @@ padding:30px;
 }
 .textdivider4 h1 {
     padding-top: 40px;
-    color: black;
+    color: #ffffff;
     font-size: 40px;
 }
 
 .textdivider4 p {
-    color: black;
+    color: #ffffff;
     font-size: 20px;
 }
 
@@ -989,7 +1003,7 @@ padding:30px;
         color:#ff6a00;
     }
 #top_funds_chart .panel-heading {
-    background: #000000;
+    background: url(../assets/black.jpg) no-repeat;
 }
 
 /*==========================================

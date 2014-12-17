@@ -5,7 +5,91 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="en">
 <!--<![endif]-->
+<head>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+function drawChart() {
+  var dataTable = new google.visualization.DataTable();
+  dataTable.addColumn('string', 'Funds');
+  dataTable.addColumn('number', 'Percentage');
+  dataTable.addColumn({type: 'string', role: 'annotation'});
+  dataTable.addColumn({type: 'string', role: 'style'});
+  dataTable.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
 
+  dataTable.addRows([
+    ['ELSS', 21.0, '21.0%','#FF8B00',
+    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ],
+
+    ['ULIP', 15.6,'15.6%', '#FF2D00',
+    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ],
+
+    ['FD', 9.0,'9.0%','#0C8E86', 
+    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ],
+
+    ['NSC', 8.8,'8.8%','#0779CF',
+    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ],
+    ['PPF', 8.7,'8.7%','#27486B',
+     '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+     ],
+    ['NABARD', 8.3,'8.3%','#8B008B',
+     '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+     ],
+     ['LIC', 6.0,'6.0%','#FF00FF',
+     '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+     ]
+  ]);
+
+var view = new google.visualization.DataView(dataTable);
+    view.setColumns([0, 1, 3, 4, {
+        type: 'number',        
+        calc: function (dt, row) {
+            return 0;
+        }
+    },2]);
+
+  var options = {
+    title: '5 Years Return', titleTextStyle: {color: '#3366CC'},
+    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC'},
+            textStyle: {
+                    fontName: 'Comic Sans MS',
+                     fontSize: 12,
+                     bold: true,
+                    // italic: true,
+                      color: '#00000',     // The color of the text.
+                    //opacity: 0.8          // The transparency of the text.
+                    }
+              },
+
+    vAxis: {gridlines: {color: 'transparent', count: 0}, minValue: 0},
+    tooltip: {isHtml: true},
+    legend: 'none',
+    backgroundColor: { fill:'#ccc' },
+    isStacked: true,
+    annotations: {
+          textStyle: {
+        fontName: 'Lucida Fax',
+         fontSize: 16,
+         bold: true,
+        // italic: true,
+          color: '#fff',     // The color of the text.
+          auraColor: 'transparent', // The color of the text outline.
+        //opacity: 0.8          // The transparency of the text.
+        }
+      }
+  };
+  var chart = new google.visualization.ColumnChart(document.getElementById('e_lcf'));
+  chart.draw(view, options);
+}
+
+
+    </script>
+</head>
 <body>
 
    <div class="general-subhead">
@@ -25,30 +109,28 @@
     </section>
     <section>
       <div class="container"> 
-        <div class="row"> 
-           <div class="col-sm-3 column text-justify">
-            <img src="/assets/tax01.jpg" class="image_responsive" alt="Bonds" />
-           </div>
+        <div class="row">            
             <div class="col-sm-6 column text-justify">
-              <h3>What is 80C?</h3>
+              <h3><b>What is 80C ?</b></h3>
             <p>It is a section of the Indian Income Tax Act which allows you to reduce your taxable income by upto Rs. 1,50,000 (savings of Rs. 45,000) by investing in a certified 80C Tax Saving product. Some of you might be thinking, I earn a lot already / who will take so much pain / I have a valid reason n all that. Trust me, irrespective of how much you earn, how much you save, how much you invest, <b>You Should Always Save Tax. Don’t Evade, Save!</b></p>
             </div>
-            <div class="col-sm-3 column text-justify">
-                <img src="/assets/tax02.jpg" class="image_responsive" alt="Bonds" />
+            <div class="col-sm-6 column text-justify">
+                <iframe class="vedio-style" src="//www.youtube.com/embed/0Z6kLqXTvBc?rel=0" ></iframe>
+                
             </div>
         </div>
         <div class="row pad_top4"> 
             <div class="col-sm-12">
-            <h3>3 reasons why you should absolutely not miss this tax saving opportunity this year:</h3>
+            <h3 class="text-center"><b>3 reasons why you should absolutely not miss this tax saving opportunity this year</b></h3>
             </div>
             <div class="col-sm-6 column text-justify pad_top1">            
-            <p><b>1. A penny saved is a penny earned - </b>
-            You save upto Rs. 45,000 (if you fall under the 30% tax slab). It may not be a lot of amount for you to save, but think of it like this way, 30 min of effort can save you enough money to take a small holiday, a television set and 10 Handbags (10 is an arbitrary number that came to my head – I have no clue how much they cost   ) and so many other things that you and your family always wanted.</p>
+            <p><h4><b>A penny saved is a penny earned</b></h4>
+            You save upto Rs. 45,000 (if you fall under the 30% tax slab). It may not be a lot of amount for you to save, but think of it like this way, 30 min of effort can save you enough money to take a small holiday, a television set or a high end designer Handbag.</p>
             
-            <p><b>2. Investment - </b> Some people don’t invest at all. They say its risky, they say its too much pain, they feel they can rather spend the money now. Well think of it this way, this investment is <i>Ek Teer Do Nishaan</i>. You invest a lac and a half Rupees for your future and also get Rs. 45000 to spend this year.</p>
+            <p><h4><b>Investment</b></h4> Some people don’t invest at all. They say its risky, they say its too much pain, they feel they can rather spend the money now. Well think of it this way, this investment is <i>Ek Teer Do Nishaan</i>. You invest a lac and a half Rupees for your future and also get Rs. 45000 to spend this year.</p>
             <p> “Jab kam dam mein yeh mile; toh koi kharch kyu kare, investment na kare? Maan gaye aapki paar ki Nazar aur 80C, dono ko” – leaf out of Nirma Ad, Circa ‘90s.</p>
             
-            <p><b>3. Forms a part of your retirement portfolio - </b>
+            <p><h4><b>Forms a part of your retirement portfolio</b></h4>
             It is a fact (from professional surveys and market studies) that <b>Indians save very less for their retirement</b>. Main reasons for that are: 1. Joint Family Culture, 2. <i>“I have done so much for my kids, they will pay me back during my retirement”</i>. <b>Sir! Open your eyes and Save ur back”</b>. Irrespective of whether kids / family support, it is superb feeling to be financially independent when you are retired. 80C gives you this beautiful gift of earmarking some funds for your retirement. Note: If you are 25 and thinking, there is still time to go, I have only two words for you, <b>Think Compounding!</b></p>
             </div>
 
@@ -58,6 +140,7 @@
             <div class="col-sm-12 column text-left pad_top2">
             <p>Comparison of all the tax deductible investments  are presented below, We have an obvious choice.</p> 
             <p>So, have you done your 80C investment this year?</p>
+            <div id="e_lcf" style="height: 400px; width: 100%;"></div>
 
             </div>
         </div>
