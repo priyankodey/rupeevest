@@ -73,7 +73,7 @@ section {
 
 .fixed_top {
     position: fixed;
-    top: 5.1em;
+    top: 4.5em;
     right: 0;
     left: 0;
     z-index: 1000;
@@ -268,6 +268,53 @@ section {
 .clr-blue-bk {
     background-color:#7383F8!important;
 }
+
+.clr_primary_blue {
+    color: #fff;
+    background-color: #15355C;
+    border-color: #285e8e;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    /*cursor: pointer;*/
+    -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.clr_primary_green {
+    color: #fff;
+    background-color: #143D07;
+    border-color: #285e8e;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    /*cursor: pointer;*/
+    -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
 /*=====================================
    TOP MENU STYLE SECTION
     ===================================*/
@@ -782,7 +829,7 @@ padding:30px;
  ===================================*/
 .general-subhead {
     background-color: #1c4474;
-    padding: 25px 100px 25px 100px;
+    padding: 5px 100px 15px 100px;
     color: #fff;
 }
  #request-quote {
@@ -874,6 +921,77 @@ padding:30px;
     text-align: center;
 }
 
+
+/*==========================================
+   TAX EFFICIENT INVESTING STYLES
+=====================================================*/
+
+
+.divider4 {
+    background-image: url('../assets/taxefficient_bg1.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+.textdivider4 h1 {
+    padding-top: 40px;
+    color: black;
+    font-size: 40px;
+}
+
+.textdivider4 p {
+    color: black;
+    font-size: 20px;
+}
+
+.section-divider4 {
+    z-index: 999;
+    width: 100%;
+    margin: 0px;
+    display: block;
+    max-height: 450px;
+    /*border-bottom: 2px solid #E6EAED;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-position: center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: relative;    
+    text-align: center;
+}
+
+/*==========================================
+  TOP PERFORMING FUNDS
+ =====================================================*/
+
+.tooltip_chart {
+    background-color: #f5f5f5;
+    padding:10px;
+    color:grey;
+    line-height: 1.7em;
+}
+    .tooltip_chart h3 {
+         color:#AF9BFF;
+    }
+    .tooltip_chart small {
+        color:#ff6a00;
+    }
+#top_funds_chart .panel-heading {
+    background: #000000;
+}
+
 /*==========================================
   WHAT WE OFFER STYLES
  =====================================================*/
@@ -890,10 +1008,64 @@ padding:30px;
         font-size: 12px;
     }
 
-    #offer_body h3 {
+    #offer_body h2, h3, h4, h5 {
         text-transform:capitalize;
         font-variant:small-caps;
     }
+
+
+.divider2 {
+    background: #E8F1FA;
+    background-repeat: repeat;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+.textdivider2 h3 {
+    /*padding-top: 40px;*/
+    /*color: white;*/
+    /*font-size: 40px;*/
+}
+
+.textdivider2 p {
+    /*color: white;*/
+    /*font-size: 20px;*/
+}
+
+.section-divider2 {
+    z-index: 999;
+    width: 100%;
+    display: block;
+    /*max-height: 450px;*/
+    /*border-bottom: 2px solid #E6EAED;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    /*padding-top: 10%;
+    padding-bottom: 10%*/;
+    background-position: center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: relative;    
+    text-align: center;
+}
+
+.divider3 {
+    background: #EEDBCA;
+    background-repeat: repeat;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
 
 /*==========================================
 CONTACT STYLES
@@ -1177,7 +1349,7 @@ padding: 1px;
 #o_fd::before, #o_bd::before, #o_nd::before, #o_md::before { 
   content: "";
   display: inline-block;
-  height: 225px; /* fixed header height*/
-  margin: -225px 0 0; /* negative fixed header height */
+  height: 185px; /* fixed header height*/
+  margin: -185px 0 0; /* negative fixed header height */
 }
 

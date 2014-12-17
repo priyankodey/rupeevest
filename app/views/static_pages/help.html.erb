@@ -5,17 +5,99 @@
 <!--[if (gte IE 9)|!(IE)]><!-->
 <html lang="en">
 <!--<![endif]-->
-<body style="margin-top: 225px">
-
-   <div class="general-subhead fixed_top">
-       <h2>WHAT WE OFFER</h2>
-   </div>
-     <!-- Gereral Subhead End -->
-    
-    <section>
-<html>
-  <head>
+<head>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+  var dataTable = new google.visualization.DataTable();
+  dataTable.addColumn('string', 'Funds');
+  dataTable.addColumn('number', 'Percentage');
+  dataTable.addColumn({type: 'string', role: 'annotation'});
+
+
+  // A column for custom tooltip content
+  dataTable.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
+
+  dataTable.addRows([
+    ['L&T Equity Fund', 30.6, '30.6%','<div id="media-sec"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>3 Months:</b><span> 6.1%</span><br><b>1 Year:</b><span> 50.6%</span><br><b>3 Years:</b><span> 24%</span><br><b>5 Years:</b><span> 15%</span><br><b>Since Launch:</b><span> 20.43%</span></div>'],
+
+    ['UTI Equity Fund', 40.1,'40.1%', '<div id="media-sec"><small>Launch:</small><small> May-2005</small><br><small>Corpus(Rs.Cr.):</small><small>2255.83</small><br><small>3 Months:</small><small> 6.1%</small><br><small>1 Year:</small><small> 50.6%</small><br><small>3 Years:</small><small> 24%</small><br><small>5 Years:</small><small> 15%</small><br><small>Since Launch:</small><small> 20.43%</small></div>'],
+
+    ['HDFC Top 200 Fund', 45.7,'45.7%', '<div id="media-sec"><h6>Launch: May-2005</h6><h6>Corpus(Rs.Cr.):2255.83</h6><h6>3 Months: 6.1%</h6><h6>1 Year: 50.6%</h6><h6>3 Years: 24%</h6><h6>5 Years: 15%</h6><h6>Since Launch: 20.43%</h6></div>'],
+
+    ['Birla Sun Life Top 100 Fund ', 50.9,'50.9%', '<div id="media-sec"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>3 Months:</b><span> 6.1%</span><br><b>1 Year:</b><span> 50.6%</span><br><b>3 Years:</b><span> 24%</span><br><b>5 Years:</b><span> 15%</span><br><b>Since Launch:</b><span> 20.43%</span></div>'],
+    ['BNP Paribas Equity Fund', 55.9,'55.9%', '<div id="media-sec"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>3 Months:</b><span> 6.1%</span><br><b>1 Year:</b><span> 50.6%</span><br><b>3 Years:</b><span> 24%</span><br><b>5 Years:</b><span> 15%</span><br><b>Since Launch:</b><span> 20.43%</span></div>']
+  ]);
+
+var view = new google.visualization.DataView(dataTable);
+    view.setColumns([0, 1, 3, {
+        type: 'number',        
+        calc: function (dt, row) {
+            return 0;
+        }
+    },2]);
+
+  var options = {
+    title: 'LARGE CAP FUNDS',
+    hAxis: {title: 'List of Funds', titleTextStyle: {color: 'black'}},
+    vAxis: {title: 'Return Percentage', titleTextStyle: {color: 'black'}, gridlines: {color: 'red', count: 4}, minValue: 0},
+    tooltip: {isHtml: true},
+    legend: 'none',
+    isStacked: true,
+    annotations: {
+          textStyle: {
+        //fontName: 'Times-Roman',
+        // fontSize: 18,
+        // bold: true,
+        // italic: true,
+          color: '#fff',     // The color of the text.
+          auraColor: 'transparent', // The color of the text outline.
+        //opacity: 0.8          // The transparency of the text.
+        }
+      }
+  };
+  var chart = new google.visualization.ColumnChart(document.getElementById('tooltip'));
+  chart.draw(view, options);
+}
+
+
+    </script>
+
+
+
+
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+
+  var data = google.visualization.arrayToDataTable([
+    ['Funds', 'Percentage', { role: 'annotation' }],
+    ['ICICI',  58, '58%'],
+    ['AXIS',  40, '40%'],
+    ['HDFC',  52, '52%'],
+    ['UTI',  50, '50%']
+  ]);
+
+  var options = {
+    title: 'LARGE CAP FUNDS',titleTextStyle: {color: 'RED'},
+    hAxis: {title: 'List of Funds', titleTextStyle: {color: 'black'}},
+    vAxis: {title: 'Return Percentage', titleTextStyle: {color: 'black'}},
+
+  };
+
+  var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+
+  chart.draw(data, options);
+
+}
+
+
+    </script>
+
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
@@ -32,18 +114,36 @@
         var options = {
           title: 'My Daily Activities',
           is3D: true,
+          tooltip: { isHtml: true }
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        
+    google.visualization.events.addListener(chart, 'onmouseover', function(hover){
+        if(hover){
+            $('.google-visualization-tooltip-item:eq(1)').remove() // remove the other info
+        }
+    })
+        
+        
         chart.draw(data, options);
       }
     </script>
+
+  
   </head>
-  <body>
+
+<body>  
+     <!-- Gereral Subhead End -->
+    
+    <div id="tooltip" style="width: 900px; height: 500px;"></div>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
     <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+
   </body>
-</html>  
-    </section>
+</html>
+ 
+  
 
     
 

@@ -91,6 +91,9 @@ class StaticPagesController < ApplicationController
   def details    
   end
 
+  def top_funds    
+  end
+
   def investor_params
       params.require(:investor).permit(:name, :email, :number)
   end
