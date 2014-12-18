@@ -16,37 +16,19 @@ function drawChart() {
   dataTable.addColumn('number', 'Percentage');
   dataTable.addColumn({type: 'string', role: 'annotation'});
   dataTable.addColumn({type: 'string', role: 'style'});
-  dataTable.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
 
   dataTable.addRows([
-    ['ELSS', 21.0, '21.0%','#FF8B00',
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
-    ],
-
-    ['ULIP', 15.6,'15.6%', '#FF2D00',
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
-    ],
-
-    ['FD', 9.0,'9.0%','#0C8E86', 
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
-    ],
-
-    ['NSC', 8.8,'8.8%','#0779CF',
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
-    ],
-    ['PPF', 8.7,'8.7%','#27486B',
-     '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
-     ],
-    ['NABARD', 8.3,'8.3%','#8B008B',
-     '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
-     ],
-     ['LIC', 6.0,'6.0%','#FF00FF',
-     '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
-     ]
+    ['ELSS', 21.0, '21.0%','#FF8B00'],
+    ['ULIP', 15.6,'15.6%', '#FF2D00'],
+    ['FD', 9.0,'9.0%','#0C8E86'],
+    ['NSC', 8.8,'8.8%','#0779CF'],
+    ['PPF', 8.7,'8.7%','#27486B'],
+    ['NABARD', 8.3,'8.3%','#8B008B'],
+    ['LIC', 6.0,'6.0%','#FF00FF']
   ]);
 
 var view = new google.visualization.DataView(dataTable);
-    view.setColumns([0, 1, 3, 4, {
+    view.setColumns([0, 1, 3, {
         type: 'number',        
         calc: function (dt, row) {
             return 0;
@@ -55,10 +37,11 @@ var view = new google.visualization.DataView(dataTable);
 
   var options = {
     title: '5 Years Return', titleTextStyle: {color: '#3366CC'},
+    titlePosition: 'center',
     hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC'},
             textStyle: {
                     fontName: 'Comic Sans MS',
-                     fontSize: 12,
+                     fontSize: 10,
                      bold: true,
                     // italic: true,
                       color: '#00000',     // The color of the text.
@@ -67,14 +50,14 @@ var view = new google.visualization.DataView(dataTable);
               },
 
     vAxis: {gridlines: {color: 'transparent', count: 0}, minValue: 0},
-    tooltip: {isHtml: true},
+    tooltip: {trigger: 'none'},
     legend: 'none',
     backgroundColor: { fill:'#ccc' },
     isStacked: true,
     annotations: {
           textStyle: {
         fontName: 'Lucida Fax',
-         fontSize: 16,
+         fontSize: 10,
          bold: true,
         // italic: true,
           color: '#fff',     // The color of the text.
@@ -115,8 +98,8 @@ var view = new google.visualization.DataView(dataTable);
             <p>It is a section of the Indian Income Tax Act which allows you to reduce your taxable income by upto Rs. 1,50,000 (savings of Rs. 45,000) by investing in a certified 80C Tax Saving product. Some of you might be thinking, I earn a lot already / who will take so much pain / I have a valid reason n all that. Trust me, irrespective of how much you earn, how much you save, how much you invest, <b>You Should Always Save Tax. Don’t Evade, Save!</b></p>
             </div>
             <div class="col-sm-6 column text-justify">
-                <iframe class="vedio-style" src="//www.youtube.com/embed/0Z6kLqXTvBc?rel=0" ></iframe>
-                
+                <div id="e_lcf" style="height: 250px; width: 100%;"></div>
+                <p class="font_p83">Comparison of all the tax deductible investments  are presented above, We have an obvious choice.</p> 
             </div>
         </div>
         <div class="row pad_top4"> 
@@ -138,9 +121,8 @@ var view = new google.visualization.DataView(dataTable);
               <img src="/assets/taxefficient_img1.jpg" class="image_responsive" alt="Bonds" />
             </div>
             <div class="col-sm-12 column text-left pad_top2">
-            <p>Comparison of all the tax deductible investments  are presented below, We have an obvious choice.</p> 
-            <p>So, have you done your 80C investment this year?</p>
-            <div id="e_lcf" style="height: 400px; width: 100%;"></div>
+            
+            <p class="text-center"><b>So, have you done your 80C investment this year?</b></p>
 
             </div>
         </div>
