@@ -244,7 +244,7 @@ var view = new google.visualization.DataView(dataTable);
     annotations: {
           textStyle: {
           fontName: 'Lucida Fax',
-          fontSize: 16,
+          fontSize: 14,
           bold: true,
           color: '#fff', 
           auraColor: 'transparent', 
@@ -431,23 +431,26 @@ function drawChart() {
   dataTable.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
 
   dataTable.addRows([
-    ['L&T Equity Fund', 30.6, '30.6%','#FF8B00',
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['Birla Sun Life Income Plus', 15.97, '15.97%','#FF8B00',
+    '<div class="tooltip_chart"><b>Launch:</b><span> Oct-1995</span><br><b>Corpus(Rs.Cr.):</b><span>3316.19</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 7.07%</span><br>1 Year:<span class="pull-right"> 15.97%</span><br>3 Years:<span class="pull-right"> 9.43%</span><br>5 Years:<span class="pull-right"> 8.01%</span><br>Since Launch:<span class="pull-right"> 9.91%</span></div>'
     ],
 
-    ['UTI Equity Fund', 40.1,'40.1%', '#FF2D00',
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['HDFC High Interest Fund - Dynamic Plan', 16.11,'16.11%', '#FF2D00',
+    '<div class="tooltip_chart"><b>Launch:</b><span> Apr-1997</span><br><b>Corpus(Rs.Cr.):</b><span>927.69</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.67%</span><br>1 Year:<span class="pull-right"> 16.11%</span><br>3 Years:<span class="pull-right"> 10.25%</span><br>5 Years:<span class="pull-right"> 8.70%</span><br>Since Launch:<span class="pull-right"> 9.12%</span></div>'
     ],
 
-    ['HDFC Top 200 Fund', 45.7,'45.7%','#0C8E86', 
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['ICICI Prudential Income Plan - Regular Plan', 17.09,'17.09%','#0C8E86', 
+    '<div class="tooltip_chart"><b>Launch:</b><span> Jul-1998</span><br><b>Corpus(Rs.Cr.):</b><span>3126.76</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.81%</span><br>1 Year:<span class="pull-right"> 17.09%</span><br>3 Years:<span class="pull-right"> 8.83%</span><br>5 Years:<span class="pull-right"> 7.34%</span><br>Since Launch:<span class="pull-right"> 9.20%</span></div>'
     ],
 
-    ['Birla Sun Life Top 100 Fund ', 50.9,'50.9%','#0779CF',
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['IDFC Dynamic Bond Fund - Regular Plan', 15.75,'15.75%','#0779CF',
+    '<div class="tooltip_chart"><b>Launch:</b><span> Dec-2008</span><br><b>Corpus(Rs.Cr.):</b><span>3323.69</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 7.05%</span><br>1 Year:<span class="pull-right"> 15.75%</span><br>3 Years:<span class="pull-right"> 10.37%</span><br>5 Years:<span class="pull-right"> 9.19%</span><br>Since Launch:<span class="pull-right"> 8.50%</span></div>'
     ],
-    ['BNP Paribas Equity Fund', 55.9,'55.9%','#27486B',
-     '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['IDFC Super Saver Income Fund - Investment Plan - Regular Plan', 15.53,'15.53%','#27486B',
+     '<div class="tooltip_chart"><b>Launch:</b><span> Jul-2000</span><br><b>Corpus(Rs.Cr.):</b><span>1598.97</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.97%</span><br>1 Year:<span class="pull-right"> 15.53%</span><br>3 Years:<span class="pull-right"> 9.94%</span><br>5 Years:<span class="pull-right"> 8.47%</span><br>Since Launch:<span class="pull-right"> 8.63%</span></div>'
+     ],
+    ['Reliance Dynamic Bond Fund', 15.23,'15.23%','#27486B',
+     '<div class="tooltip_chart"><b>Launch:</b><span> Nov-2004</span><br><b>Corpus(Rs.Cr.):</b><span>4277.85</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.58%</span><br>1 Year:<span class="pull-right"> 15.23%</span><br>3 Years:<span class="pull-right"> 10.41%</span><br>5 Years:<span class="pull-right"> 9.17%</span><br>Since Launch:<span class="pull-right"> 6.24%</span></div>'
      ]
   ]);
 
@@ -508,23 +511,29 @@ function drawChart() {
   dataTable.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
 
   dataTable.addRows([
-    ['L&T Equity Fund', 30.6, '30.6%','#FF8B00',
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['Birla Sun Life Medium Term Plan', 11.93, '11.93%','#FF8B00',
+    '<div class="tooltip_chart"><b>Launch:</b><span> May-2009</span><br><b>Corpus(Rs.Cr.):</b><span>3536.19</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.42%</span><br>1 Year:<span class="pull-right"> 11.93%</span><br>3 Years:<span class="pull-right"> 11.04%</span><br>5 Years:<span class="pull-right"> 9.66%</span><br>Since Launch:<span class="pull-right"> 9.17%</span></div>'
     ],
 
-    ['UTI Equity Fund', 40.1,'40.1%', '#FF2D00',
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['Birla Sun Life Short Term Opportunities Fund', 11.28,'11.28%', '#FF2D00',
+    '<div class="tooltip_chart"><b>Launch:</b><span> Jun-2008</span><br><b>Corpus(Rs.Cr.):</b><span>3967.31</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.41%</span><br>1 Year:<span class="pull-right"> 11.28%</span><br>3 Years:<span class="pull-right"> 10.84%</span><br>5 Years:<span class="pull-right"> 9.56%</span><br>Since Launch:<span class="pull-right"> 9.32%</span></div>'
     ],
 
-    ['HDFC Top 200 Fund', 45.7,'45.7%','#0C8E86', 
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['Franklin India Short Term Income Plan - Retail Plan', 11.5,'11.5%','#0C8E86', 
+    '<div class="tooltip_chart"><b>Launch:</b><span> Jan-2002</span><br><b>Corpus(Rs.Cr.):</b><span>10078.89</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.41%</span><br>1 Year:<span class="pull-right"> 11.50%</span><br>3 Years:<span class="pull-right"> 10.14%</span><br>5 Years:<span class="pull-right"> 8.99%</span><br>Since Launch:<span class="pull-right"> 8.28%</span></div>'
     ],
 
-    ['Birla Sun Life Top 100 Fund ', 50.9,'50.9%','#0779CF',
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['HDFC Corporate Debt Opportunities Fund - Regular Plan', 0 ,'-','#0779CF',
+    '<div class="tooltip_chart"><b>Launch:</b><span> Mar-2014</span><br><b>Corpus(Rs.Cr.):</b><span>3291.05</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.84%</span><br>1 Year:<span class="pull-right"> - </span><br>3 Years:<span class="pull-right"> - </span><br>5 Years:<span class="pull-right"> - </span><br>Since Launch:<span class="pull-right"> 9.42%</span></div>'
     ],
-    ['BNP Paribas Equity Fund', 55.9,'55.9%','#27486B',
-     '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['ICICI Prudential Corporate Bond Fund - Regular Plan', 12.22,'12.22%','#27486B',
+     '<div class="tooltip_chart"><b>Launch:</b><span> Sep-2004</span><br><b>Corpus(Rs.Cr.):</b><span>2971.58</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.71%</span><br>1 Year:<span class="pull-right"> 12.22%</span><br>3 Years:<span class="pull-right"> 9.24%</span><br>5 Years:<span class="pull-right"> 8.15%</span><br>Since Launch:<span class="pull-right"> 7.39%</span></div>'
+     ],
+    ['Pramerica Credit Opportunities Fund', 10.88,'10.88%','#27486B',
+     '<div class="tooltip_chart"><b>Launch:</b><span> Oct-2011</span><br><b>Corpus(Rs.Cr.):</b><span>266.52</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.56%</span><br>1 Year:<span class="pull-right"> 10.88%</span><br>3 Years:<span class="pull-right"> 9.57%</span><br>5 Years:<span class="pull-right"> - </span><br>Since Launch:<span class="pull-right"> 9.70%</span></div>'
+     ],
+    ['Reliance Short Term Fund', 11.17,'11.17%','#27486B',
+     '<div class="tooltip_chart"><b>Launch:</b><span> Dec-2002</span><br><b>Corpus(Rs.Cr.):</b><span>5178.89</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.34%</span><br>1 Year:<span class="pull-right"> 11.17%</span><br>3 Years:<span class="pull-right"> 9.38%</span><br>5 Years:<span class="pull-right"> 8.26%</span><br>Since Launch:<span class="pull-right"> 8.11%</span></div>'
      ]
   ]);
 
@@ -585,23 +594,26 @@ function drawChart() {
   dataTable.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
 
   dataTable.addRows([
-    ['L&T Equity Fund', 30.6, '30.6%','#FF8B00',
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['Birla Sun Life Savings Fund', 9.68, '9.68%','#FF8B00',
+    '<div class="tooltip_chart"><b>Launch:</b><span> Apr-2003</span><br><b>Corpus(Rs.Cr.):</b><span>12388.75</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.36%</span><br>1 Year:<span class="pull-right"> 9.68%</span><br>3 Years:<span class="pull-right"> 9.66%</span><br>5 Years:<span class="pull-right"> 8.75%</span><br>Since Launch:<span class="pull-right"> 7.39%</span></div>'
     ],
 
-    ['UTI Equity Fund', 40.1,'40.1%', '#FF2D00',
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['Birla Sun Life Treasury Optimizer Fund - Regular Plan', 12.26,'12.26%', '#FF2D00',
+    '<div class="tooltip_chart"><b>Launch:</b><span> Apr-2008</span><br><b>Corpus(Rs.Cr.):</b><span>2760.66</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.86%</span><br>1 Year:<span class="pull-right"> 12.26%</span><br>3 Years:<span class="pull-right"> 10.59%</span><br>5 Years:<span class="pull-right"> 9.32%</span><br>Since Launch:<span class="pull-right"> 8.74%</span></div>'
     ],
 
-    ['HDFC Top 200 Fund', 45.7,'45.7%','#0C8E86', 
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['Franklin India Ultra Short Bond Fund - Super Institutional Plan', 10.06,'10.06%','#0C8E86', 
+    '<div class="tooltip_chart"><b>Launch:</b><span> Dec-2007</span><br><b>Corpus(Rs.Cr.):</b><span>7225.92</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.39%</span><br>1 Year:<span class="pull-right"> 10.06%</span><br>3 Years:<span class="pull-right"> 10.10%</span><br>5 Years:<span class="pull-right"> 9.07%</span><br>Since Launch:<span class="pull-right"> 8.79%</span></div>'
     ],
 
-    ['Birla Sun Life Top 100 Fund ', 50.9,'50.9%','#0779CF',
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['Kotak Flexi Debt - Plan A', 10.27,'10.27%','#0779CF',
+    '<div class="tooltip_chart"><b>Launch:</b><span> May-2008</span><br><b>Corpus(Rs.Cr.):</b><span>401.61</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.04%</span><br>1 Year:<span class="pull-right"> 10.27%</span><br>3 Years:<span class="pull-right"> 9.60%</span><br>5 Years:<span class="pull-right"> 8.73%</span><br>Since Launch:<span class="pull-right"> 8.40%</span></div>'
     ],
-    ['BNP Paribas Equity Fund', 55.9,'55.9%','#27486B',
-     '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['Religare Invesco Credit Opportunities Fund', 9.47,'9.47%','#27486B',
+     '<div class="tooltip_chart"><b>Launch:</b><span> Aug-2009</span><br><b>Corpus(Rs.Cr.):</b><span>2429.74</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.21%</span><br>1 Year:<span class="pull-right"> 9.47%</span><br>3 Years:<span class="pull-right"> 9.77%</span><br>5 Years:<span class="pull-right"> 8.83%</span><br>Since Launch:<span class="pull-right"> 8.65%</span></div>'
+     ],
+     ['Taurus Short Term Income Fund', 9.8,'9.8%','#BC8F8F',
+     '<div class="tooltip_chart"><b>Launch:</b><span> Apr-2010</span><br><b>Corpus(Rs.Cr.):</b><span>155.04</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.30%</span><br>1 Year:<span class="pull-right"> 9.80%</span><br>3 Years:<span class="pull-right"> 10.13%</span><br>5 Years:<span class="pull-right"> - </span><br>Since Launch:<span class="pull-right">9.50%</span></div>'
      ]
   ]);
 
@@ -662,23 +674,23 @@ function drawChart() {
   dataTable.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
 
   dataTable.addRows([
-    ['L&T Equity Fund', 30.6, '30.6%','#FF8B00',
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['Birla Sun Life Cash Plus', 9.21, '9.21%','#FF8B00',
+    '<div class="tooltip_chart"><b>Launch:</b><span> Mar-2004</span><br><b>Corpus(Rs.Cr.):</b><span>17931</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.15%</span><br>1 Year:<span class="pull-right"> 9.21%</span><br>3 Years:<span class="pull-right"> 9.41%</span><br>5 Years:<span class="pull-right"> 8.49%</span><br>Since Launch:<span class="pull-right"> 7.58%</span></div>'
     ],
 
-    ['UTI Equity Fund', 40.1,'40.1%', '#FF2D00',
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['Escorts Liquid Fund', 9.55,'9.55%', '#FF2D00',
+    '<div class="tooltip_chart"><b>Launch:</b><span> Sep-2005</span><br><b>Corpus(Rs.Cr.):</b><span>206.00</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.29%</span><br>1 Year:<span class="pull-right"> 9.55%</span><br>3 Years:<span class="pull-right"> 9.91%</span><br>5 Years:<span class="pull-right"> 9.16%</span><br>Since Launch:<span class="pull-right"> 8.48%</span></div>'
     ],
 
-    ['HDFC Top 200 Fund', 45.7,'45.7%','#0C8E86', 
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['Franklin India Treasury Management Account Fund - Super Institutional Plan', 9.24,'9.24%','#0C8E86', 
+    '<div class="tooltip_chart"><b>Launch:</b><span> Sep-2005</span><br><b>Corpus(Rs.Cr.):</b><span>5988</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.17%</span><br>1 Year:<span class="pull-right"> 9.24%</span><br>3 Years:<span class="pull-right"> 9.44%</span><br>5 Years:<span class="pull-right"> 8.52%</span><br>Since Launch:<span class="pull-right"> 7.95%</span></div>'
     ],
 
-    ['Birla Sun Life Top 100 Fund ', 50.9,'50.9%','#0779CF',
-    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['ICICI Prudential Liquid Plan - Regular Plan', 9.14,'9.14%','#0779CF',
+    '<div class="tooltip_chart"><b>Launch:</b><span> Nov-2005</span><br><b>Corpus(Rs.Cr.):</b><span>23932</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.15%</span><br>1 Year:<span class="pull-right"> 9.14%</span><br>3 Years:<span class="pull-right"> 9.36%</span><br>5 Years:<span class="pull-right"> 8.46%</span><br>Since Launch:<span class="pull-right"> 8.04%</span></div>'
     ],
-    ['BNP Paribas Equity Fund', 55.9,'55.9%','#27486B',
-     '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.1%</span><br>1 Year:<span class="pull-right"> 50.6%</span><br>3 Years:<span class="pull-right"> 24%</span><br>5 Years:<span class="pull-right"> 15%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ['JM High Liquidity Fund', 9.15,'9.15%','#27486B',
+     '<div class="tooltip_chart"><b>Launch:</b><span> Dec-1997</span><br><b>Corpus(Rs.Cr.):</b><span>4807</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.17%</span><br>1 Year:<span class="pull-right"> 9.15%</span><br>3 Years:<span class="pull-right"> 9.34%</span><br>5 Years:<span class="pull-right"> 8.44%</span><br>Since Launch:<span class="pull-right"> 8.05%</span></div>'
      ]
   ]);
 
@@ -753,7 +765,7 @@ var view = new google.visualization.DataView(dataTable);
                 <li><a href="#panel_E_MCF" data-toggle="tab">Mid And Small Cap Funds</a></li>
                 <li><a href="#panel_E_ELSS" data-toggle="tab">ELSS Funds</a></li>
                 <li><a href="#panel_E_SF" data-toggle="tab">Sectoral Funds</a></li>
-                <li><a href="#panel_E_IF" data-toggle="tab">International Funds</a></li>
+                <!-- <li><a href="#panel_E_IF" data-toggle="tab">International Funds</a></li> -->
                 <li class="clr_primary_green"><span data-toggle="tab"><h4>Debt</h4></span></li>
                 <li><a href="#panel_D_LTDF" data-toggle="tab">Long Term Debt Funds</a></li>
                 <li><a href="#panel_D_STDF" data-toggle="tab">Short Term Debt Funds</a></li>
