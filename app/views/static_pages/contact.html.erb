@@ -37,7 +37,21 @@
                     <a href=" https://www.pinterest.com/rupeevest/" target="_blank"><i class="fa fa-pinterest-square fa-3x color-pinterest"></i></a>
                 </div>
                 <div class="col-lg-6 col-md-6  col-sm-12">
-                    <h3>GET IN TOUCH WITH US</h3>                    
+                    <h3>GET IN TOUCH WITH US</h3> 
+                    <%= form_for @contact do |f| %>
+                      <%= f.label :name %>:
+                      <%= f.text_field :name %><br />
+
+                      <%= f.label :email %>:
+                      <%= f.text_field :email %><br />
+
+                      <%= f.label :phone %>:
+                      <%= f.text_field :phone %><br />
+                      <%= f.label :message %>:
+                      <%= f.text_field :message %><br />
+
+                      <%= f.submit %>
+                    <% end %>
                     <form>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">

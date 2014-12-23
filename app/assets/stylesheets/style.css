@@ -41,6 +41,14 @@ section {
     padding-top: 4em;
 }
 
+.pad_bot1 {
+   padding-bottom: 1em;
+}
+
+.pad_bot2 {
+    padding-bottom: 2em;
+}
+
 .pad-bot {
    padding-bottom: 12em;
 }
@@ -60,6 +68,14 @@ section {
 
 .pad_modal {
     padding: 6em 3em 0 3em;
+}
+
+.mar_top_p5 {
+    margin-top: 0.5em;
+}
+
+.mar_top_mp5 {
+    margin-top: -0.5em;
 }
 
 .font_1p5 {
@@ -242,6 +258,91 @@ section {
     margin: 5.9em 0;
     width: 105px;
     height: 105px;
+    border-radius: 50%;
+    text-align: center;    
+    border: .1em solid rgb(200, 200, 216);
+    color: #ffffff;
+    background: #449239;
+    box-shadow: 0 0 0 0.7em #143D07, 0 0 0 0.5em #0098f9;
+    padding-top:0.20em;
+    position: relative;
+    z-index: 1;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration:2s;
+    -o-transition-duration:2s;
+}
+
+
+
+/*Effect for Equity. (Eq & Debt in horizontal) */
+.back_effect_eq {
+    display: inline-block;
+    /*cursor: pointer;*/
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;    
+    border: .1em solid rgb(200, 200, 216);
+    color: #ffffff;
+    background: #15355C;
+    box-shadow: 0 0 0 0.7em #5189BD, 0 0 0 0.5em #0098f9;
+    padding-top:0.20em;
+    position: relative;
+    z-index: 1;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration:2s;
+    -o-transition-duration:2s;
+}
+
+.back_effect_eq:hover {
+    display: inline-block;
+    /*cursor: pointer;*/
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;    
+    border: .1em solid rgb(200, 200, 216);
+    color: #ffffff;
+    background: #5189BD;
+    box-shadow: 0 0 0 0.7em #15355C, 0 0 0 0.5em #0098f9;
+    padding-top:0.20em;
+    position: relative;
+    z-index: 1;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration:2s;
+    -o-transition-duration:2s;
+}
+
+/*Effect for Debt. (Eq & Debt in horizontal)*/
+
+.back_effect_dt {
+    display: inline-block;
+    /*cursor: pointer;*/
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-align: center;    
+    border: .1em solid rgb(200, 200, 216);
+    color: #ffffff;
+    background: #143D07;
+    box-shadow: 0 0 0 0.7em #449239, 0 0 0 0.5em #0098f9;
+    padding-top:0.20em;
+    position: relative;
+    z-index: 1;
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration:2s;
+    -o-transition-duration:2s;
+}
+
+.back_effect_dt:hover {
+    display: inline-block;
+    /*cursor: pointer;*/
+    margin: 10px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     text-align: center;    
     border: .1em solid rgb(200, 200, 216);
@@ -808,7 +909,7 @@ padding:30px;
     font-size:14px;
 }
 #blog-footer-div {
-     border-right: 1px solid #3D3577;
+     border-right: 0px solid #3D3577;
       padding-right:10px;
 }
 #footser-end {
@@ -872,7 +973,7 @@ padding:30px;
    TEAM MEMBER STYLES
     =====================================================*/
 #just-middle-row {
-    background-color:#d41010;
+    background-color: #15355C;
     color:#fff;
     text-align:center;
 }
@@ -961,7 +1062,7 @@ padding:30px;
     background-size: 100%;
 }
 .textdivider4 h1 {
-    padding-top: 40px;
+    padding-top: 130px;
     color: #ffffff;
     font-size: 40px;
 }
@@ -1371,22 +1472,18 @@ padding: 1px;
 /* bootstrap hack end  */
 
 
-#o_fd::before, #o_bd::before, #o_nd::before, #o_md::before { 
+
+#o_fd::before, #o_bd::before, #o_nd::before, #o_md::before, #o_eq::before, #o_dt::before { 
   content: "";
   display: inline-block;
   height: 185px; /* fixed header height*/
   margin: -185px 0 0; /* negative fixed header height */
 }
 
-
-#id_gradient {
-    background: #87ffef; /* Old browsers */
-background: -moz-linear-gradient(45deg,  #87ffef 18%, #f7ee76 37%, #f1ff30 62%, #f1ff30 62%, #93360b 89%); /* FF3.6+ */
-background: -webkit-gradient(linear, left bottom, right top, color-stop(18%,#87ffef), color-stop(37%,#f7ee76), color-stop(62%,#f1ff30), color-stop(62%,#f1ff30), color-stop(89%,#93360b)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(45deg,  #87ffef 18%,#f7ee76 37%,#f1ff30 62%,#f1ff30 62%,#93360b 89%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(45deg,  #87ffef 18%,#f7ee76 37%,#f1ff30 62%,#f1ff30 62%,#93360b 89%); /* Opera 11.10+ */
-background: -ms-linear-gradient(45deg,  #87ffef 18%,#f7ee76 37%,#f1ff30 62%,#f1ff30 62%,#93360b 89%); /* IE10+ */
-background: linear-gradient(45deg,  #87ffef 18%,#f7ee76 37%,#f1ff30 62%,#f1ff30 62%,#93360b 89%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87ffef', endColorstr='#93360b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+#testi::before {
+  content: "";
+  display: inline-block;
+  height: 55px; /* fixed header height*/
+  margin: -55px 0 0; /* negative fixed header height */
 }
+
