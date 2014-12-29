@@ -6,6 +6,7 @@
 <html lang="en">
 <!--<![endif]-->
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
     <link href="/assets/style.css" rel="stylesheet" />
     <!--  Jquery Core Script -->
     <script src="/assets/jquery-1.10.2.js"></script>
@@ -32,22 +33,22 @@ function drawChart() {
   dataTable.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
 
   dataTable.addRows([
-    ['L&T Equity Fund', 50.6, '50.6%','#FF8B00',
+    ['L&T Equity Fund', 50.60, '50.60%','#FF8B00',
     '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.10%</span><br>1 Year:<span class="pull-right"> 50.60%</span><br>3 Years:<span class="pull-right"> 24.00%</span><br>5 Years:<span class="pull-right"> 15.00%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
     ],
 
-    ['UTI Equity Fund', 49.1,'49.1%', '#FF2D00',
+    ['UTI Equity Fund', 49.10,'49.10%', '#FF2D00',
     '<div class="tooltip_chart"><b>Launch:</b><span> May-1992</span><br><b>Corpus(Rs.Cr.):</b><span>3275.59</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 5.70%</span><br>1 Year:<span class="pull-right"> 49.10%</span><br>3 Years:<span class="pull-right"> 26.60%</span><br>5 Years:<span class="pull-right"> 15.60%</span><br>Since Launch:<span class="pull-right"> 13.02%</span></div>'
     ],
 
-    ['HDFC Top 200 Fund', 48.7,'48.7%','#0C8E86', 
+    ['HDFC Top 200 Fund', 48.70,'48.70%','#0C8E86', 
     '<div class="tooltip_chart"><b>Launch:</b><span> Sep-1996</span><br><b>Corpus(Rs.Cr.):</b><span>12276.81</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.40%</span><br>1 Year:<span class="pull-right"> 48.70%</span><br>3 Years:<span class="pull-right"> 24.90%</span><br>5 Years:<span class="pull-right"> 14.20%</span><br>Since Launch:<span class="pull-right"> 22.77%</span></div>'
     ],
 
-    ['Birla Sun Life Top 100 Fund ', 50.9,'50.9%','#0779CF',
+    ['Birla Sun Life Top 100 Fund ', 50.90,'50.90%','#0779CF',
     '<div class="tooltip_chart"><b>Launch:</b><span> Sep-2005</span><br><b>Corpus(Rs.Cr.):</b><span>691.15</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 7.30%</span><br>1 Year:<span class="pull-right"> 50.90%</span><br>3 Years:<span class="pull-right"> 29.00%</span><br>5 Years:<span class="pull-right"> 16.00%</span><br>Since Launch:<span class="pull-right"> 17.07%</span></div>'
     ],
-    ['BNP Paribas Equity Fund', 47.3,'47.3%','#27486B',
+    ['BNP Paribas Equity Fund', 47.30,'47.30%','#27486B',
      '<div class="tooltip_chart"><b>Launch:</b><span> Sep-2004</span><br><b>Corpus(Rs.Cr.):</b><span>372.22</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 4.60%</span><br>1 Year:<span class="pull-right"> 47.30%</span><br>3 Years:<span class="pull-right"> 26.60%</span><br>5 Years:<span class="pull-right"> 15.30%</span><br>Since Launch:<span class="pull-right"> 19.72%</span></div>'
      ]
   ]);
@@ -61,10 +62,10 @@ var view = new google.visualization.DataView(dataTable);
     },2]);
 
   var options = {
-    title: '1 Year Return', titleTextStyle: {color: '#ffffff'},
-    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC'},
+    title: '1 Year Return', titleTextStyle: {color: '#ffffff', fontName: 'Walter Turncoat'},
+    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC', fontName: 'Walter Turncoat'},
             textStyle: {
-                    fontName: 'Comic Sans MS',
+                    fontName: 'Walter Turncoat',
                      fontSize: 10,
                     // bold: true,
                     // italic: true,
@@ -80,9 +81,9 @@ var view = new google.visualization.DataView(dataTable);
     isStacked: true,
     annotations: {
           textStyle: {
-        fontName: 'Lucida Fax',
+        fontName: 'Walter Turncoat',
          fontSize: 16,
-         bold: true,
+         bold: false,
         // italic: true,
           color: '#fff',     // The color of the text.
           auraColor: 'transparent', // The color of the text outline.
@@ -92,6 +93,7 @@ var view = new google.visualization.DataView(dataTable);
   };
   var chart = new google.visualization.ColumnChart(document.getElementById('e_lcf'));
   chart.draw(view, options);
+   $("text:contains(" + options.title + ")").attr({'x':'365', 'y':'50'})
 }
 
 
@@ -129,7 +131,7 @@ function drawChart() {
     '<div class="tooltip_chart"><b>Launch:</b><span> Jun-2007</span><br><b>Corpus(Rs.Cr.):</b><span>1682.46</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 9.43%</span><br>1 Year:<span class="pull-right"> 102.75%</span><br>3 Years:<span class="pull-right"> 38.62%</span><br>5 Years:<span class="pull-right"> 25.36%</span><br>Since Launch:<span class="pull-right"> 17.68%</span></div>'
     ],
 
-    ['Franklin India Smaller Companies Fund', 85.86,'85.86%','#0779CF',
+    ['Franklin India\nSmaller Companies Fund', 85.86,'85.86%','#0779CF',
     '<div class="tooltip_chart"><b>Launch:</b><span> Jan-2006</span><br><b>Corpus(Rs.Cr.):</b><span>1574.6</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.82%</span><br>1 Year:<span class="pull-right"> 85.86%</span><br>3 Years:<span class="pull-right"> 44.22%</span><br>5 Years:<span class="pull-right"> 23.06%</span><br>Since Launch:<span class="pull-right"> 14.80%</span></div>'
     ],
     ['ICICI Prudential Value Discovery Fund - Regular Plan', 72.66,'72.66%','#27486B',
@@ -146,10 +148,10 @@ var view = new google.visualization.DataView(dataTable);
     },2]);
 
   var options = {
-    title: '1 Year Return', titleTextStyle: {color: '#ffffff'},
-    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC'},
+    title: '1 Year Return', titleTextStyle: {color: '#ffffff', fontName: 'Walter Turncoat'},
+    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC', fontName: 'Walter Turncoat'},
             textStyle: {
-                    fontName: 'Comic Sans MS',
+                    fontName: 'Walter Turncoat',
                     fontSize: 10,                    
                     color: '#fff',                           
                     }
@@ -162,9 +164,9 @@ var view = new google.visualization.DataView(dataTable);
     isStacked: true,
     annotations: {
           textStyle: {
-          fontName: 'Lucida Fax',
-          fontSize: 14,
-          bold: true,
+          fontName: 'Walter Turncoat',
+          fontSize: 16,
+          bold: false,
           color: '#fff', 
           auraColor: 'transparent', 
         
@@ -173,6 +175,7 @@ var view = new google.visualization.DataView(dataTable);
   };
   var chart = new google.visualization.ColumnChart(document.getElementById('e_mcf'));
   chart.draw(view, options);
+  $("text:contains(" + options.title + ")").attr({'x':'365', 'y':'50'})
 }
 
 
@@ -195,7 +198,7 @@ function drawChart() {
   dataTable.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
 
   dataTable.addRows([
-    ['Axis Long Term Equity Fund', 62.6, '62.6%','#FF8B00',
+    ['Axis Long Term Equity Fund', 62.60, '62.60%','#FF8B00',
     '<div class="tooltip_chart"><b>Launch:</b><span> Dec-2009</span><br><b>Corpus(Rs.Cr.):</b><span>3199.00</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.01%</span><br>1 Year:<span class="pull-right"> 62.60%</span><br>3 Years:<span class="pull-right"> 34.63%</span><br>5 Years:<span class="pull-right"> - </span><br>Since Launch:<span class="pull-right"> 22.41%</span></div>'
     ],
 
@@ -210,10 +213,10 @@ function drawChart() {
     ['IDBI Equity Advantage Fund - Regular Plan', 69.79,'69.79%','#0779CF',
     '<div class="tooltip_chart"><b>Launch:</b><span> Sep-2013</span><br><b>Corpus(Rs.Cr.):</b><span>187.00</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 11.59%</span><br>1 Year:<span class="pull-right"> 69.79%</span><br>3 Years:<span class="pull-right"> - </span><br>5 Years:<span class="pull-right"> - </span><br>Since Launch:<span class="pull-right">62.34%</span></div>'
     ],
-    ['Reliance Tax Saver Fund', 84.58,'84.58%','#27486B',
+    ['Reliance Tax\nSaver Fund', 84.58,'84.58%','#27486B',
      '<div class="tooltip_chart"><b>Launch:</b><span> Sep-2005</span><br><b>Corpus(Rs.Cr.):</b><span>3618.00</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 4.34%</span><br>1 Year:<span class="pull-right"> 84.58%</span><br>3 Years:<span class="pull-right"> 36.99%</span><br>5 Years:<span class="pull-right"> 20.19%</span><br>Since Launch:<span class="pull-right">17.31%</span></div>'
      ],
-    ['Religare Invesco Tax Plan', 54.1,'54.1%','#BC8F8F',
+    ['Religare Invesco Tax Plan', 54.10,'54.10%','#BC8F8F',
      '<div class="tooltip_chart"><b>Launch:</b><span> Dec-2006</span><br><b>Corpus(Rs.Cr.):</b><span>213.00</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 4.48%</span><br>1 Year:<span class="pull-right"> 54.10%</span><br>3 Years:<span class="pull-right"> 28.35%</span><br>5 Years:<span class="pull-right"> 16.84%</span><br>Since Launch:<span class="pull-right">15.68%</span></div>'
      ]
   ]);
@@ -227,10 +230,10 @@ var view = new google.visualization.DataView(dataTable);
     },2]);
 
   var options = {
-    title: '1 Year Return', titleTextStyle: {color: '#ffffff'},
-    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC'},
+    title: '1 Year Return', titleTextStyle: {color: '#ffffff', fontName: 'Walter Turncoat'},
+    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC', fontName: 'Walter Turncoat'},
             textStyle: {
-                    fontName: 'Comic Sans MS',
+                    fontName: 'Walter Turncoat',
                     fontSize: 10,                    
                     color: '#fff',                           
                     }
@@ -243,9 +246,9 @@ var view = new google.visualization.DataView(dataTable);
     isStacked: true,
     annotations: {
           textStyle: {
-          fontName: 'Lucida Fax',
+          fontName: 'Walter Turncoat',
           fontSize: 14,
-          bold: true,
+          bold: false,
           color: '#fff', 
           auraColor: 'transparent', 
         
@@ -254,6 +257,7 @@ var view = new google.visualization.DataView(dataTable);
   };
   var chart = new google.visualization.ColumnChart(document.getElementById('e_elss'));
   chart.draw(view, options);
+  $("text:contains(" + options.title + ")").attr({'x':'365', 'y':'50'})
 }
 
 
@@ -281,11 +285,11 @@ function drawChart() {
     '<div class="tooltip_chart"><b>Launch:</b><span> Jun-2004</span><br><b>Corpus(Rs.Cr.):</b><span>1150.00</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.88%</span><br>1 Year:<span class="pull-right"> 50.22%</span><br>3 Years:<span class="pull-right"> 32.69%</span><br>5 Years:<span class="pull-right"> 22.90%</span><br>Since Launch:<span class="pull-right"> 26.57%</span></div>'
     ],
 
-    ['SBI FMCG Fund', 32.8,'32.8%','#0C8E86', 
+    ['SBI FMCG Fund', 32.80,'32.80%','#0C8E86', 
     '<div class="tooltip_chart"><b>Launch:</b><span> Jul-1999</span><br><b>Corpus(Rs.Cr.):</b><span>222.00</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.63%</span><br>1 Year:<span class="pull-right"> 32.80%</span><br>3 Years:<span class="pull-right"> 30.39%</span><br>5 Years:<span class="pull-right"> 28.04%</span><br>Since Launch:<span class="pull-right"> 15.80%</span></div>'
     ],
 
-    ['Franklin Build India Fund', 89.49,'89.49%','#0779CF',
+    ['Franklin Build\nIndia Fund', 89.49,'89.49%','#0779CF',
     '<div class="tooltip_chart"><b>Launch:</b><span> Sep-2009</span><br><b>Corpus(Rs.Cr.):</b><span>232.00</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 11.66%</span><br>1 Year:<span class="pull-right"> 89.49%</span><br>3 Years:<span class="pull-right"> 39.30%</span><br>5 Years:<span class="pull-right"> 18.89%</span><br>Since Launch:<span class="pull-right"> 20.19%</span></div>'
     ],
     ['R*Shares Banking ETF', 61.10,'61.10%','#27486B',
@@ -302,10 +306,10 @@ var view = new google.visualization.DataView(dataTable);
     },2]);
 
   var options = {
-    title: '1 Year Return', titleTextStyle: {color: '#ffffff'},
-    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC'},
+    title: '1 Year Return', titleTextStyle: {color: '#ffffff', fontName: 'Walter Turncoat'},
+    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC', fontName: 'Walter Turncoat'},
             textStyle: {
-                    fontName: 'Comic Sans MS',
+                    fontName: 'Walter Turncoat',
                     fontSize: 10,                    
                     color: '#fff',                           
                     }
@@ -318,9 +322,9 @@ var view = new google.visualization.DataView(dataTable);
     isStacked: true,
     annotations: {
           textStyle: {
-          fontName: 'Lucida Fax',
+          fontName: 'Walter Turncoat',
           fontSize: 16,
-          bold: true,
+          bold: false,
           color: '#fff', 
           auraColor: 'transparent', 
         
@@ -329,6 +333,7 @@ var view = new google.visualization.DataView(dataTable);
   };
   var chart = new google.visualization.ColumnChart(document.getElementById('e_sf'));
   chart.draw(view, options);
+  $("text:contains(" + options.title + ")").attr({'x':'365', 'y':'50'})
 }
 
 
@@ -380,10 +385,10 @@ var view = new google.visualization.DataView(dataTable);
     },2]);
 
   var options = {
-    title: '1 Year Return', titleTextStyle: {color: '#ffffff'},
-    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC'},
+    title: '1 Year Return', titleTextStyle: {color: '#ffffff', fontName: 'Walter Turncoat'},
+    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC', fontName: 'Walter Turncoat'},
             textStyle: {
-                    fontName: 'Comic Sans MS',
+                    fontName: 'Walter Turncoat',
                     fontSize: 10,                    
                     color: '#fff',                           
                     }
@@ -396,9 +401,9 @@ var view = new google.visualization.DataView(dataTable);
     isStacked: true,
     annotations: {
           textStyle: {
-          fontName: 'Lucida Fax',
+          fontName: 'Walter Turncoat',
           fontSize: 16,
-          bold: true,
+          bold: false,
           color: '#fff', 
           auraColor: 'transparent', 
         
@@ -407,6 +412,7 @@ var view = new google.visualization.DataView(dataTable);
   };
   var chart = new google.visualization.ColumnChart(document.getElementById('e_if'));
   chart.draw(view, options);
+  $("text:contains(" + options.title + ")").attr({'x':'365', 'y':'50'})
 }
 
 
@@ -435,18 +441,18 @@ function drawChart() {
     '<div class="tooltip_chart"><b>Launch:</b><span> Oct-1995</span><br><b>Corpus(Rs.Cr.):</b><span>3316.19</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 7.07%</span><br>1 Year:<span class="pull-right"> 15.97%</span><br>3 Years:<span class="pull-right"> 9.43%</span><br>5 Years:<span class="pull-right"> 8.01%</span><br>Since Launch:<span class="pull-right"> 9.91%</span></div>'
     ],
 
-    ['HDFC High Interest Fund - Dynamic Plan', 16.11,'16.11%', '#FF2D00',
+    ['HDFC High Interest Fund', 16.11,'16.11%', '#FF2D00',
     '<div class="tooltip_chart"><b>Launch:</b><span> Apr-1997</span><br><b>Corpus(Rs.Cr.):</b><span>927.69</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.67%</span><br>1 Year:<span class="pull-right"> 16.11%</span><br>3 Years:<span class="pull-right"> 10.25%</span><br>5 Years:<span class="pull-right"> 8.70%</span><br>Since Launch:<span class="pull-right"> 9.12%</span></div>'
     ],
 
-    ['ICICI Prudential Income Plan - Regular Plan', 17.09,'17.09%','#0C8E86', 
+    ['ICICI Prudential Income Plan', 17.09,'17.09%','#0C8E86', 
     '<div class="tooltip_chart"><b>Launch:</b><span> Jul-1998</span><br><b>Corpus(Rs.Cr.):</b><span>3126.76</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.81%</span><br>1 Year:<span class="pull-right"> 17.09%</span><br>3 Years:<span class="pull-right"> 8.83%</span><br>5 Years:<span class="pull-right"> 7.34%</span><br>Since Launch:<span class="pull-right"> 9.20%</span></div>'
     ],
 
-    ['IDFC Dynamic Bond Fund - Regular Plan', 15.75,'15.75%','#0779CF',
+    ['IDFC Dynamic Bond Fund', 15.75,'15.75%','#0779CF',
     '<div class="tooltip_chart"><b>Launch:</b><span> Dec-2008</span><br><b>Corpus(Rs.Cr.):</b><span>3323.69</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 7.05%</span><br>1 Year:<span class="pull-right"> 15.75%</span><br>3 Years:<span class="pull-right"> 10.37%</span><br>5 Years:<span class="pull-right"> 9.19%</span><br>Since Launch:<span class="pull-right"> 8.50%</span></div>'
     ],
-    ['IDFC Super Saver Income Fund - Investment Plan - Regular Plan', 15.53,'15.53%','#27486B',
+    ['IDFC Super Saver Income Fund', 15.53,'15.53%','#27486B',
      '<div class="tooltip_chart"><b>Launch:</b><span> Jul-2000</span><br><b>Corpus(Rs.Cr.):</b><span>1598.97</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.97%</span><br>1 Year:<span class="pull-right"> 15.53%</span><br>3 Years:<span class="pull-right"> 9.94%</span><br>5 Years:<span class="pull-right"> 8.47%</span><br>Since Launch:<span class="pull-right"> 8.63%</span></div>'
      ],
     ['Reliance Dynamic Bond Fund', 15.23,'15.23%','#BC8F8F',
@@ -463,10 +469,10 @@ var view = new google.visualization.DataView(dataTable);
     },2]);
 
   var options = {
-    title: '1 Year Return', titleTextStyle: {color: '#ffffff'},
-    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC'},
+    title: '1 Year Return', titleTextStyle: {color: '#ffffff', fontName: 'Walter Turncoat'},
+    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC', fontName: 'Walter Turncoat'},
             textStyle: {
-                    fontName: 'Comic Sans MS',
+                    fontName: 'Walter Turncoat',
                     fontSize: 10,                    
                     color: '#fff',                           
                     }
@@ -479,9 +485,9 @@ var view = new google.visualization.DataView(dataTable);
     isStacked: true,
     annotations: {
           textStyle: {
-          fontName: 'Lucida Fax',
+          fontName: 'Walter Turncoat',
           fontSize: 14,
-          bold: true,
+          bold: false,
           color: '#fff', 
           auraColor: 'transparent', 
         
@@ -490,6 +496,7 @@ var view = new google.visualization.DataView(dataTable);
   };
   var chart = new google.visualization.ColumnChart(document.getElementById('d_ltdf'));
   chart.draw(view, options);
+  $("text:contains(" + options.title + ")").attr({'x':'365', 'y':'50'})
 }
 
 
@@ -519,14 +526,14 @@ function drawChart() {
     '<div class="tooltip_chart"><b>Launch:</b><span> Jun-2008</span><br><b>Corpus(Rs.Cr.):</b><span>3967.31</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.41%</span><br>1 Year:<span class="pull-right"> 11.28%</span><br>3 Years:<span class="pull-right"> 10.84%</span><br>5 Years:<span class="pull-right"> 9.56%</span><br>Since Launch:<span class="pull-right"> 9.32%</span></div>'
     ],
 
-    ['Franklin India Short Term Income Plan - Retail Plan', 11.5,'11.5%','#0C8E86', 
+    ['Franklin India Short Term Income Plan', 11.50,'11.50%','#0C8E86', 
     '<div class="tooltip_chart"><b>Launch:</b><span> Jan-2002</span><br><b>Corpus(Rs.Cr.):</b><span>10078.89</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.41%</span><br>1 Year:<span class="pull-right"> 11.50%</span><br>3 Years:<span class="pull-right"> 10.14%</span><br>5 Years:<span class="pull-right"> 8.99%</span><br>Since Launch:<span class="pull-right"> 8.28%</span></div>'
     ],
 
    /* ['HDFC Corporate Debt Opportunities Fund - Regular Plan', 0 ,'-','#0779CF',
     '<div class="tooltip_chart"><b>Launch:</b><span> Mar-2014</span><br><b>Corpus(Rs.Cr.):</b><span>3291.05</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.84%</span><br>1 Year:<span class="pull-right"> - </span><br>3 Years:<span class="pull-right"> - </span><br>5 Years:<span class="pull-right"> - </span><br>Since Launch:<span class="pull-right"> 9.42%</span></div>'
     ],*/
-    ['ICICI Prudential Corporate Bond Fund - Regular Plan', 12.22,'12.22%','#0779CF',
+    ['ICICI Prudential Corporate Bond Fund', 12.22,'12.22%','#0779CF',
      '<div class="tooltip_chart"><b>Launch:</b><span> Sep-2004</span><br><b>Corpus(Rs.Cr.):</b><span>2971.58</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.71%</span><br>1 Year:<span class="pull-right"> 12.22%</span><br>3 Years:<span class="pull-right"> 9.24%</span><br>5 Years:<span class="pull-right"> 8.15%</span><br>Since Launch:<span class="pull-right"> 7.39%</span></div>'
      ],
     ['Pramerica Credit Opportunities Fund', 10.88,'10.88%','#27486B',
@@ -546,10 +553,10 @@ var view = new google.visualization.DataView(dataTable);
     },2]);
 
   var options = {
-    title: '1 Year Return', titleTextStyle: {color: '#ffffff'},
-    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC'},
+    title: '1 Year Return', titleTextStyle: {color: '#ffffff', fontName: 'Walter Turncoat'},
+    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC', fontName: 'Walter Turncoat'},
             textStyle: {
-                    fontName: 'Comic Sans MS',
+                    fontName: 'Walter Turncoat',
                     fontSize: 10,                    
                     color: '#fff',                           
                     }
@@ -562,9 +569,9 @@ var view = new google.visualization.DataView(dataTable);
     isStacked: true,
     annotations: {
           textStyle: {
-          fontName: 'Lucida Fax',
+          fontName: 'Walter Turncoat',
           fontSize: 14,
-          bold: true,
+          bold: false,
           color: '#fff', 
           auraColor: 'transparent', 
         
@@ -573,6 +580,7 @@ var view = new google.visualization.DataView(dataTable);
   };
   var chart = new google.visualization.ColumnChart(document.getElementById('d_stdf'));
   chart.draw(view, options);
+  $("text:contains(" + options.title + ")").attr({'x':'365', 'y':'50'})
 }
 
 
@@ -598,21 +606,21 @@ function drawChart() {
     '<div class="tooltip_chart"><b>Launch:</b><span> Apr-2003</span><br><b>Corpus(Rs.Cr.):</b><span>12388.75</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.36%</span><br>1 Year:<span class="pull-right"> 9.68%</span><br>3 Years:<span class="pull-right"> 9.66%</span><br>5 Years:<span class="pull-right"> 8.75%</span><br>Since Launch:<span class="pull-right"> 7.39%</span></div>'
     ],
 
-    ['Birla Sun Life Treasury Optimizer Fund - Regular Plan', 12.26,'12.26%', '#FF2D00',
+    ['Birla Sun Life Treasury Optimizer Fund', 12.26,'12.26%', '#FF2D00',
     '<div class="tooltip_chart"><b>Launch:</b><span> Apr-2008</span><br><b>Corpus(Rs.Cr.):</b><span>2760.66</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.86%</span><br>1 Year:<span class="pull-right"> 12.26%</span><br>3 Years:<span class="pull-right"> 10.59%</span><br>5 Years:<span class="pull-right"> 9.32%</span><br>Since Launch:<span class="pull-right"> 8.74%</span></div>'
     ],
 
-    ['Franklin India Ultra Short Bond Fund - Super Institutional Plan', 10.06,'10.06%','#0C8E86', 
+    ['Franklin India Ultra Short\nBond Fund', 10.06,'10.06%','#0C8E86', 
     '<div class="tooltip_chart"><b>Launch:</b><span> Dec-2007</span><br><b>Corpus(Rs.Cr.):</b><span>7225.92</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.39%</span><br>1 Year:<span class="pull-right"> 10.06%</span><br>3 Years:<span class="pull-right"> 10.10%</span><br>5 Years:<span class="pull-right"> 9.07%</span><br>Since Launch:<span class="pull-right"> 8.79%</span></div>'
     ],
 
-    ['Kotak Flexi Debt - Plan A', 10.27,'10.27%','#0779CF',
+    ['Kotak Flexi Debt', 10.27,'10.27%','#0779CF',
     '<div class="tooltip_chart"><b>Launch:</b><span> May-2008</span><br><b>Corpus(Rs.Cr.):</b><span>401.61</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.04%</span><br>1 Year:<span class="pull-right"> 10.27%</span><br>3 Years:<span class="pull-right"> 9.60%</span><br>5 Years:<span class="pull-right"> 8.73%</span><br>Since Launch:<span class="pull-right"> 8.40%</span></div>'
     ],
     ['Religare Invesco Credit Opportunities Fund', 9.47,'9.47%','#27486B',
      '<div class="tooltip_chart"><b>Launch:</b><span> Aug-2009</span><br><b>Corpus(Rs.Cr.):</b><span>2429.74</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.21%</span><br>1 Year:<span class="pull-right"> 9.47%</span><br>3 Years:<span class="pull-right"> 9.77%</span><br>5 Years:<span class="pull-right"> 8.83%</span><br>Since Launch:<span class="pull-right"> 8.65%</span></div>'
      ],
-     ['Taurus Short Term Income Fund', 9.8,'9.8%','#BC8F8F',
+     ['Taurus Short\nTerm Income Fund', 9.80,'9.80%','#BC8F8F',
      '<div class="tooltip_chart"><b>Launch:</b><span> Apr-2010</span><br><b>Corpus(Rs.Cr.):</b><span>155.04</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.30%</span><br>1 Year:<span class="pull-right"> 9.80%</span><br>3 Years:<span class="pull-right"> 10.13%</span><br>5 Years:<span class="pull-right"> - </span><br>Since Launch:<span class="pull-right">9.50%</span></div>'
      ]
   ]);
@@ -626,10 +634,10 @@ var view = new google.visualization.DataView(dataTable);
     },2]);
 
   var options = {
-    title: '1 Year Return', titleTextStyle: {color: '#ffffff'},
-    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC'},
+    title: '1 Year Return', titleTextStyle: {color: '#ffffff', fontName: 'Walter Turncoat'},
+    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC', fontName: 'Walter Turncoat'},
             textStyle: {
-                    fontName: 'Comic Sans MS',
+                    fontName: 'Walter Turncoat',
                     fontSize: 10,                    
                     color: '#fff',                           
                     }
@@ -642,9 +650,9 @@ var view = new google.visualization.DataView(dataTable);
     isStacked: true,
     annotations: {
           textStyle: {
-          fontName: 'Lucida Fax',
+          fontName: 'Walter Turncoat',
           fontSize: 14,
-          bold: true,
+          bold: false,
           color: '#fff', 
           auraColor: 'transparent', 
         
@@ -653,6 +661,7 @@ var view = new google.visualization.DataView(dataTable);
   };
   var chart = new google.visualization.ColumnChart(document.getElementById('d_ustdf'));
   chart.draw(view, options);
+  $("text:contains(" + options.title + ")").attr({'x':'365', 'y':'50'})
 }
 
 
@@ -682,11 +691,11 @@ function drawChart() {
     '<div class="tooltip_chart"><b>Launch:</b><span> Sep-2005</span><br><b>Corpus(Rs.Cr.):</b><span>206.00</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.29%</span><br>1 Year:<span class="pull-right"> 9.55%</span><br>3 Years:<span class="pull-right"> 9.91%</span><br>5 Years:<span class="pull-right"> 9.16%</span><br>Since Launch:<span class="pull-right"> 8.48%</span></div>'
     ],
 
-    ['Franklin India Treasury Management Account Fund - Super Institutional Plan', 9.24,'9.24%','#0C8E86', 
+    ['Franklin India\nTreasury Management Account Fund', 9.24,'9.24%','#0C8E86', 
     '<div class="tooltip_chart"><b>Launch:</b><span> Sep-2005</span><br><b>Corpus(Rs.Cr.):</b><span>5988</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.17%</span><br>1 Year:<span class="pull-right"> 9.24%</span><br>3 Years:<span class="pull-right"> 9.44%</span><br>5 Years:<span class="pull-right"> 8.52%</span><br>Since Launch:<span class="pull-right"> 7.95%</span></div>'
     ],
 
-    ['ICICI Prudential Liquid Plan - Regular Plan', 9.14,'9.14%','#0779CF',
+    ['ICICI Prudential Liquid Plan', 9.14,'9.14%','#0779CF',
     '<div class="tooltip_chart"><b>Launch:</b><span> Nov-2005</span><br><b>Corpus(Rs.Cr.):</b><span>23932</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 2.15%</span><br>1 Year:<span class="pull-right"> 9.14%</span><br>3 Years:<span class="pull-right"> 9.36%</span><br>5 Years:<span class="pull-right"> 8.46%</span><br>Since Launch:<span class="pull-right"> 8.04%</span></div>'
     ],
     ['JM High Liquidity Fund', 9.15,'9.15%','#27486B',
@@ -703,10 +712,10 @@ var view = new google.visualization.DataView(dataTable);
     },2]);
 
   var options = {
-    title: '1 Year Return', titleTextStyle: {color: '#ffffff'},
-    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC'},
+    title: '1 Year Return', titleTextStyle: {color: '#ffffff', fontName: 'Walter Turncoat'},
+    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC', fontName: 'Walter Turncoat'},
             textStyle: {
-                    fontName: 'Comic Sans MS',
+                    fontName: 'Walter Turncoat',
                     fontSize: 10,                    
                     color: '#fff',                           
                     }
@@ -719,9 +728,9 @@ var view = new google.visualization.DataView(dataTable);
     isStacked: true,
     annotations: {
           textStyle: {
-          fontName: 'Lucida Fax',
+          fontName: 'Walter Turncoat',
           fontSize: 16,
-          bold: true,
+          bold: false,
           color: '#fff', 
           auraColor: 'transparent', 
         
@@ -730,6 +739,7 @@ var view = new google.visualization.DataView(dataTable);
   };
   var chart = new google.visualization.ColumnChart(document.getElementById('d_lf'));
   chart.draw(view, options);
+  $("text:contains(" + options.title + ")").attr({'x':'365', 'y':'50'})
 }
 
 

@@ -1098,6 +1098,10 @@ padding:30px;
     text-align: center;
 }
 
+.chart_back {
+     background: url(../assets/black.jpg) no-repeat;
+}
+
 /*==========================================
   TOP PERFORMING FUNDS
  =====================================================*/
@@ -1201,6 +1205,54 @@ CONTACT STYLES
 width: 100%;
 min-height: 350px;
 border: 1px solid #e1e1e1;
+}
+
+.divider5 {
+    background-image: url('../assets/contactus.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+.textdivider5 h3 {   
+    color: #ccc;    
+}
+
+.textdivider5 p {
+    color: #ffffff;
+}
+.textdivider5 span {
+    color: #ffffff;
+}
+.textdivider5 a {
+    color: #ffffff;
+}
+
+.section-divider5 {
+    z-index: 999;
+    width: 100%;
+    display: block;
+    max-height: 450px;
+    /*border-bottom: 2px solid #E6EAED;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0px;
+    padding-top: 2%;
+    padding-bottom: 20%;
+    background-position: center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: relative;    
+    
 }
 
 

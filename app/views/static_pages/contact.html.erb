@@ -12,17 +12,17 @@
         <h2>CONTACT US</h2>
     </div>
     <!--./ Gereral Subhead End -->
-    <section>
+    <section class="section-divider5 textdivider5 divider5">
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-6 col-md-6  col-sm-12">
-                    <h3>Call Us</h3>
-                    <span class="fa fa-mobile fa-4x color-facebook"></span><span class="fa font_1p5">&nbsp;+91 987 469 1177 ; <br />&nbsp;+91 740 699 8067</span>
+                <div class="col-lg-5 col-md-5  col-sm-5">
+                    <h3>Support</h3>
+                    <span class="fa fa-mobile fa-4x color-linkedin"></span><span class="fa font_1p5">&nbsp;+91 987 469 1177  <br />&nbsp;+91 740 699 8067</span>
                     <br />
-                    <span class="fa fa-envelope fa-2x color-facebook">&nbsp;<a href="mailto:info@rupeevest.com">info@rupeevest.com</a></span>
+                    <span class="fa fa-envelope fa-2x color-linkedin">&nbsp;<a href="mailto:info@rupeevest.com">info@rupeevest.com</a></span>
 
-                    <h3>Headquarter</h3>
+                    <h3>Headquarters</h3>
                     <p>
                         RupeeVest <br />
                         Room No-81, 5th Floor, <br />
@@ -36,9 +36,11 @@
                     <a href="https://www.linkedin.com/company/rupeevest/" target="_blank"><i class="fa fa-linkedin-square fa-3x color-linkedin"></i></a>
                     <a href=" https://www.pinterest.com/rupeevest/" target="_blank"><i class="fa fa-pinterest-square fa-3x color-pinterest"></i></a>
                 </div>
-                <div class="col-lg-6 col-md-6  col-sm-12">
-                    <h3>GET IN TOUCH WITH US</h3> 
-                    <%= form_for @contact do |f| %>
+                <div class="col-lg-7 col-md-7  col-sm-7">
+                    <div class="well">
+                    <h3>Drop In A Message</h3> 
+                <!-- <span>
+                      <%= form_for @contact do |f| %>
                       <%= f.label :name %>:
                       <%= f.text_field :name %><br />
 
@@ -52,6 +54,7 @@
 
                       <%= f.submit %>
                     <% end %>
+                </span> -->
                     <form>
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
@@ -83,6 +86,7 @@
                             </div>
                         </div>
                     </form>
+                    </div>
                 </div>
 
             </div>

@@ -18,13 +18,11 @@ function drawChart() {
   dataTable.addColumn({type: 'string', role: 'style'});
 
   dataTable.addRows([
-    ['ELSS', 21.0, '21.0%','#FF8B00'],
-    ['ULIP', 15.6,'15.6%', '#FF2D00'],
-    ['FD', 9.0,'9.0%','#0C8E86'],
-    ['NSC', 8.8,'8.8%','#0779CF'],
-    ['PPF', 8.7,'8.7%','#27486B'],
-    ['NABARD', 8.3,'8.3%','#8B008B'],
-    ['LIC', 6.0,'6.0%','#FF00FF']
+    ['ELSS', 17.5, '17.5%','#FF8B00'],
+    ['FD', 9.0,'9.0%', '#FF2D00'],
+    ['PPF', 8.5,'8.5%','#0C8E86'],
+    ['NSC', 8.5,'8.5%','#0779CF'],
+    ['LIC', 6.0,'6.0%','#27486B']
   ]);
 
 var view = new google.visualization.DataView(dataTable);
@@ -36,7 +34,7 @@ var view = new google.visualization.DataView(dataTable);
     },2]);
 
   var options = {
-    title: '5 Years Return', titleTextStyle: {color: '#3366CC'},
+    title: '5 Years Return', titleTextStyle: {color: '#ffffff'},
     titlePosition: 'center',
     hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC'},
             textStyle: {
@@ -44,7 +42,7 @@ var view = new google.visualization.DataView(dataTable);
                      fontSize: 10,
                      bold: true,
                     // italic: true,
-                      color: '#00000',     // The color of the text.
+                      color: '#ffffff',     // The color of the text.
                     //opacity: 0.8          // The transparency of the text.
                     }
               },
@@ -52,12 +50,12 @@ var view = new google.visualization.DataView(dataTable);
     vAxis: {gridlines: {color: 'transparent', count: 0}, minValue: 0},
     tooltip: {trigger: 'none'},
     legend: 'none',
-    backgroundColor: { fill:'#ccc' },
+    backgroundColor: { fill:'transparent' },
     isStacked: true,
     annotations: {
           textStyle: {
         fontName: 'Lucida Fax',
-         fontSize: 10,
+         fontSize: 12,
          bold: true,
         // italic: true,
           color: '#fff',     // The color of the text.
@@ -68,6 +66,7 @@ var view = new google.visualization.DataView(dataTable);
   };
   var chart = new google.visualization.ColumnChart(document.getElementById('e_lcf'));
   chart.draw(view, options);
+  $("text:contains(" + options.title + ")").attr({'x':'250', 'y':'50'})
 }
 
 
@@ -98,7 +97,7 @@ var view = new google.visualization.DataView(dataTable);
             <p>It is a section of the Indian Income Tax Act which allows you to reduce your taxable income by upto Rs. 1,50,000 (savings of Rs. 45,000) by investing in a certified 80C Tax Saving product. Some of you might be thinking, I earn a lot already / who will take so much pain / I have a valid reason n all that. Trust me, irrespective of how much you earn, how much you save, how much you invest, <b>You Should Always Save Tax. Don’t Evade, Save!</b></p>
             </div>
             <div class="col-sm-6 column text-justify">
-                <div id="e_lcf" style="height: 250px; width: 100%;"></div>
+                <div id="e_lcf" class="chart_back" style="height: 250px; width: 100%;"></div>
                 <p class="font_p83">Comparison of all the tax deductible investments  are presented above, We have an obvious choice.</p> 
             </div>
         </div>

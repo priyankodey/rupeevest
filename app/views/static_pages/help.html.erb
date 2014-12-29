@@ -6,33 +6,82 @@
 <html lang="en">
 <!--<![endif]-->
 <head>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript">
+google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawChart);
+
+function drawChart() {
+var columnChartProps = {
+    fontName: 'HelveticaNeueBC',
+    legend: {position: 'none'},
+    titleTextStyle: {fontSize: 18},
+    hAxis:  {color: '#121b2d'},
+    vAxis: {
+        gridlines: {color: '#666666'}
+    },
+    width: 400,
+    height: 300,
+    backgroundColor: '#CBCBCB',
+    chartArea:{top:80, width:"80%"}
+}
+// VENCIMIENTOS:
+var vencData = google.visualization.arrayToDataTable([
+    ['equis', 'Vencimientos'],
+    ['ENE', 7],
+    ['FEB', 10],
+    ['MAR', 5],
+    ['ABR', 6],
+    ['MAY', 10],
+    ['JUN', 15]
+]);
+
+var vencOptions = {
+    colors:['#24375e','#2c4370','#324a7c','#38538a','#3e5b96','#4363a3'],
+    title: 'Vencimientos prox. 6 meses',
+    hAxis: {title: 'Meses'}
+};
+
+var vencimientos = new google.visualization.ColumnChart(document.getElementById('vencimientos'));
+vencimientos.draw(vencData, jQuery.extend({},vencOptions,columnChartProps));
+$("text:contains(" + vencOptions.title + ")").attr({'x':'65', 'y':'20'})
+}
+  </script>
+
+  <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
 function drawChart() {
   var dataTable = new google.visualization.DataTable();
   dataTable.addColumn('string', 'Funds');
   dataTable.addColumn('number', 'Percentage');
   dataTable.addColumn({type: 'string', role: 'annotation'});
-
-
-  // A column for custom tooltip content
+  dataTable.addColumn({type: 'string', role: 'style'});
   dataTable.addColumn({type: 'string', role: 'tooltip', 'p': {'html': true}});
 
   dataTable.addRows([
-    ['L&T Equity Fund', 30.6, '30.6%','<div id="media-sec"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>3 Months:</b><span> 6.1%</span><br><b>1 Year:</b><span> 50.6%</span><br><b>3 Years:</b><span> 24%</span><br><b>5 Years:</b><span> 15%</span><br><b>Since Launch:</b><span> 20.43%</span></div>'],
+    ['L&T Equity Fund', 50.6, '50.6%','#FF8B00',
+    '<div class="tooltip_chart"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 6.10%</span><br>1 Year:<span class="pull-right"> 50.60%</span><br>3 Years:<span class="pull-right"> 24.00%</span><br>5 Years:<span class="pull-right"> 15.00%</span><br>Since Launch:<span class="pull-right"> 20.43%</span></div>'
+    ],
 
-    ['UTI Equity Fund', 40.1,'40.1%', '<div id="media-sec"><small>Launch:</small><small> May-2005</small><br><small>Corpus(Rs.Cr.):</small><small>2255.83</small><br><small>3 Months:</small><small> 6.1%</small><br><small>1 Year:</small><small> 50.6%</small><br><small>3 Years:</small><small> 24%</small><br><small>5 Years:</small><small> 15%</small><br><small>Since Launch:</small><small> 20.43%</small></div>'],
+    ['UTI Equity Fund', 49.1,'49.1%', '#FF2D00',
+    '<div class="tooltip_chart"><b>Launch:</b><span> May-1992</span><br><b>Corpus(Rs.Cr.):</b><span>3275.59</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 5.70%</span><br>1 Year:<span class="pull-right"> 49.10%</span><br>3 Years:<span class="pull-right"> 26.60%</span><br>5 Years:<span class="pull-right"> 15.60%</span><br>Since Launch:<span class="pull-right"> 13.02%</span></div>'
+    ],
 
-    ['HDFC Top 200 Fund', 45.7,'45.7%', '<div id="media-sec"><h6>Launch: May-2005</h6><h6>Corpus(Rs.Cr.):2255.83</h6><h6>3 Months: 6.1%</h6><h6>1 Year: 50.6%</h6><h6>3 Years: 24%</h6><h6>5 Years: 15%</h6><h6>Since Launch: 20.43%</h6></div>'],
+    ['HDFC Top 200 Fund', 48.7,'48.7%','#0C8E86', 
+    '<div class="tooltip_chart"><b>Launch:</b><span> Sep-1996</span><br><b>Corpus(Rs.Cr.):</b><span>12276.81</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 3.40%</span><br>1 Year:<span class="pull-right"> 48.70%</span><br>3 Years:<span class="pull-right"> 24.90%</span><br>5 Years:<span class="pull-right"> 14.20%</span><br>Since Launch:<span class="pull-right"> 22.77%</span></div>'
+    ],
 
-    ['Birla Sun Life Top 100 Fund ', 50.9,'50.9%', '<div id="media-sec"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>3 Months:</b><span> 6.1%</span><br><b>1 Year:</b><span> 50.6%</span><br><b>3 Years:</b><span> 24%</span><br><b>5 Years:</b><span> 15%</span><br><b>Since Launch:</b><span> 20.43%</span></div>'],
-    ['BNP Paribas Equity Fund', 55.9,'55.9%', '<div id="media-sec"><b>Launch:</b><span> May-2005</span><br><b>Corpus(Rs.Cr.):</b><span>2255.83</span><br><b>3 Months:</b><span> 6.1%</span><br><b>1 Year:</b><span> 50.6%</span><br><b>3 Years:</b><span> 24%</span><br><b>5 Years:</b><span> 15%</span><br><b>Since Launch:</b><span> 20.43%</span></div>']
+    ['Birla Sun Life Top 100 Fund ', 50.9,'50.9%','#0779CF',
+    '<div class="tooltip_chart"><b>Launch:</b><span> Sep-2005</span><br><b>Corpus(Rs.Cr.):</b><span>691.15</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 7.30%</span><br>1 Year:<span class="pull-right"> 50.90%</span><br>3 Years:<span class="pull-right"> 29.00%</span><br>5 Years:<span class="pull-right"> 16.00%</span><br>Since Launch:<span class="pull-right"> 17.07%</span></div>'
+    ],
+    ['BNP Paribas Equity Fund', 47.3,'47.3%','#27486B',
+     '<div class="tooltip_chart"><b>Launch:</b><span> Sep-2004</span><br><b>Corpus(Rs.Cr.):</b><span>372.22</span><br><b>Return:</b><br>3 Months:<span class="pull-right"> 4.60%</span><br>1 Year:<span class="pull-right"> 47.30%</span><br>3 Years:<span class="pull-right"> 26.60%</span><br>5 Years:<span class="pull-right"> 15.30%</span><br>Since Launch:<span class="pull-right"> 19.72%</span></div>'
+     ]
   ]);
 
 var view = new google.visualization.DataView(dataTable);
-    view.setColumns([0, 1, 3, {
+    view.setColumns([0, 1, 3, 4, {
         type: 'number',        
         calc: function (dt, row) {
             return 0;
@@ -40,17 +89,28 @@ var view = new google.visualization.DataView(dataTable);
     },2]);
 
   var options = {
-    title: 'LARGE CAP FUNDS',
-    hAxis: {title: 'List of Funds', titleTextStyle: {color: 'black'}},
-    vAxis: {title: 'Return Percentage', titleTextStyle: {color: 'black'}, gridlines: {color: 'red', count: 4}, minValue: 0},
+    title: '1 Year Return', titleTextStyle: {color: '#000', fontName: 'Finger Paint'},
+    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC', fontName: 'Finger Paint'},
+            textStyle: {
+                    fontName: 'Finger Paint',
+                     fontSize: 10,
+                    // bold: true,
+                    // italic: true,
+                      color: '#fff',     // The color of the text.
+                    //opacity: 0.8          // The transparency of the text.
+                    }
+              },
+
+    vAxis: {gridlines: {color: 'transparent', count: 0}, minValue: 0},
     tooltip: {isHtml: true},
     legend: 'none',
+    backgroundColor: { fill:'transparent' },
     isStacked: true,
     annotations: {
           textStyle: {
-        //fontName: 'Times-Roman',
-        // fontSize: 18,
-        // bold: true,
+        fontName: 'Lucida Fax',
+         fontSize: 16,
+         bold: true,
         // italic: true,
           color: '#fff',     // The color of the text.
           auraColor: 'transparent', // The color of the text outline.
@@ -58,87 +118,50 @@ var view = new google.visualization.DataView(dataTable);
         }
       }
   };
-  var chart = new google.visualization.ColumnChart(document.getElementById('tooltip'));
+  var chart = new google.visualization.ColumnChart(document.getElementById('e_lcf'));
   chart.draw(view, options);
+  $("text:contains(" + options.title + ")").attr({'x':'65', 'y':'20'})
 }
 
 
-    </script>
 
-
-
-
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-google.setOnLoadCallback(drawChart);
-function drawChart() {
-
-  var data = google.visualization.arrayToDataTable([
-    ['Funds', 'Percentage', { role: 'annotation' }],
-    ['ICICI',  58, '58%'],
-    ['AXIS',  40, '40%'],
-    ['HDFC',  52, '52%'],
-    ['UTI',  50, '50%']
-  ]);
-
-  var options = {
-    title: 'LARGE CAP FUNDS',titleTextStyle: {color: 'RED'},
-    hAxis: {title: 'List of Funds', titleTextStyle: {color: 'black'}},
-    vAxis: {title: 'Return Percentage', titleTextStyle: {color: 'black'}},
-
-  };
-
-  var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-
-  chart.draw(data, options);
-
-}
 
 
     </script>
 
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
-
-        var options = {
-          title: 'My Daily Activities',
-          is3D: true,
-          tooltip: { isHtml: true }
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-        
-    google.visualization.events.addListener(chart, 'onmouseover', function(hover){
-        if(hover){
-            $('.google-visualization-tooltip-item:eq(1)').remove() // remove the other info
-        }
-    })
-        
-        
-        chart.draw(data, options);
-      }
-    </script>
-
-  
   </head>
 
 <body>  
-     <!-- Gereral Subhead End -->
-    
-    <div id="tooltip" style="width: 900px; height: 500px;"></div>
-    <div id="chart_div" style="width: 900px; height: 500px;"></div>
-    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+  <div class="col-sm-6" id='vencimientos'></div>
+  <div id='e_lcf'></div>
+    <div class="well well-lg">
+            <ul id="myTab" class="nav nav-pills">                
+                <li class="active"><a href="#A" data-toggle="tab">AAA</a></li>
+                <li><a href="#B" data-toggle="tab">BBB</a></li>
+                <li><a href="#C" data-toggle="tab">CCC</a></li>
+            </ul>
+            </div>
+
+            <div id="myTabContent" class="tab-content">      
+              <div class="tab-pane fade in active" id="A">
+                  <div class="col-sm-12">
+                    AAAAAAAAAA
+                  </div>
+              </div>
+
+              <div class="tab-pane fade" id="B">
+                  <div class="col-sm-12">
+                    BBBBBBBBBBB
+                  </div>
+              </div>
+
+              <div class="tab-pane fade" id="C">
+                  <div class="col-sm-12">
+                    CCCCCCCCCCC
+                  </div>
+              </div>
+
+            </div>
 
   </body>
 </html>
