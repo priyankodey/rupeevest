@@ -1102,6 +1102,17 @@ padding:30px;
      background: url(../assets/black.jpg) no-repeat;
 }
 
+.table_bot {
+    border-bottom-style: solid;
+    border-bottom-color: rgb(204, 196, 196);
+    background: #f5f5f5;
+}
+.table_head {
+    background: #f5f5f5;
+    border-top-style: solid;
+    border-top-color: rgb(204, 196, 196);
+}
+
 /*==========================================
   TOP PERFORMING FUNDS
  =====================================================*/
@@ -1208,7 +1219,7 @@ border: 1px solid #e1e1e1;
 }
 
 .divider5 {
-    background-image: url('../assets/contactus.jpg');
+    background-image: url('../assets/contact123.jpg');
     background-repeat: no-repeat;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -1216,17 +1227,17 @@ border: 1px solid #e1e1e1;
     background-size: 100%;
 }
 .textdivider5 h3 {   
-    color: #ccc;    
+    color: #000000;    
 }
 
 .textdivider5 p {
-    color: #ffffff;
+    color: #000000;
 }
 .textdivider5 span {
-    color: #ffffff;
+    color: #000000;
 }
 .textdivider5 a {
-    color: #ffffff;
+    color: #000000;
 }
 
 .section-divider5 {

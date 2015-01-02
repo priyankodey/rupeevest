@@ -71,6 +71,85 @@ var view = new google.visualization.DataView(dataTable);
 
 
     </script>
+
+    <script src="/assets/jquery-1.10.2.js"></script>
+ <script src="http://code.highcharts.com/highcharts.js"></script>
+<!-- <script src="http://code.highcharts.com/modules/exporting.js"></script> -->
+
+<script type="text/javascript">
+$(function () {
+    Highcharts.setOptions({
+        lang: {
+            numericSymbols: ['thousands', '' ]
+        }
+    });
+
+    $('#comparison_chart').highcharts({
+        chart: {            
+            backgroundColor: 'rgba(0,0,0,0)',            
+        },
+
+        credits: {
+            enabled: false
+        },
+
+        title: {
+            text: 'Comparison Of Investments Tax Deductible Under 80C',
+            x: -20 //center
+        },
+        // subtitle: {
+        //     text: 'Subheading',
+        //     x: -20
+        // },        
+        
+        xAxis: {
+            categories: ['2015', '2017', '2019', '2021', '2023', '2025',
+                '2027', '2029', '2031', '2033', '2035', '2037', '2039']
+        },
+        yAxis: {            
+                       
+            title: {
+                text: 'Rs. in 10 Lacs (₹)'
+            },            
+            gridLineWidth: 0,
+            minorGridLineWidth: 0,
+            min: 0,
+            max: 60000000,
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }],
+        },
+        tooltip: {
+            valuePrefix: '₹'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'ELSS',
+            data: [176250, 626679, 1248552, 2107126, 3292495, 4929045, 7188506, 10307975, 14614792, 20560890, 28770223, 40104233,55752250]
+        }, {
+            name: 'BANK FD',
+            data: [159450, 509118.9071, 904233.9323, 1350701.662, 1855196.357, 2425259.722, 3069413.653, 3797287.626, 4619762.651, 5549133.933, 6599294.671, 7785943.75, 9126820.424]
+        }, {
+            name: 'PPF',
+            data: [162750, 530927.1188, 964354.4274, 1474595.891, 2075264.898, 2782387.469, 3614829.838, 4594801.806, 5748449.306, 7106551.985, 8705344.41, 10587482.82, 12803183.22]
+        }, {
+            name: 'NSC',
+            data: [158925, 505705.7467, 894981.0929, 1331958.337, 1822482.882, 2373116.428, 2991224.746, 3685076.211, 4463952.409, 5338272.291, 6319731.549, 7421459.071, 8658192.558]
+        }, {
+            name: 'LIC',
+            data: [159000, 506192.4, 896297.7806, 1334620.186, 1827119.241, 2380491.18, 3002259.889, 3700879.212, 4485847.882, 5367838.681, 6358843.541, 7472336.603, 8723457.407]
+        }]
+    });
+});
+</script>
+
 </head>
 <body>
 
@@ -89,18 +168,167 @@ var view = new google.visualization.DataView(dataTable);
             </div>
         </div> 
     </section>
+
     <section>
       <div class="container"> 
         <div class="row">            
             <div class="col-sm-6 column text-justify">
               <h3><b>What is 80C ?</b></h3>
             <p>It is a section of the Indian Income Tax Act which allows you to reduce your taxable income by upto Rs. 1,50,000 (savings of Rs. 45,000) by investing in a certified 80C Tax Saving product. Some of you might be thinking, I earn a lot already / who will take so much pain / I have a valid reason n all that. Trust me, irrespective of how much you earn, how much you save, how much you invest, <b>You Should Always Save Tax. Don’t Evade, Save!</b></p>
+            <p>There are a number of assets than an individual can invest in to reduce their tax liability in the current year and simultaneously built wealth. Find below a comparison of the most popular assets that are tax exempt under 80C.</p>
             </div>
-            <div class="col-sm-6 column text-justify">
-                <div id="e_lcf" class="chart_back" style="height: 250px; width: 100%;"></div>
-                <p class="font_p83">Comparison of all the tax deductible investments  are presented above, We have an obvious choice.</p> 
+            <div class="col-sm-6 column text-justify pad_top1">
+                <div id="e_lcf" class="chart_back" style="height: 270px; width: 100%;"></div>
+                <!-- <p class="font_p83">Comparison of all the tax deductible investments  are presented above, We have an obvious choice.</p> --> 
             </div>
         </div>
+      </div> 
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 column pad_top1">
+              <table class="table table-responsive">
+    <thead class="table_head">
+        <tr>
+            <th></th>
+            <th class="text-center">ELSS</th>
+            <th class="text-center">BANK FD</th>
+            <th class="text-center">PPF</th>
+            <th class="text-center">NSC</th>
+            <th class="text-center">LIC</th>
+        </tr>
+    </thead>
+    <tbody class="table_bot text-center">
+        <tr>
+            <td class="text-left">Pre Tax Returns</td>
+            <td>17.5%</td>
+            <td>9%</td>
+            <td>8.5%</td>
+            <td>8.5%</td>
+            <td>6%</td>
+        </tr>
+        <tr>
+            <td class="text-left">Tax Liability</td>
+            <td>No Tax</td>
+            <td>Interest is taxable</td>
+            <td>No Tax</td>
+            <td>Interest is taxable</td>
+            <td>No Tax</td>
+        </tr>
+        <tr>
+            <td class="text-left">Post Tax Return</td>
+            <td>17.5%</td>
+            <td>6.3%</td>
+            <td>8.5%</td>
+            <td>5.95%</td>
+            <td>6%</td>
+        </tr>
+        <tr>
+            <td class="text-left">Minimum Lock in period</td>
+            <td>3 Years</td>
+            <td>5 Years</td>
+            <td>15 Years</td>
+            <td>5 To 10 Years</td>
+            <td>5 Years</td>
+        </tr>
+        
+    </tbody>
+</table>
+<span class="font_p83">Returns based on historical data. Past performances are not indicative of future returns.</span>
+          </div>
+          <div class="col-sm-4 column text-justify">            
+            <h4 class="text-center">Benefits of investing in ELSS</h4>
+            <ul class="row">    
+                <li>Gives the highest return and with inflation numbers close to double digits the only investment, which can beat inflation.</li>
+                <li>No Tax liability</li>
+                <li>Minimum Lock in period</li>      
+           </ul>
+           <div class="text-right">
+           <% if user_signed_in? %>
+                  <span> <a href="/invest"> <button class="btn btn-primary" type="button">INVEST NOW!</button></a></span>
+            <% else %>
+                  <span> <a href="/users/sign_in"> <button class="btn btn-primary" type="button">LOGIN</button></a></span>
+            <% end %>
+           </div>
+          </div>
+        </div>
+
+        </div> 
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+            <div class="col-sm-12 column">
+<p><b>Return over time horizons </b><span class="font_p83">(approx. in lacs)</span></p>
+                <table class="table table-responsive">
+    <thead class="table_head">
+        <tr>
+            <th class="text-center">Time Horizon</th>
+            <th class="text-center">ELSS</th>
+            <th class="text-center">BANK FD</th>
+            <th class="text-center">PPF</th>
+            <th class="text-center">NSC</th>
+            <th class="text-center">LIC</th>
+        </tr>
+    </thead>
+    <tbody class="table_bot text-center">
+        <tr>
+            <td >After 5 years</td>
+            <td><b>12.5</b></td>
+            <td>9</td>
+            <td>9.6</td>
+            <td>9</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td >After 10 years</td>
+            <td><b>40</b></td>
+            <td>21</td>
+            <td>24</td>
+            <td>21</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td >After 15 years</td>
+            <td><b>103</b></td>
+            <td>38</td>
+            <td>46</td>
+            <td>37</td>
+            <td>37</td>
+        </tr>
+        <tr>
+            <td >After 20 years</td>
+            <td><b>243</b></td>
+            <td>60.5</td>
+            <td>79</td>
+            <td>58</td>
+            <td>58.5</td>
+        </tr>
+        <tr>
+            <td >After 25 years</td>
+            <td><b>557</b></td>
+            <td>91</td>
+            <td>128</td>
+            <td>86.5</td>
+            <td>87</td>
+        </tr>
+    </tbody>
+</table>
+<span class="font_p83">Returns based on historical data. Past performances are not indicative of future returns.</span>
+
+            </div>
+
+            <div class="col-sm-12 pad_top2"> 
+                 <div id="comparison_chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            </div>
+            <div class="text-center">           
+                <span><a href="/invest"> <button class="btn btn-primary" type="button">INVEST IN ELSS TODAY</button></a></span>
+           </div>
+        </div>
+
         <div class="row pad_top4"> 
             <div class="col-sm-12">
             <h3 class="text-center"><b>3 reasons why you should absolutely not miss this tax saving opportunity this year</b></h3>
@@ -122,6 +350,9 @@ var view = new google.visualization.DataView(dataTable);
             <div class="col-sm-12 column text-left pad_top2">
             
             <p class="text-center"><b>So, have you done your 80C investment this year?</b></p>
+            <div class="text-center">           
+              <span><a href="/contact"><button class="btn btn-primary" type="button">CONTACT US</button></a></span>
+            </div>
 
             </div>
         </div>
@@ -131,11 +362,11 @@ var view = new google.visualization.DataView(dataTable);
        
     
     <!--  Jquery Core Script -->
-    <script src="/assets/jquery-1.10.2.js"></script>
+   
     <!--  Core Bootstrap Script -->
     <script src="/assets/bootstrap.js"></script>
         <!--  Custom Scripts -->
-    <script src="/assets/custom.js"></script>
+    
    
 </body>
 </html>
