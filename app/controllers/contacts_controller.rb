@@ -9,12 +9,12 @@ class ContactsController < ApplicationController
 	    # @contact.request = request
 	    
 	    if @contact.save
-	      ContactMailer.contact_confirmation(@contact).deliver
+	      ContactMailer.contact_confirmation(@contact).deliver	      
 	      flash.now[:notice] = 'Thank you for your message. We will contact you soon!' 
 	      redirect_to :controller=>'static_pages', :action => 'contact'     
-	    else
-	      flash.now[:error] = 'Cannot send message.'
-	      render :new
+	    # else
+	    #   flash.now[:error] = 'Cannot send message.'
+	    #   render :new
 	    end
 	  
 	  end
