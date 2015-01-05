@@ -7,6 +7,13 @@
 <!--<![endif]-->
 
 <body style="margin-top: 135px">
+    <% if flash[:notice_invest] -%>
+        <script type="text/javascript">    
+          $(window).load(function(){
+              $('#myModal_investor_message').modal('show');
+          });
+        </script>
+    <% end -%>
 
    <div class="general-subhead fixed_top">
        <h2>WHAT WE OFFER</h2>
@@ -31,6 +38,24 @@
                   <div class="col-sm-6 column">
                   <h2 class="text-center pad_top1">Fixed Deposit</h2>  
             <p class="font_1p2 pad_top1">This is a fixed return-paying term deposit lend to a bank, financial institution or company. To compensate for the low liquidity, FDs offer higher rates of interest than saving accounts. These are usually considered to be a very safe investment. Fixed deposit rates vary across banks and companies. Withdrawing a Fixed Deposit (FD) before maturity is usually difficult but some banks offer loans against FD certificate.</p>
+        <!-- Invest now button -->
+        <div class="col-sm-12 text-center pad_top2">
+                    <% if user_signed_in? %>            
+                  
+                <% if current_user.status == 1 %>
+                    <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <% elsif current_user.status == 2 %>
+                    <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <% elsif current_user.status == 3 %>
+                 <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+                <% end %>
+
+                    <% else %>
+
+                    <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+
+                    <% end %>
+        </div>
                 </div>
                 <div class="col-sm-6 column text-center">
                   <img src="/assets/offer/offer_fixed.png" class="image_responsive" width="60%" alt="FD" />                
@@ -133,6 +158,26 @@
                   <h2 class="text-center">Bonds And Non-Convertible Debentures’</h2>
                   
                     <p class="font_1p2 pad_top1">Bond refers to a secured fixed interest-paying instrument by a company, financial institution or government, which offers periodic payment of the ascertained interest in return on the amount of, borrowed money for the predetermined period of time. Interest rates and Bonds / NCDs’ prices are inversely related; i.e. if the interest rates in the economy go down the price of the Bond / NCD will go up and vice versa. However, in the case of an FD, there is always a penalty charge for pre-mature withdrawal, irrespective of any movement in interest rates.</p>
+
+        <!-- Invest now button -->
+        <div class="col-sm-12 text-center pad_top2">
+                    <% if user_signed_in? %>            
+                  
+                <% if current_user.status == 1 %>
+                    <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <% elsif current_user.status == 2 %>
+                    <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <% elsif current_user.status == 3 %>
+                 <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+                <% end %>
+
+                    <% else %>
+
+                    <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+
+                    <% end %>
+        </div>
+
                   </div>
                   <div class="col-sm-6 column text-center pad_top1">
                   <img src="/assets/offer/offer_bonds.jpg" class="image_responsive" alt="Bonds" />
@@ -183,6 +228,26 @@
 
                   <p class="font_1p2 pad_top1">A Mutual Fund is a pool of focused and professionally managed investments which invests in a spectrum of asset classes. These are regulated and sold every day on their re-priced NAV (net asset value) the portfolio's assets are usually valued by criteria established at the onset of the fund.</p>
                   <p class="font_1p2">These could be both open ended as well as closed ended; an open ended fund is where an investor can buy/sell these funds as and when they feel though some funds do have an exit load associated with them, where as a closed ended fund is where one should invest excess money with a growth objective as this has a lock in period and the asset can only be redeemed after expiration of said maturity.</p>
+
+        <!-- Invest now button -->
+        <div class="col-sm-12 text-center pad_top2">
+                    <% if user_signed_in? %>            
+                  
+                <% if current_user.status == 1 %>
+                    <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <% elsif current_user.status == 2 %>
+                    <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <% elsif current_user.status == 3 %>
+                 <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+                <% end %>
+
+                    <% else %>
+
+                    <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+
+                    <% end %>
+        </div>
+
                 </div>
                 <div class="col-sm-6 column text-center pad_top1">
                   <img src="/assets/offer/offer_mf.jpg" class="image_responsive" alt="MF" />
@@ -196,8 +261,7 @@
 
                         
     <section class="section-divider2 divider2" >
-      <div class="container"> 
-        
+      <div class="container">
         <div class="row" id="offer_body"> 
           <a id="o_eq"></a>
             <div class="col-sm-6 column text-left">
@@ -212,6 +276,24 @@
         </div>
       </div>
     </section>
+        <!-- Invest now button -->
+        <div class="col-sm-12 text-center pad_bot2">
+                    <% if user_signed_in? %>            
+                  
+                <% if current_user.status == 1 %>
+                    <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <% elsif current_user.status == 2 %>
+                    <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <% elsif current_user.status == 3 %>
+                 <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+                <% end %>
+
+                    <% else %>
+
+                    <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+
+                    <% end %>
+        </div>
 
     <section>
         <div class="container">          
@@ -304,6 +386,24 @@
           </div>
 
     </section>
+        <!-- Invest now button -->
+        <div class="col-sm-12 text-center pad_bot2">
+                    <% if user_signed_in? %>            
+                  
+                <% if current_user.status == 1 %>
+                    <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <% elsif current_user.status == 2 %>
+                    <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <% elsif current_user.status == 3 %>
+                 <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+                <% end %>
+
+                    <% else %>
+
+                    <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+
+                    <% end %>
+        </div>
 
     <section>
         <div class="container">          

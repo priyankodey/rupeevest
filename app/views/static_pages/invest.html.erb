@@ -152,108 +152,6 @@
 
 <!-- MODAL DEMO END--> 
 
-<!-- MODAL INVESTOR DETAILS -->
-
-    <div class="modal fade" id="myModal_investor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog pad_modal">
-          <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Register With Us</h4>
-              </div>
-              <div class="modal-body">
-                  <div class="row">
-                      <div class="col-sm-12">
-
-    <%= form_tag investor_details_path, class: "form-horizontal" do  %>
-
-        <div class="form-group">                
-            <label class="control-label col-sm-3 col-lg-2"> Name</label>
-            <div class="col-sm-9 col-lg-10">
-            <%= text_field_tag "investor[name]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The Name',  required: true %>
-            </div>
-        </div>
-        <div class="form-group">                
-            <label class="control-label col-sm-3 col-lg-2"> Email</label>
-            <div class="col-sm-9 col-lg-10">
-            <%= text_field_tag "investor[email]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The email',  required: true %>
-            </div>
-        </div>
-        <div class="form-group">                
-            <label class="control-label col-sm-3 col-lg-2"> Mobile</label>
-            <div class="col-sm-9 col-lg-10">
-            <%= text_field_tag "investor[number]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The Mobile',  required: true %>
-            </div>
-        </div>
-        <div class="row">
-            <div class="actions">
-                <div class="col-sm-3 col-lg-2"></div>
-                <div class="col-xs-5 col-sm-3 col-lg-3">
-                <%= submit_tag 'Submit', :class => 'btn btn-primary btn-block', tabindex: "2" %>
-                </div>
-                
-                <div class="col-xs-2 col-sm-3 col-lg-4"></div>
-            </div> 
-        </div>                     
-     <% end %> 
-
-                      </div>
-                  </div>  
-              
-              </div>
-              <!-- <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div> -->
-          </div>
-      </div>
-    </div>
-
-<!-- MODAL INVESTOR DETAILS END -->
-
-<!-- MODAL INVESTOR MESSAGE -->
-
-    <div class="modal fade" id="myModal_investor_message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog pad_modal">
-            <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title"></h4>
-                  </div>
-                  <div class="modal-body">
-                      <div class="row">
-                          <div class="col-lg-12 text-center">
-                        You will get an email shortly.
-                          </div>
-                      </div> 
-                  </div>              
-            </div>
-         </div>
-    </div>
-
-<!-- MODAL INVESTOR MESSAGE END -->
-
-<!-- MODAL USER MESSAGE -->
-
-    <div class="modal fade" id="myModal_user_message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog pad_modal">
-            <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Alert Message</h4>
-                  </div>
-                  <div class="modal-body">
-                      <div class="row">
-                          <div class="col-lg-12">
-                        Please <a href="/users/sign_in"><b>LOGIN</b></a> to Invest.                        
-                          </div>
-                      </div> 
-                  </div>              
-            </div>
-         </div>
-    </div>
-
-<!-- MODAL USER MESSAGE END -->
-
 
     <div class="general-subhead">
         <h2>START INVESTING</h2>
@@ -267,12 +165,55 @@
         </script>
     <% end -%>
 
-    <section id="port-folio">
+    <section class="section-divider6 textdivider6 divider6" >        
+        <div class="container">
+            <div class="row mar_top_m25">
+                <div class="col-sm-12 column text-center">
+                  <h1> Invest Online Now! </h1>
+                    <h4>Hassle free investments</h4>
+                    <h4>No paperwork</h4>
+                    <h4>Save time</h4>                    
+                </div>
+                
+            <div class="col-sm-12 pad_top10">              
+
+              <div class="col-sm-4 text-right">
+                <% if user_signed_in? %>            
+              
+            <% if current_user.status == 1 %>
+                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">CLICK TO INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 2 %>
+                <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">CLICK TO INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 3 %>
+             <span><%= link_to "CLICK TO INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+            <% end %>
+
+                <% else %>
+
+                <a data-toggle="modal" href="#myModal_user_message"><button type="button"  class=" btn btn-primary"><span class="text">CLICK TO INVEST NOW!</span></button></a>
+
+                <% end %>
+              </div>
+              <div class="col-sm-4">
+                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">ADD ANOTHER ACCOUNT</span></button></a>
+              </div>
+              <div class="col-sm-4 text-left">
+                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">RESEND EMAIL</span></button></a>
+              </div>
+
+            </div>
+        
+                
+            </div>
+        </div> 
+    </section>
+
+    <!-- <section id="port-folio">
         <div class="container">
 
             <div class="row pad-row">
 
-                 <div class="allthumb text-center">
+  <div class="allthumb text-center">
 
     <div class="col-md-3" style="padding-right:1cm">
     <div class="thumbnail" style="background:none;border:none;box-shadow:none;">
@@ -317,38 +258,12 @@
   </div>               
 
                 
-        <div class="row">
-            <div class="col-sm-12 pad-row">
-
-              <div class="col-sm-6 col-sm-push-3">
-                <a data-toggle="modal" href="#myModal"><button type="button"  class=" btn btn-primary"><span class="text">CLICK HERE TO TRY DEMO</span></button></a>
-              </div>
-
-              <div class="col-sm-6">
-                <% if user_signed_in? %>            
-              
-            <% if current_user.status == 1 %>
-                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">CLICK HERE TO INVEST</span></button></a>
-            <% elsif current_user.status == 2 %>
-                <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">CLICK HERE TO INVEST</span></button></a>
-            <% elsif current_user.status == 3 %>
-             <span><%= link_to "CLICK HERE TO INVEST", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
-            <% end %>
-
-                <% else %>
-
-                <a data-toggle="modal" href="#myModal_user_message"><button type="button"  class=" btn btn-primary"><span class="text">CLICK HERE TO INVEST</span></button></a>
-
-                <% end %>
-              </div>
-
-            </div>
-        </div>
+        
 
             </div>           
          
         </div>
-    </section>  
+    </section> -->  
     
 
       <!-- invest End-->

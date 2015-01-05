@@ -8,6 +8,14 @@
 
 <body>
 
+    <% if flash[:notice_invest] -%>
+        <script type="text/javascript">    
+          $(window).load(function(){
+              $('#myModal_investor_message').modal('show');
+          });
+        </script>
+    <% end -%>
+
    
     <div id="main-slider">
 
@@ -78,6 +86,25 @@ So, invest before its too late
 
     </div> -->
     <!--./ Welcome Section End -->
+
+    <!-- Invest now button -->
+    <div class="col-sm-12 text-center pad_top2">
+                <% if user_signed_in? %>            
+              
+            <% if current_user.status == 1 %>
+                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 2 %>
+                <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 3 %>
+             <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+            <% end %>
+
+                <% else %>
+
+                <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+
+                <% end %>
+    </div>
     
     <!--./ Home Service End -->
     <section id="service-info">
@@ -195,8 +222,23 @@ So, invest before its too late
                 </div>
             </div>
             <div class="row">
+                <!-- Invest now button -->
                 <div class="col-sm-12 text-center pad_top2">
-                    <a href="/invest"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW</span></button></a>
+                            <% if user_signed_in? %>            
+                          
+                        <% if current_user.status == 1 %>
+                            <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                        <% elsif current_user.status == 2 %>
+                            <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                        <% elsif current_user.status == 3 %>
+                         <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+                        <% end %>
+
+                            <% else %>
+
+                            <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+
+                            <% end %>
                 </div>
             </div>
 
@@ -307,7 +349,24 @@ So, invest before its too late
     </div>
     
     <!--./ Testimonials End -->
+    <!-- Invest now button -->
+    <div class="col-sm-12 text-center pad_top2">
+                <% if user_signed_in? %>            
+              
+            <% if current_user.status == 1 %>
+                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 2 %>
+                <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 3 %>
+             <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+            <% end %>
 
+                <% else %>
+
+                <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+
+                <% end %>
+    </div>
     <section id="service-info">
         <div class="container">
             

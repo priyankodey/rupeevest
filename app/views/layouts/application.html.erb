@@ -35,6 +35,108 @@
 
 </head>
 <body>
+    <!-- MODAL INVESTOR DETAILS -->
+
+    <div class="modal fade" id="myModal_investor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog pad_modal">
+          <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Register With Us</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="row">
+                      <div class="col-sm-12">
+
+    <%= form_tag investor_details_path, class: "form-horizontal" do  %>
+
+        <div class="form-group">                
+            <label class="control-label col-sm-3 col-lg-2"> Name</label>
+            <div class="col-sm-9 col-lg-10">
+            <%= text_field_tag "investor[name]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The Name',  required: true %>
+            </div>
+        </div>
+        <div class="form-group">                
+            <label class="control-label col-sm-3 col-lg-2"> Email</label>
+            <div class="col-sm-9 col-lg-10">
+            <%= text_field_tag "investor[email]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The email',  required: true %>
+            </div>
+        </div>
+        <div class="form-group">                
+            <label class="control-label col-sm-3 col-lg-2"> Mobile</label>
+            <div class="col-sm-9 col-lg-10">
+            <%= text_field_tag "investor[number]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The Mobile',  required: true %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="actions">
+                <div class="col-sm-3 col-lg-2"></div>
+                <div class="col-xs-5 col-sm-3 col-lg-3">
+                <%= submit_tag 'Submit', :class => 'btn btn-primary btn-block', tabindex: "2" %>
+                </div>
+                
+                <div class="col-xs-2 col-sm-3 col-lg-4"></div>
+            </div> 
+        </div>                     
+     <% end %> 
+
+                      </div>
+                  </div>  
+              
+              </div>
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div> -->
+          </div>
+      </div>
+    </div>
+
+<!-- MODAL INVESTOR DETAILS END -->
+
+<!-- MODAL INVESTOR MESSAGE -->
+
+    <div class="modal fade" id="myModal_investor_message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog pad_modal">
+            <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                  </div>
+                  <div class="modal-body">
+                      <div class="row">
+                          <div class="col-lg-12 text-center">
+                        You will get an email shortly.
+                          </div>
+                      </div> 
+                  </div>              
+            </div>
+         </div>
+    </div>
+
+<!-- MODAL INVESTOR MESSAGE END -->
+
+<!-- MODAL USER MESSAGE -->
+
+    <div class="modal fade" id="myModal_user_message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog pad_modal">
+            <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Alert Message</h4>
+                  </div>
+                  <div class="modal-body">
+                      <div class="row">
+                          <div class="col-lg-12">
+                        Please <a href="/users/sign_in"><b>LOGIN</b></a> to Invest.                        
+                          </div>
+                      </div> 
+                  </div>              
+            </div>
+         </div>
+    </div>
+
+<!-- MODAL USER MESSAGE END -->
+
     <div class="navbar navbar-default navbar-fixed-top menu-back">
         <div class="container">
             <div class="navbar-header">
@@ -217,7 +319,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-8">
-                    <i class="fa fa-building fa-2x"></i>
+                    <!-- <i class="fa fa-building fa-2x"></i> -->
                     <span>A Small Introduction</span>                    
                     <p class="text-justify">Rupeevest helps you INVEST ONLINE in a simple, efficient and effective manner. Rupeevest helps retail investors make simple investment decisions. Whether it is to save tax, save money for your life goals, invest in equities, generate monthly income for family, or just track your investments, Rupeevest aims to be a one stop destination to manage money for every Indian.                  
                     </p>
@@ -225,9 +327,10 @@
                 
 
                 <div class="col-lg-4 col-md-4">
-                    <i class="fa fa-sliders fa-2x"></i>
+                    <!-- <i class="fa fa-sliders fa-2x"></i> -->
                     <span>Our location</span>
-                    <br />    
+                    <br />
+                    <p>    
                     Room No:81, 5th Floor,
                     <br />
                     Stephen House, BBD Bag,
@@ -236,7 +339,8 @@
                     <br />
                     Call: +91 987 469 1177 ; +91-740-699-8067
                      <br />
-                    mail: info@rupeevest.com                    
+                    mail: info@rupeevest.com  
+                </p>                  
                 </div>
             </div>
         </div>
@@ -245,8 +349,8 @@
     <!--./ footer-sec  End -->
 
     <div class="div-social-top">
-
-        <i class="fa fa-globe "></i>E-mail:  <a href="mailto:info@rupeevest.com">info@rupeevest.com</a>   | <i class="fa fa-mobile "></i>Call: : +91 987 469 1177  |  <i class="fa fa-map-marker "></i>Country : INDIA &nbsp;
+        <div class="container">
+        <i class="fa fa-envelope"></i><a href="mailto:info@rupeevest.com">info@rupeevest.com</a>   | <i class="fa fa-mobile "></i> +91 987 469 1177  &nbsp;<a href= "http://maps.google.com/maps?ll=22.571411,88.350815&z=15&t=m&hl=en-US&gl=IN&mapclient=embed&cid=18209202087708110679" target="_blank" ><image src="/assets/logo/google_map_logo.png" class="img-rounded"></a>&nbsp;
               <a href="https://www.facebook.com/rupeevest" target="_blank">
                   <i class="fa fa-facebook-square "></i>
               </a>
@@ -262,6 +366,7 @@
               <a href=" https://www.pinterest.com/rupeevest/" target="_blank">
                   <i class="fa fa-pinterest-square "></i>
               </a>
+        </div>
     </div>
     <!--./ Social Div End -->
 
@@ -269,10 +374,10 @@
         <div class="container">
             <div class="row">
                 <div  class="col-lg-8 col-md-12">
-                    <span>Mutual Funds are subject to market risk. Please read the offer document carefully before investing. | ARN-86752</span>
+                    <i class="font_p83">Mutual Funds are subject to market risk. Please read the offer document carefully before investing. | ARN-86752</i>
                 </div>
                 <div class="col-lg-4 col-md-12">
-                    2014 All Rights Reserved | by: <a href="http://rupeevest.com" style="color:#fff" >www.rupeevest.com</a>                    
+                    © 2014 All Rights Reserved                    
                 </div>
             </div>
         </div>

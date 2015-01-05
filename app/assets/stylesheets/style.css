@@ -53,6 +53,10 @@ section {
    padding-bottom: 12em;
 }
 
+.pad_top10 {
+    padding-top: 10em;
+}
+
 .padding_reduce {
    padding: 2px !important;
    margin: 2px !important;
@@ -76,6 +80,10 @@ section {
 
 .mar_top_mp5 {
     margin-top: -0.5em;
+}
+
+.mar_top_m25 {
+    margin-top: -25em;
 }
 
 .font_1p5 {
@@ -893,16 +901,19 @@ padding:30px;
 }
 #footer-sec span {
     font-size:20px;
-    color:#ff6a00;
+    font-family: tahoma;
+    color:#ffffff;
 }
 #footer-sec small {
     display:table-cell;
     color: #C5C5C5;
 }
 #footer-sec p {
-   border-right: 1px solid #3D3577;
+   /*border-right: 1px solid #3D3577;*/
    padding-right:10px;
-
+   font-family: tahoma;
+   font-size: 0.83em;
+   line-height: 1.9em;
 }
 #footer-sec .media-heading > a {
     color:#fff;
@@ -1270,6 +1281,50 @@ border: 1px solid #e1e1e1;
  /*==========================================
    INVEST STYLES
     =====================================================*/
+.divider6 {
+    background-image: url('../assets/invest_handshake1.jpg');
+    background-repeat: no-repeat;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+.textdivider6 h1 {
+    padding-top: 40px;
+    color: #2D2A2A;
+    font-size: 40px;
+}
+
+.textdivider6 p {
+    color: white;
+    font-size: 20px;
+}
+
+.section-divider6 {
+    z-index: 999;
+    width: 100%;
+    display: block;
+    margin: 0px;
+    max-height: 500px;
+    /*border-bottom: 2px solid #E6EAED;*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-top: 25%;
+    padding-bottom: 10%;
+    background-position: center center;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: relative;    
+    text-align: center;
+}
 
 
 .invest-item {

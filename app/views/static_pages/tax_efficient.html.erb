@@ -152,7 +152,13 @@ $(function () {
 
 </head>
 <body>
-
+    <% if flash[:notice_invest] -%>
+        <script type="text/javascript">    
+          $(window).load(function(){
+              $('#myModal_investor_message').modal('show');
+          });
+        </script>
+    <% end -%>
    <div class="general-subhead">
        <h2>TAX EFFICIENT INVESTING</h2>
    </div>
@@ -245,13 +251,24 @@ $(function () {
                 <li>No Tax liability</li>
                 <li>Minimum Lock in period</li>      
            </ul>
-           <div class="text-right">
-           <% if user_signed_in? %>
-                  <span> <a href="/invest"> <button class="btn btn-primary" type="button">INVEST NOW!</button></a></span>
-            <% else %>
-                  <span> <a href="/users/sign_in"> <button class="btn btn-primary" type="button">LOGIN</button></a></span>
-            <% end %>
-           </div>
+           <!-- Invest now button -->
+            <div class="col-sm-12 text-right pad_top2">
+                        <% if user_signed_in? %>            
+                      
+                    <% if current_user.status == 1 %>
+                        <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                    <% elsif current_user.status == 2 %>
+                        <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                    <% elsif current_user.status == 3 %>
+                     <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+                    <% end %>
+
+                        <% else %>
+
+                        <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+
+                        <% end %>
+            </div>
           </div>
         </div>
 
@@ -324,9 +341,24 @@ $(function () {
             <div class="col-sm-12 pad_top2"> 
                  <div id="comparison_chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
             </div>
-            <div class="text-center">           
-                <span><a href="/invest"> <button class="btn btn-primary" type="button">INVEST IN ELSS TODAY</button></a></span>
-           </div>
+            <!-- Invest now button -->
+            <div class="col-sm-12 text-center pad_top2">
+                        <% if user_signed_in? %>            
+                      
+                    <% if current_user.status == 1 %>
+                        <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST IN ELSS TODAY</span></button></a>
+                    <% elsif current_user.status == 2 %>
+                        <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST IN ELSS TODAY</span></button></a>
+                    <% elsif current_user.status == 3 %>
+                     <span><%= link_to "INVEST IN ELSS TODAY", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+                    <% end %>
+
+                        <% else %>
+
+                        <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST IN ELSS TODAY</span></button></a>
+
+                        <% end %>
+            </div>
         </div>
 
         <div class="row pad_top4"> 

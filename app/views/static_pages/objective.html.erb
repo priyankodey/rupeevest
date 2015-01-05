@@ -8,7 +8,13 @@
 
 <body>
 
-     <!--./ Gereral Subhead End -->
+     <% if flash[:notice_invest] -%>
+        <script type="text/javascript">    
+          $(window).load(function(){
+              $('#myModal_investor_message').modal('show');
+          });
+        </script>
+    <% end -%>
     
     <section class="section-divider textdivider divider1" >        
         <div class="container">
@@ -33,7 +39,25 @@
                         <p>Each Mutual Fund has been selected to balance considerations of low cost and high liquidity as a means to access each asset class. When making the selection for each Fund, we considered the following: expense ratio, historical return and we emphasis on only the best, fund managers, liquidity, portfolio of assets and capital gains implication.</p>    
                 </div> 
                 <div class="col-sm-4 column text-center pad_top4">
-                        <img src="/assets/obj_chart.png" class="image_responsive" alt="" />                
+                        <img src="/assets/obj_chart.png" class="image_responsive" alt="" />
+                        <!-- Invest now button -->
+                        <div class="col-sm-12 text-center pad_top2">
+                                    <% if user_signed_in? %>            
+                                  
+                                <% if current_user.status == 1 %>
+                                    <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                                <% elsif current_user.status == 2 %>
+                                    <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                                <% elsif current_user.status == 3 %>
+                                 <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+                                <% end %>
+
+                                    <% else %>
+
+                                    <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+
+                                    <% end %>
+                        </div>                
                 </div>                
             </div>
             

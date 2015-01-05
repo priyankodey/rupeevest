@@ -7,7 +7,14 @@
 <!--<![endif]-->
 
 <body>
-
+    <% if flash[:notice_invest] -%>
+        <script type="text/javascript">    
+          $(window).load(function(){
+              $('#myModal_investor_message').modal('show');
+          });
+        </script>
+    <% end -%>
+    
    <div class="general-subhead">
        <h2>TEAM MEMBERS</h2>
    </div>
@@ -68,7 +75,7 @@
            </div> 
         </section>
      <!--./Team Style One End -->
-    <div id="just-middle-row">
+    <!-- <div id="just-middle-row">
         <div class="container">
                 <div class="row pad-top-botm">
                 <div class="col-lg-12 col-md-12">
@@ -76,7 +83,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
      <!--./Middle Row End -->
     <section>
         <div class="container">
@@ -129,7 +136,7 @@
                 </div>
             </div> -->
 
-            <div class="row ">
+            <!-- <div class="row ">
                 <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2"  >
                      <h2><strong>Rupee Vest Vision</strong></h2>
                     <p>
@@ -137,16 +144,16 @@
                               
                     </p>
                     </div>  
-              </div>
+              </div> -->
 
   
-            <div class="row ">
+            <!-- <div class="row ">
                 <div class="col-lg-6 col-lg-offset-2  col-sm-6 col-sm-offset-2" >
                     <h2><strong>Rupee Vest Teasure</strong></h2>
                     <hr />
                      <iframe class="vedio-style" src="//www.youtube.com/embed/DqrN2kWPzPo?rel=0" ></iframe>
                 </div>
-            </div>
+            </div> -->
 
 
 
@@ -200,6 +207,24 @@
                 </div>
                 
             </div>
+        </div>
+        <!-- Invest now button -->
+        <div class="col-sm-12 text-center">
+                    <% if user_signed_in? %>            
+                  
+                <% if current_user.status == 1 %>
+                    <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <% elsif current_user.status == 2 %>
+                    <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <% elsif current_user.status == 3 %>
+                 <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+                <% end %>
+
+                    <% else %>
+
+                    <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+
+                    <% end %>
         </div>
     </section>
      <!--./Team Style Two End -->

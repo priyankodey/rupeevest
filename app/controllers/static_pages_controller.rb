@@ -14,7 +14,7 @@ class StaticPagesController < ApplicationController
         current_user.status = 2
         current_user.save
         @investor.save
-        format.html { redirect_to "/invest", :flash => { :notice_invest => "You wiil received an email shortly" }  }
+        format.html { redirect_to :back, :flash => { :notice_invest => "You wiil received an email shortly" }  }
         #flash.now[:notice] = 'Thank you for your message. We will contact you soon!'
         format.json { render action: 'show', status: :created, location: @investor }
       else
