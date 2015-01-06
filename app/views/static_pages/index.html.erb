@@ -7,6 +7,28 @@
 <!--<![endif]-->
 
 <body>
+    <% if user_signed_in? %>
+    <% if current_user.status == 1 %>
+        <script type="text/javascript">
+        $(window).load(function(){
+            $('#myModal_investor').modal('show');
+        });
+        </script>
+    <% elsif current_user.status == 2 %>
+        <script type="text/javascript">
+        $(window).load(function(){
+            $('#myModal_investor_message').modal('show');
+        });
+        </script>
+    <% elsif current_user.status == 3 %>
+        <script type="text/javascript">
+        $(window).load(function(){
+            $('#myModal_investor_invest').modal('show');
+        });
+        </script>
+        <% end %>
+    <% end %>
+
 
     <% if flash[:notice_invest] -%>
         <script type="text/javascript">    
@@ -101,7 +123,7 @@ So, invest before its too late
 
                 <% else %>
 
-                <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <span><%= link_to "INVEST NOW!", new_user_session_path ,method: :get, class: "btn btn-primary" %></span>
 
                 <% end %>
     </div>
