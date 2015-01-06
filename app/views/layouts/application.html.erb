@@ -93,6 +93,123 @@
 
 <!-- MODAL INVESTOR DETAILS END -->
 
+<!-- MODAL INVESTOR DETAILS FOR ANOTHER ACCOUNT -->
+
+    <div class="modal fade" id="myModal_investor_another_acc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog pad_modal">
+          <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Register With a different account</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="row">
+                      <div class="col-sm-12">
+
+    <%= form_tag investor_details_path, class: "form-horizontal" do  %>
+
+        <div class="form-group">                
+            <label class="control-label col-sm-3 col-lg-2"> Name</label>
+            <div class="col-sm-9 col-lg-10">
+            <%= text_field_tag "investor[name]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The Name',  required: true %>
+            </div>
+        </div>
+        <div class="form-group">                
+            <label class="control-label col-sm-3 col-lg-2"> Email</label>
+            <div class="col-sm-9 col-lg-10">
+            <%= text_field_tag "investor[email]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The email',  required: true %>
+            </div>
+        </div>
+        <div class="form-group">                
+            <label class="control-label col-sm-3 col-lg-2"> Mobile</label>
+            <div class="col-sm-9 col-lg-10">
+            <%= text_field_tag "investor[number]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The Mobile',  required: true %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="actions">
+                <div class="col-sm-3 col-lg-2"></div>
+                <div class="col-xs-5 col-sm-3 col-lg-3">
+                <%= submit_tag 'Submit', :class => 'btn btn-primary btn-block', tabindex: "2" %>
+                </div>
+                
+                <div class="col-xs-2 col-sm-3 col-lg-4"></div>
+            </div> 
+        </div>                     
+     <% end %> 
+
+                      </div>
+                  </div>  
+              
+              </div>
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div> -->
+          </div>
+      </div>
+    </div>
+
+<!-- MODAL INVESTOR DETAILS FOR ANOTHER ACCOUNT END -->
+
+<!-- MODAL INVESTOR DETAILS FOR RESEND EMAIL-->
+
+    <div class="modal fade" id="myModal_investor_resend_email" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog pad_modal">
+          <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Resend Details</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="row">
+                      <div class="col-sm-12">
+
+    <%= form_tag investor_details_path, class: "form-horizontal" do  %>
+
+        <div class="form-group">                
+            <label class="control-label col-sm-3 col-lg-2"> Name</label>
+            <div class="col-sm-9 col-lg-10">
+            <%= text_field_tag "investor[name]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The Name',  required: true %>
+            </div>
+        </div>
+        <div class="form-group">                
+            <label class="control-label col-sm-3 col-lg-2"> Email</label>
+            <div class="col-sm-9 col-lg-10">
+            <%= text_field_tag "investor[email]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The email',  required: true %>
+            </div>
+        </div>
+        <div class="form-group">                
+            <label class="control-label col-sm-3 col-lg-2"> Mobile</label>
+            <div class="col-sm-9 col-lg-10">
+            <%= text_field_tag "investor[number]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The Mobile',  required: true %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="actions">
+                <div class="col-sm-3 col-lg-2"></div>
+                <div class="col-xs-5 col-sm-3 col-lg-3">
+                <%= submit_tag 'Submit', :class => 'btn btn-primary btn-block', tabindex: "2" %>
+                </div>
+                
+                <div class="col-xs-2 col-sm-3 col-lg-4"></div>
+            </div> 
+        </div>                     
+     <% end %> 
+
+                      </div>
+                  </div>  
+              
+              </div>
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div> -->
+          </div>
+      </div>
+    </div>
+
+<!-- MODAL INVESTOR DETAILS FOR RESEND EMAIL END -->
+
+
 <!-- MODAL INVESTOR MESSAGE -->
 
     <div class="modal fade" id="myModal_investor_message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -127,7 +244,7 @@
                   <div class="modal-body">
                       <div class="row">
                           <div class="col-lg-12">
-                    <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>                        
+                    <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-warning", target: "_blank" %></span>                        
                           </div>
                       </div> 
                   </div>              
@@ -372,7 +489,7 @@
 
     <div class="div-social-top">
         <div class="container">
-        <i class="fa fa-envelope"></i><a href="mailto:info@rupeevest.com">info@rupeevest.com</a>   | <i class="fa fa-mobile "></i> +91 987 469 1177  &nbsp;<a href= "http://maps.google.com/maps?ll=22.571411,88.350815&z=15&t=m&hl=en-US&gl=IN&mapclient=embed&cid=18209202087708110679" target="_blank" ><image src="/assets/logo/google_map_logo.png" class="img-rounded"></a>&nbsp;
+        <i class="fa fa-envelope"></i><a href="mailto:info@rupeevest.com">info@rupeevest.com&nbsp;&nbsp;</a>  <i class="fa fa-mobile "></i>+91 987 469 1177  &nbsp;<a href= "http://maps.google.com/maps?ll=22.571411,88.350815&z=15&t=m&hl=en-US&gl=IN&mapclient=embed&cid=18209202087708110679" target="_blank" ><image src="/assets/logo/google_map_logo.png" class="img-rounded"></a>&nbsp;
               <a href="https://www.facebook.com/rupeevest" target="_blank">
                   <i class="fa fa-facebook-square "></i>
               </a>

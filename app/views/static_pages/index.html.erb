@@ -100,9 +100,9 @@ So, invest before its too late
 
         <div class="welcome-div">
             <% if user_signed_in? %>
-                <i class="fa fa-sign-in fa-2x"></i><span>INDIA'S FIRST SELF-HELP INVESTMENT PLATFORM</span><span> <a href="/invest"> <button class="btn btn-primary" type="button">TRY IT NOW!</button></a></span>
+                <i class="fa fa-sign-in fa-2x"></i><span>INDIA'S FIRST SELF-HELP INVESTMENT PLATFORM</span><span> <a href="/invest"> <button class="btn btn-warning" type="button">TRY IT NOW!</button></a></span>
             <% else %>
-                <i class="fa fa-sign-in fa-2x"></i><span>INDIA'S FIRST SELF-HELP INVESTMENT PLATFORM</span><span> <a href="/users/sign_in"> <button class="btn btn-primary" type="button">TRY IT NOW!</button></a></span>
+                <i class="fa fa-sign-in fa-2x"></i><span>INDIA'S FIRST SELF-HELP INVESTMENT PLATFORM</span><span> <a href="/users/sign_in"> <button class="btn btn-warning" type="button">TRY IT NOW!</button></a></span>
             <% end %>
         </div>
 
@@ -111,21 +111,24 @@ So, invest before its too late
 
     <!-- Invest now button -->
     <div class="col-sm-12 text-center pad_top2">
+                <div id="button_warning">
                 <% if user_signed_in? %>            
               
             <% if current_user.status == 1 %>
-                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
             <% elsif current_user.status == 2 %>
-                <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
             <% elsif current_user.status == 3 %>
-             <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+             <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-warning", target: "_blank" %></span>
             <% end %>
 
                 <% else %>
 
-                <span><%= link_to "INVEST NOW!", new_user_session_path ,method: :get, class: "btn btn-primary" %></span>
+                <span><%= link_to "INVEST NOW!", new_user_session_path ,method: :get, class: "btn btn-warning" %></span>
 
                 <% end %>
+                </div>
+
     </div>
     
     <!--./ Home Service End -->
@@ -246,21 +249,23 @@ So, invest before its too late
             <div class="row">
                 <!-- Invest now button -->
                 <div class="col-sm-12 text-center pad_top2">
+                    <div id="button_warning">
                             <% if user_signed_in? %>            
                           
                         <% if current_user.status == 1 %>
-                            <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                            <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
                         <% elsif current_user.status == 2 %>
-                            <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                            <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
                         <% elsif current_user.status == 3 %>
-                         <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+                         <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-warning", target: "_blank" %></span>
                         <% end %>
 
                             <% else %>
 
-                            <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                        <span><%= link_to "INVEST NOW!", new_user_session_path ,method: :get, class: "btn btn-warning" %></span>
 
                             <% end %>
+                    </div>
                 </div>
             </div>
 
@@ -335,7 +340,7 @@ So, invest before its too late
 
                                         <h4><i class="fa fa-quote-left"></i>All thanks to RupeeVest for making my investments simple and efficient. Your honest opinion helped me overcome my previous failures with mutual funds. <i class="fa fa-quote-right"></i></h4>
                                         <div class="user-img pull-right">
-                                            <img src="/assets/team/team1.png" alt="" class="img-u image-responsive" />
+                                            <img src="/assets/team/blank_male.jpg" alt="" class="img-u image-responsive" />
                                         </div>
                                         <h5 class="pull-right"><strong class="c-black">Abhishek Mishra</strong></h5>
                                     </div>
@@ -346,7 +351,7 @@ So, invest before its too late
                                     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 slide-custom">
                                         <h4><i class="fa fa-quote-left"></i>I had a difficult time understanding which funds are right for me. But you guys made it just so easy. Thank you guys for your great advice. <i class="fa fa-quote-right"></i></h4>
                                         <div class="user-img pull-right">
-                                            <img src="/assets/team/team1.png" alt="" class="img-u image-responsive" />
+                                            <img src="/assets/team/blank_male.jpg" alt="" class="img-u image-responsive" />
                                         </div>
                                         <h5 class="pull-right"><strong class="c-black">Manas Sharma</strong></h5>
                                     </div>
@@ -357,7 +362,7 @@ So, invest before its too late
                                     <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 slide-custom">
                                         <h4><i class="fa fa-quote-left"></i>If you want to invest carefree, my only suggestion is RupeeVest. All I had to do was trust them. Now my investment life has become a lot more simpler. <i class="fa fa-quote-right"></i></h4>
                                         <div class="user-img pull-right">
-                                            <img src="/assets/team/team1.png" alt="" class="img-u image-responsive" />
+                                            <img src="/assets/team/blank_female.jpg" alt="" class="img-u image-responsive" />
                                         </div>
                                         <h5 class="pull-right"><strong class="c-black">Priyanka Singh</strong></h5>
                                     </div>
@@ -373,21 +378,23 @@ So, invest before its too late
     <!--./ Testimonials End -->
     <!-- Invest now button -->
     <div class="col-sm-12 text-center pad_top2">
+        <div id="button_warning">
                 <% if user_signed_in? %>            
               
             <% if current_user.status == 1 %>
-                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
             <% elsif current_user.status == 2 %>
-                <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
             <% elsif current_user.status == 3 %>
-             <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+             <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-warning", target: "_blank" %></span>
             <% end %>
 
                 <% else %>
 
-                <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                <span><%= link_to "INVEST NOW!", new_user_session_path ,method: :get, class: "btn btn-warning" %></span>
 
                 <% end %>
+        </div>
     </div>
     <section id="service-info">
         <div class="container">

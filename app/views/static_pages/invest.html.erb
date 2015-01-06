@@ -135,9 +135,9 @@
         <div class="row">
             <div class="col-lg-12 pad-top-botm">
               <% if user_signed_in? %>
-                  <span> <a href="/invest"> <button class="btn btn-primary" type="button">TRY IT NOW!</button></a></span>
+                  <span> <a href="/invest"> <button class="btn btn-warning" type="button">TRY IT NOW!</button></a></span>
             <% else %>
-                  <span> <a href="/users/sign_in"> <button class="btn btn-primary" type="button">TRY IT NOW!</button></a></span>
+                  <span> <a href="/users/sign_in"> <button class="btn btn-warning" type="button">TRY IT NOW!</button></a></span>
             <% end %>
             </div>
         </div>
@@ -177,28 +177,29 @@
                 
             <div class="col-sm-12 pad_top10">              
 
-              <div class="col-sm-4 text-right">
+            <div class="col-sm-4 text-right" id="button_warning">
+                <div id="button_warning">
                 <% if user_signed_in? %>            
               
             <% if current_user.status == 1 %>
-                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">CLICK TO INVEST NOW!</span></button></a>
+                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-warning"><span class="text">CLICK TO INVEST NOW!</span></button></a>
             <% elsif current_user.status == 2 %>
-                <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">CLICK TO INVEST NOW!</span></button></a>
+                <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-warning"><span class="text">CLICK TO INVEST NOW!</span></button></a>
             <% elsif current_user.status == 3 %>
-             <span><%= link_to "CLICK TO INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+             <span><%= link_to "CLICK TO INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-warning", target: "_blank" %></span>
             <% end %>
 
                 <% else %>
-
-                <a data-toggle="modal" href="#myModal_user_message"><button type="button"  class=" btn btn-primary"><span class="text">CLICK TO INVEST NOW!</span></button></a>
+                <span><%= link_to "CLICK TO INVEST NOW!", new_user_session_path ,method: :get, class: "btn btn-warning" %></span>                
 
                 <% end %>
+                </div>
+            </div>
+              <div class="col-sm-4" id="button_warning">
+                <a data-toggle="modal" href="#myModal_investor_another_acc"><button type="button"  class=" btn btn-warning"><span class="text">ADD ANOTHER ACCOUNT</span></button></a>
               </div>
-              <div class="col-sm-4">
-                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">ADD ANOTHER ACCOUNT</span></button></a>
-              </div>
-              <div class="col-sm-4 text-left">
-                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">RESEND EMAIL</span></button></a>
+              <div class="col-sm-4 text-left" id="button_warning">
+                <a data-toggle="modal" href="#myModal_investor_resend_email"><button type="button"  class=" btn btn-warning"><span class="text">RESEND EMAIL</span></button></a>
               </div>
 
             </div>

@@ -22,6 +22,31 @@
                      <ul class="nav nav-tabs" role="tablist">
                         <li class="active"><a href="#video" role="tab" data-toggle="tab">VIDEOS</a></li>
                         <li><a href="#image" role="tab" data-toggle="tab">IMAGES</a></li>
+                        <div class="dis_inl_blk text-right">
+                        <li>
+                            <!-- Invest now button -->
+    <div class="col-sm-12 text-right">
+                <div id="button_warning">
+                <% if user_signed_in? %>            
+              
+            <% if current_user.status == 1 %>
+                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 2 %>
+                <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 3 %>
+             <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-warning", target: "_blank" %></span>
+            <% end %>
+
+                <% else %>
+
+                <span><%= link_to "INVEST NOW!", new_user_session_path ,method: :get, class: "btn btn-warning" %></span>
+
+                <% end %>
+                </div>
+
+    </div>
+                        </li>
+                        </div>
                      </ul>
 
                 <!-- Tab panes -->

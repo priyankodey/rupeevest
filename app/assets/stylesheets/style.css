@@ -8,7 +8,7 @@
    GENERAL STYLE SECTION
 ===================================*/
 body {
-    font-family: Tahoma, 'Open Sans', sans-serif;
+    font-family: Helvetica, Arial, 'Open Sans', sans-serif;
     margin-top:70px;
     font-size:14px;
     line-height:25px;
@@ -98,6 +98,19 @@ section {
     font-size: 0.83em;
 }
 
+#button_warning .btn-warning {
+    background-color: #ff6a00;
+    border-color: #ff6a00;
+} 
+
+#button_warning .btn-warning:hover {
+    background-color: #ff6a50;
+    border-color: #ff6a50;
+}
+
+.dis_inl_blk > li {
+    display: inline-block;
+}
 
 .fixed_top {
     position: fixed;
@@ -746,21 +759,21 @@ background-color:rgba(158, 158, 158, 0.15);
 .slide1_cap {
     color: grey;
     text-shadow: none;
-    font-family: tahoma;
+    font-family: Helvetica;
 
 }
 
 .slide2_cap {
     color: #1B1B1B;
     text-shadow: none;
-    font-family: tahoma;
+    font-family: Helvetica;
 
 }
 
 .slide3_cap {
     color: #ffffff;
     text-shadow: none;
-    font-family: tahoma;
+    font-family: Helvetica;
     
 }
 
@@ -901,7 +914,7 @@ padding:30px;
 }
 #footer-sec span {
     font-size:20px;
-    font-family: tahoma;
+    font-family: Helvetica;
     color:#ffffff;
 }
 #footer-sec small {
@@ -911,7 +924,7 @@ padding:30px;
 #footer-sec p {
    /*border-right: 1px solid #3D3577;*/
    padding-right:10px;
-   font-family: tahoma;
+   font-family: Helvetica;
    font-size: 0.83em;
    line-height: 1.9em;
 }
@@ -1160,10 +1173,10 @@ padding:30px;
         font-size: 12px;
     }
 
-    #offer_body h2, h3, h4, h5 {
+   /* #offer_body h2, h3, h4, h5 {
         text-transform:capitalize;
         font-variant:small-caps;
-    }
+    }*/
 
 
 .divider2 {

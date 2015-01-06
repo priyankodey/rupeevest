@@ -40,7 +40,7 @@
                 colors: ['#035D0F'],
                 backgroundColor: { fill:'transparent' },
                 tooltip: {text: 'percentage'},
-                legend:{textStyle:{fontSize:'10px', fontName:'tahoma', color:'grey'}}                
+                legend:{textStyle:{fontSize:'10px', fontName:'Helvetica', color:'grey'}}                
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('google_chart_t1_10'));
@@ -68,7 +68,7 @@
                 colors: ['#003397','#005CB9'],
                 backgroundColor: { fill:'transparent' },
                 tooltip: {text: 'percentage'},
-                legend:{textStyle:{fontSize:'10px', fontName:'tahoma', color:'grey'}}
+                legend:{textStyle:{fontSize:'10px', fontName:'Helvetica', color:'grey'}}
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('google_chart_t1_15'));
@@ -100,7 +100,7 @@
                 colors: ['#035D0F', '#50891F', '#74B505'],
                 backgroundColor: { fill:'transparent' },
                 tooltip: {text: 'percentage'},
-                legend:{textStyle:{fontSize:'10px', fontName:'tahoma', color:'grey'}}
+                legend:{textStyle:{fontSize:'10px', fontName:'Helvetica', color:'grey'}}
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('google_chart_t2_10'));
@@ -129,7 +129,7 @@
                 colors: ['#003397','#005CB9','#74B505'],
                 backgroundColor: { fill:'transparent' },
                 tooltip: {text: 'percentage'},
-                legend:{textStyle:{fontSize:'10px', fontName:'tahoma', color:'grey'}}
+                legend:{textStyle:{fontSize:'10px', fontName:'Helvetica', color:'grey'}}
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('google_chart_t2_15'));
@@ -157,7 +157,7 @@
                 colors: ['#003397','#005CB9'],
                 backgroundColor: { fill:'transparent' },
                 tooltip: {text: 'percentage'},
-                legend:{textStyle:{fontSize:'10px', fontName:'tahoma', color:'grey'}}
+                legend:{textStyle:{fontSize:'10px', fontName:'Helvetica', color:'grey'}}
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('google_chart_t2_20'));
@@ -188,7 +188,7 @@
                 colors: ['#035D0F', '#50891F', '#74B505'],
                 backgroundColor: { fill:'transparent' },
                 tooltip: {text: 'percentage'},
-                legend:{textStyle:{fontSize:'10px', fontName:'tahoma', color:'grey'}}
+                legend:{textStyle:{fontSize:'10px', fontName:'Helvetica', color:'grey'}}
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('google_chart_t3_10'));
@@ -217,7 +217,7 @@
                 colors: ['#003397','#005CB9','#74B505'],
                 backgroundColor: { fill:'transparent' },
                 tooltip: {text: 'percentage'},
-                legend:{textStyle:{fontSize:'10px', fontName:'tahoma', color:'grey'}}
+                legend:{textStyle:{fontSize:'10px', fontName:'Helvetica', color:'grey'}}
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('google_chart_t3_15'));
@@ -246,7 +246,7 @@
                 colors: ['#003397','#005CB9','#74B505'],
                 backgroundColor: { fill:'transparent' },
                 tooltip: {text: 'percentage'},
-                legend:{textStyle:{fontSize:'10px', fontName:'tahoma', color:'grey'}}
+                legend:{textStyle:{fontSize:'10px', fontName:'Helvetica', color:'grey'}}
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('google_chart_t3_20'));
@@ -273,7 +273,7 @@
                 colors: ['#005CB9'],
                 backgroundColor: { fill:'transparent' },
                 tooltip: {text: 'percentage'},
-                legend:{textStyle:{fontSize:'10px', fontName:'tahoma', color:'grey'}}
+                legend:{textStyle:{fontSize:'10px', fontName:'Helvetica', color:'grey'}}
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('google_chart_t3_25'));
@@ -305,7 +305,7 @@
                 colors: ['#035D0F', '#50891F', '#74B505'],
                 backgroundColor: { fill:'transparent' },
                 tooltip: {text: 'percentage'},
-                legend:{textStyle:{fontSize:'10px', fontName:'tahoma', color:'grey'}}
+                legend:{textStyle:{fontSize:'10px', fontName:'Helvetica', color:'grey'}}
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('google_chart_t4_10'));
@@ -334,7 +334,7 @@
                 colors: ['#003397','#005CB9','#74B505'],
                 backgroundColor: { fill:'transparent' },
                 tooltip: {text: 'percentage'},
-                legend:{textStyle:{fontSize:'10px', fontName:'tahoma', color:'grey'}}
+                legend:{textStyle:{fontSize:'10px', fontName:'Helvetica', color:'grey'}}
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('google_chart_t4_15'));
@@ -363,7 +363,7 @@
                 colors: ['#003397','#005CB9','#74B505'],
                 backgroundColor: { fill:'transparent' },
                 tooltip: {text: 'percentage'},
-                legend:{textStyle:{fontSize:'10px', fontName:'tahoma', color:'grey'}}
+                legend:{textStyle:{fontSize:'10px', fontName:'Helvetica', color:'grey'}}
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('google_chart_t4_20'));
@@ -391,7 +391,7 @@
                 colors: ['#003397','#005CB9'],
                 backgroundColor: { fill:'transparent' },
                 tooltip: {text: 'percentage'},
-                legend:{textStyle:{fontSize:'10px', fontName:'tahoma', color:'grey'}}
+                legend:{textStyle:{fontSize:'10px', fontName:'Helvetica', color:'grey'}}
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('google_chart_t4_25'));
@@ -432,6 +432,27 @@
                 <li><a href="#panel_more_5yr" data-toggle="tab">More Than 5 Years</a></li>
             </ul>
             </div>
+            <!-- Invest now button -->
+    <div class="col-sm-12 text-center pad_top1">
+                <div id="button_warning">
+                <% if user_signed_in? %>            
+              
+            <% if current_user.status == 1 %>
+                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 2 %>
+                <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 3 %>
+             <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-warning", target: "_blank" %></span>
+            <% end %>
+
+                <% else %>
+
+                <span><%= link_to "INVEST NOW!", new_user_session_path ,method: :get, class: "btn btn-warning" %></span>
+
+                <% end %>
+                </div>
+    </div>
+
           </div>
 
 

@@ -210,21 +210,23 @@
         </div>
         <!-- Invest now button -->
         <div class="col-sm-12 text-center">
+            <div id="button_warning">
                     <% if user_signed_in? %>            
                   
                 <% if current_user.status == 1 %>
-                    <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                    <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
                 <% elsif current_user.status == 2 %>
-                    <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                    <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
                 <% elsif current_user.status == 3 %>
-                 <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-primary", target: "_blank" %></span>
+                 <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-warning", target: "_blank" %></span>
                 <% end %>
 
                     <% else %>
 
-                    <a data-toggle="modal" href="#myModal_user_message"><button type="button" class=" btn btn-primary"><span class="text">INVEST NOW!</span></button></a>
+                    <span><%= link_to "INVEST NOW!", new_user_session_path ,method: :get, class: "btn btn-warning" %></span>
 
                     <% end %>
+            </div>
         </div>
     </section>
      <!--./Team Style Two End -->
