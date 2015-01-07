@@ -69,10 +69,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="actions">
+            <div class="actions" id="button_warning">
                 <div class="col-sm-3 col-lg-2"></div>
                 <div class="col-xs-5 col-sm-3 col-lg-3">
-                <%= submit_tag 'Submit', :class => 'btn btn-primary btn-block', tabindex: "2" %>
+                <%= submit_tag 'Submit', :class => 'btn btn-warning btn-block', tabindex: "2" %>
                 </div>
                 
                 <div class="col-xs-2 col-sm-3 col-lg-4"></div>
@@ -127,10 +127,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="actions">
+            <div class="actions" id="button_warning">
                 <div class="col-sm-3 col-lg-2"></div>
                 <div class="col-xs-5 col-sm-3 col-lg-3">
-                <%= submit_tag 'Submit', :class => 'btn btn-primary btn-block', tabindex: "2" %>
+                <%= submit_tag 'Submit', :class => 'btn btn-warning btn-block', tabindex: "2" %>
                 </div>
                 
                 <div class="col-xs-2 col-sm-3 col-lg-4"></div>
@@ -185,10 +185,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="actions">
+            <div class="actions" id="button_warning">
                 <div class="col-sm-3 col-lg-2"></div>
                 <div class="col-xs-5 col-sm-3 col-lg-3">
-                <%= submit_tag 'Submit', :class => 'btn btn-primary btn-block', tabindex: "2" %>
+                <%= submit_tag 'Submit', :class => 'btn btn-warning btn-block', tabindex: "2" %>
                 </div>
                 
                 <div class="col-xs-2 col-sm-3 col-lg-4"></div>
@@ -217,11 +217,11 @@
             <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title"></h4>
+                    <h4 class="modal-title">Check Your Registered Email</h4>
                   </div>
                   <div class="modal-body">
                       <div class="row">
-                          <div class="col-lg-12 text-center">
+                          <div class="col-lg-12">
                         You will get an email shortly.
                           </div>
                       </div> 
@@ -239,9 +239,9 @@
             <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Alert Message</h4>
+                    <h4 class="modal-title">Click Below To Invest!</h4>
                   </div>
-                  <div class="modal-body">
+                  <div class="modal-body" id="button_warning">
                       <div class="row">
                           <div class="col-lg-12">
                     <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-warning", target: "_blank" %></span>                        
@@ -263,7 +263,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title">Alert Message</h4>
                   </div>
-                  <div class="modal-body">
+                  <div class="modal-body" id="button_warning">
                       <div class="row">
                           <div class="col-lg-12">
                         Please <a href="/users/sign_in"><b>LOGIN</b></a> to Invest.                        
@@ -434,7 +434,7 @@
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12">
-                            <button type="submit" class="btn btn-primary">SUBMIT REQUEST</button>
+                            <button type="submit" class="btn btn-warning">SUBMIT REQUEST</button>
 
                         </div>
                     </form>

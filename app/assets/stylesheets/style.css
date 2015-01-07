@@ -78,6 +78,10 @@ section {
     margin-top: 0.5em;
 }
 
+.mar_top2 {
+    margin-top: 2em;
+}
+
 .mar_top_mp5 {
     margin-top: -0.5em;
 }
@@ -85,6 +89,8 @@ section {
 .mar_top_m25 {
     margin-top: -25em;
 }
+
+
 
 .font_1p5 {
     font-size: 1.5em;
