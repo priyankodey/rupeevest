@@ -254,6 +254,66 @@
 
 <!-- MODAL INVESTOR INVEST END -->
 
+<!-- MODAL CONTACT DETAILS -->
+
+    <div class="modal fade" id="myModal_contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog pad_modal">
+          <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Seek advice? Send us details, we will contact you soon.</h4>
+              </div>
+              <div class="modal-body" id="button_warning">
+                  <div class="row">
+                      <div class="col-sm-12">
+
+    <%= form_for Contact.new do |f| %>
+                      <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <%= f.text_field :name, type: 'text', class: 'form-control', required: true, placeholder: 'Name',tabindex: '1', pattern: '[a-zA-Z. ]{1,50}'  %>
+                                </div>                                
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <%= f.text_field :email, type: 'email', class: 'form-control', required: true, placeholder: 'Email address',tabindex: '2' %>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="form-group">
+                                    <%= f.text_field :phone, type: 'tel', class: 'form-control', required: true, placeholder: 'Mobile',tabindex: '3', pattern: '[0-9]{10}', maxlength: '10' %>
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="actions" id="button_warning">
+                                <div class="col-lg-12 col-md-12 col-sm-12">                                
+                                <div class="form-group">                                    
+                                    <%= f.submit 'Send', :class => 'btn btn-warning', tabindex: "4" %> 
+                                </div>
+                                </div>
+                            </div> 
+                        </div> 
+                        
+                        <div class="row">
+                            
+                        </div>
+                      
+                    <% end %> 
+
+                      </div>
+                  </div>  
+              
+              </div>
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div> -->
+          </div>
+      </div>
+    </div>
+
+<!-- MODAL CONTACT DETAILS END -->
+
 <!-- MODAL USER MESSAGE -->
 
     <!-- <div class="modal fade" id="myModal_user_message" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -460,7 +520,7 @@
                 <div class="col-lg-8 col-md-8">
                     <!-- <i class="fa fa-building fa-2x"></i> -->
                     <span>A Small Introduction</span>                    
-                    <p class="text-justify">Rupeevest helps you INVEST ONLINE in a simple, efficient and effective manner. Rupeevest helps retail investors make simple investment decisions. Whether it is to save tax, save money for your life goals, invest in equities, generate monthly income for family, or just track your investments, Rupeevest aims to be a one stop destination to manage money for every Indian.                  
+                    <p class="text-justify">RupeeVest helps you INVEST ONLINE in a simple, efficient and effective manner. RupeeVest helps retail investors make simple investment decisions. Whether it is to save tax, save money for your life goals, invest in equities, generate monthly income for family, or just track your investments, RupeeVest aims to be a one stop destination to manage money for every Indian.                  
                     </p>
                 </div>
                 
@@ -470,7 +530,7 @@
                     <span>Our location</span>
                     <br />
                     <p>    
-                    Room No:81, 5th Floor,
+                    Room No: 81, 5th Floor,
                     <br />
                     Stephen House, BBD Bag,
                     <br />

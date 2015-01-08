@@ -11,7 +11,7 @@ class ContactsController < ApplicationController
 	    if @contact.save
 	      ContactMailer.contact_confirmation(@contact).deliver	      
 	      flash.now[:notice] = 'Thank you for your message. We will contact you soon!' 
-	      redirect_to :controller=>'static_pages', :action => 'contact'     
+	      redirect_to :back     
 	    # else
 	    #   flash.now[:error] = 'Cannot send message.'
 	    #   render :new

@@ -27,7 +27,7 @@
                      <h2><strong>Raghav Nagarajan</strong> </h2>
                     <h3>Co-founder and CEO</h3>
                     <p class="text-justify">
-                        Any discussion on math,music(#desi) and money excites Raghav. He is a true believer in value investing, does his own research and takes his time to invest his money into anything. Raghav has done his bachelors and masters in Mathematics from IIT Kharagpur. He has worked with several Indian and Global financial services firms like Barclays Capital, Edelweiss, Crisil in a diversified set of roles covering all facets of operations, technology and front office.He has cleared CFA(certified financial analyst) level 1 and 2, all 5 examinations of CFP(certified financial planner) certification, CWM(certified wealth manager) level 1 and 2. “Keep it simple” - he says.
+                        Any discussion on math, music (#desi) and money excites Raghav. He is a true believer in value investing, does his own research and takes his time to invest his money into anything. Raghav has done his bachelors and masters in Mathematics from IIT Kharagpur. He has worked with several Indian and Global financial services firms like Barclays Capital, Edelweiss, Crisil in a diversified set of roles covering all facets of operations, technology and front office.He has cleared CFA(certified financial analyst) level 1 and 2, all 5 examinations of CFP(certified financial planner) certification, CWM(certified wealth manager) level 1 and 2. “Keep it simple” - he says.
                     </p>
                     
                 </div>
@@ -64,7 +64,7 @@
                      <h2><strong>Varun Mundra</strong> </h2>
                     <h3>Co-founder and CTO</h3>
                     <p class="text-justify">
-                        If you want to befriend Varun, talk about poker ( strictly Texas holdem ). A true believer in high risk, high return strategies but cautions you to always maintain a stop loss.Varun has done his bachelors in computer science from IIT Kharagpur. He has worked with Oracle financial services and his home grown stock broking business. He has cleared CFA level 1, FRM (financial risk management) level 1 and 2 examinations. It took one call from Raghav to convince Varun that retail investments is an important problem in India and they can solve it together. “Invest regularly with discipline” – he says.
+                        If you want to befriend Varun, talk about poker (strictly Texas holdem). A true believer in high risk, high return strategies but cautions you to always maintain a stop loss.Varun has done his bachelors in computer science from IIT Kharagpur. He has worked with Oracle financial services and his home grown stock broking business. He has cleared CFA level 1, FRM (financial risk management) level 1 and 2 examinations. It took one call from Raghav to convince Varun that retail investment is an important problem in India and they can solve it together. “Invest regularly with discipline” – he says.
                     </p>
                     
                 </div>
@@ -210,22 +210,8 @@
         </div>
         <!-- Invest now button -->
         <div class="col-sm-12 text-center">
-            <div id="button_warning">
-                    <% if user_signed_in? %>            
-                  
-                <% if current_user.status == 1 %>
-                    <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
-                <% elsif current_user.status == 2 %>
-                    <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
-                <% elsif current_user.status == 3 %>
-                 <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-warning", target: "_blank" %></span>
-                <% end %>
-
-                    <% else %>
-
-                    <span><%= link_to "INVEST NOW!", new_user_session_path ,method: :get, class: "btn btn-warning" %></span>
-
-                    <% end %>
+            <div id="button_warning">  
+                    <a data-toggle="modal" href="#myModal_contact"><button type="button"  class=" btn btn-warning"><span class="text">SEEK ADVICE!</span></button></a>  
             </div>
         </div>
     </section>

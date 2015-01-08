@@ -24,6 +24,11 @@ class StaticPagesController < ApplicationController
     end    
   end
 
+
+  # def investor_details_elss
+    
+  # end
+
   def index
     @investor = Investor.new
   end
