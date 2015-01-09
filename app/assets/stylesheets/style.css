@@ -104,6 +104,10 @@ section {
     font-size: 0.83em;
 }
 
+.font_p65 {
+font-size: 0.65em;
+}
+
 #button_warning .btn-warning {
     background-color: #ff6a00;
     border-color: #ff6a00;
@@ -132,6 +136,9 @@ section {
     height: auto;
 }
 
+#myModal_investor_home .modal-header {
+    border-bottom: 0px solid #e5e5e5;
+}
 
 /*Effect for Equity*/
 .back_effect {
@@ -1143,6 +1150,15 @@ padding:30px;
     border-top-color: rgb(204, 196, 196);
 }
 
+#myModal_investor_details_information .modal-header {
+    border-bottom: 0px solid #e5e5e5;
+}
+
+#myModal_investor_details_information .panel-default > .panel-heading {
+    color: #fff;
+    background-color: #15355C;
+    border-color: #ddd;
+}
 /*==========================================
   TOP PERFORMING FUNDS
  =====================================================*/

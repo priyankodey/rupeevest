@@ -173,35 +173,80 @@ $(function () {
           <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">Connect with us</h4>
+               <!--  <h4 class="modal-title">Connect with us</h4> -->
               </div>
               <div class="modal-body">
                   <div class="row">
                       <div class="col-sm-12">
 
-    <%= form_tag investor_details_path, class: "form-horizontal" do  %>
+    <%= form_tag investor_details_elss_path, class: "form-horizontal" do  %>
 
-        
-        <div class="form-group">                
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <span>Request a meeting </span><span class="font_p65">(Only for investors in Kolkata)</span>
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <div class="form-group active">                
+            <label class="control-label col-sm-3 col-lg-2"> Name*</label>
+            <div class="col-sm-9 col-lg-10">
+            <%= text_field_tag "investor[email]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The Name', required: true %>
+            </div>
+        </div>
+        <div class="form-group active">                
             <label class="control-label col-sm-3 col-lg-2"> Email</label>
             <div class="col-sm-9 col-lg-10">
-            <%= text_field_tag "investor[email]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The email',  required: true %>
+            <%= text_field_tag "investor[email]", nil, type:"text", tabindex: "2", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The email' %>
             </div>
         </div>
         <div class="form-group">                
-            <label class="control-label col-sm-3 col-lg-2"> Mobile</label>
+            <label class="control-label col-sm-3 col-lg-2"> Mobile*</label>
             <div class="col-sm-9 col-lg-10">
-            <%= text_field_tag "investor[number]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The Mobile',  required: true %>
+            <%= text_field_tag "investor[mobile]", nil, type:"text", tabindex: "3", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The Mobile',  required: true %>
             </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Request A Call Back
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <div class="form-group active">                
+            <label class="control-label col-sm-3 col-lg-2"> Name*</label>
+            <div class="col-sm-9 col-lg-10">
+            <%= text_field_tag "investor[email]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The Name', required: true %>
+            </div>
+        </div>
+        <div class="form-group">                
+            <label class="control-label col-sm-3 col-lg-2"> Mobile*</label>
+            <div class="col-sm-9 col-lg-10">           
+            <%= text_field_tag "investor[mobile]", nil, type:"text", tabindex: "2", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter The Mobile',  required: true %>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+        
+        
         <div class="row">
-            <div class="actions" id="button_warning">
-                <div class="col-sm-3 col-lg-2"></div>
-                <div class="col-xs-5 col-sm-3 col-lg-3">
-                <%= submit_tag 'Submit', :class => 'btn btn-warning btn-block', tabindex: "2" %>
+            <div class="actions" id="button_warning">                
+                <div class="col-sm-12">
+                <%= submit_tag 'Submit', :class => 'btn btn-warning', tabindex: "2" %>
                 </div>
-                
-                <div class="col-xs-2 col-sm-3 col-lg-4"></div>
             </div> 
         </div>                     
      <% end %> 
@@ -210,9 +255,9 @@ $(function () {
                   </div>  
               
               </div>
-              <!-- <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div> -->
+              <div class="modal-footer">
+                Get in touch with us <a href="mailto:info@rupeevest.com">info@rupeevest.com</a>
+              </div>
           </div>
       </div>
     </div>

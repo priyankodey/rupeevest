@@ -6,73 +6,43 @@
 <html lang="en">
 <!--<![endif]-->
 <head>
-<script src="/assets/jquery-1.10.2.js"></script>
- <script src="http://code.highcharts.com/highcharts.js"></script>
-<!-- <script src="http://code.highcharts.com/modules/exporting.js"></script> -->
+  <script src="/assets/bootstrap.js"></script>
+ 
+ <script type="text/javascript">
+// Javascript to enable link to tab
+var hash = document.location.hash;
+var prefix = "tab_";
+if (hash) {
+    $('.nav-tabs a[href='+hash.replace(prefix,"")+']').tab('show');
+} 
 
-<script type="text/javascript">
-$(function () {
-    $('#comparison_chart').highcharts({
-        title: {
-            text: 'Comparison Of Investments Tax Deductible Under 80C',
-            x: -20 //center
-        },
-        // subtitle: {
-        //     text: 'Subheading',
-        //     x: -20
-        // },
-        xAxis: {
-            categories: ['2015', '2017', '2019', '2021', '2023', '2025',
-                '2027', '2029', '2031', '2033', '2035', '2037', '2039']
-        },
-        yAxis: {
-            title: {
-                text: 'Rs. in Million (₹)'
-            },
-            gridLineWidth: 0,
-            minorGridLineWidth: 0,
-            min: 0,
-            max: 60000000,
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#808080'
-            }]
-        },
-        tooltip: {
-            valuePrefix: '₹'
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle',
-            borderWidth: 0
-        },
-        series: [{
-            name: 'ELSS',
-            data: [176250, 626679, 1248552, 2107126, 3292495, 4929045, 7188506, 10307975, 14614792, 20560890, 28770223, 40104233,55752250]
-        }, {
-            name: 'BANK FD',
-            data: [159450, 509118.9071, 904233.9323, 1350701.662, 1855196.357, 2425259.722, 3069413.653, 3797287.626, 4619762.651, 5549133.933, 6599294.671, 7785943.75, 9126820.424]
-        }, {
-            name: 'PPF',
-            data: [162750, 530927.1188, 964354.4274, 1474595.891, 2075264.898, 2782387.469, 3614829.838, 4594801.806, 5748449.306, 7106551.985, 8705344.41, 10587482.82, 12803183.22]
-        }, {
-            name: 'NSC',
-            data: [158925, 505705.7467, 894981.0929, 1331958.337, 1822482.882, 2373116.428, 2991224.746, 3685076.211, 4463952.409, 5338272.291, 6319731.549, 7421459.071, 8658192.558]
-        }, {
-            name: 'LIC',
-            data: [159000, 506192.4, 896297.7806, 1334620.186, 1827119.241, 2380491.18, 3002259.889, 3700879.212, 4485847.882, 5367838.681, 6358843.541, 7472336.603, 8723457.407]
-        }]
-    });
+// Change hash for page-reload
+$('.nav-tabs a').on('shown.bs.tab', function (e) {
+    window.location.hash = e.target.hash.replace("#", "#" + prefix);
 });
-</script>
+ </script>
+ <script src="/assets/jquery-1.10.2.js"></script>
+ 
   </head>
 
 <body>  
   
- <div id="comparison_chart" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-
+ <div class="container">
+<div class="tabbable">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+    <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tab1">
+      <p>I'm in Section 1.</p>
+    </div>
+    <div class="tab-pane" id="tab2">
+      <p>I'm in Section 2.</p>
+    </div>
+  </div>
+</div>
+</div>
 
   </body>
 </html>
@@ -84,7 +54,7 @@ $(function () {
 <!--  Jquery Core Script -->
     
     <!--  Core Bootstrap Script -->
-    <script src="/assets/bootstrap.js"></script>
+  
         <!--  Custom Scripts -->
     
   </body>

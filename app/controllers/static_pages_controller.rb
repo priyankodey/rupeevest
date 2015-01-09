@@ -25,12 +25,23 @@ class StaticPagesController < ApplicationController
   end
 
 
-  # def investor_details_elss
-    
-  # end
+  def investor_details_elss
+      @investor_elss = ElssContact.new(elss_params)
+      if @investor_elss.save
+        redirect_to :back
+      end
+  end
+
+  def investor_home_contact
+      @investor_home = HomeContact.new(home_params)
+      if @investor_home.save
+          redirect_to risk_profiling_path
+      end
+  end
 
   def index
-    @investor = Investor.new
+      @investor = Investor.new
+      @investor_home = HomeContact.new
   end
 
   def offer    
@@ -85,7 +96,8 @@ class StaticPagesController < ApplicationController
   def objective    
   end
 
-  def tax_efficient    
+  def tax_efficient  
+    @investor_elss = ElssContact.new  
   end
 
   def safety    
@@ -102,6 +114,14 @@ class StaticPagesController < ApplicationController
 
   def investor_params
       params.require(:investor).permit(:name, :email, :number)
+  end
+
+  def elss_params
+      params.require(:investor).permit(:email, :mobile)
+  end
+
+  def home_params
+      params.require(:investor).permit(:age, :earn, :appetite)
   end
 
 end

@@ -613,6 +613,21 @@
 
         </script>
 
+
+<script type="text/javascript">
+// Javascript to enable link to tab
+var hash = document.location.hash;
+var prefix = "tab_";
+if (hash) {
+    $('.nav-tabs a[href='+hash.replace(prefix,"")+']').tab('show');
+} 
+
+// Change hash for page-reload
+$('.nav-tabs a').on('shown.bs.tab', function (e) {
+    window.location.hash = e.target.hash.replace("#", "#" + prefix);
+});
+</script>
+
 </head>
 <body>
 
@@ -626,7 +641,7 @@
       <div class="row">
           <div class="col-md-3">
             <div class="well well-lg">
-            <ul id="myTab" class="nav nav-pills nav-stacked">
+            <ul id="myTab" class="nav nav-tabs nav-stacked">
                 <li class="clr_primary_blue"><span data-toggle="tab"><h4>Risk Appetite</h4></span></li>
                 <li class="active"><a href="#panel_conservative" data-toggle="tab">Conservative</a></li>
                 <li><a href="#panel_mconservative" data-toggle="tab">Moderately Conservative</a></li>

@@ -27,6 +27,12 @@
         });
         </script>
         <% end %>
+    <% else %>
+        <script type="text/javascript">
+        $(window).load(function(){
+            $('#myModal_investor_home').modal('show');
+        });
+        </script>
     <% end %>
 
 
@@ -37,6 +43,64 @@
           });
         </script>
     <% end -%>
+
+    <!-- MODAL INVESTOR DETAILS FOR HOME PAGE-->
+
+    <div class="modal fade" id="myModal_investor_home" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog pad_modal">
+          <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Tell us about yourself so we can advice best!</h4>
+              </div>
+              <div class="modal-body">
+                  <div class="row">
+                      <div class="col-sm-12">
+
+    <%= form_tag investor_home_contact_path, class: "form-horizontal" do  %>
+
+        <div class="form-group">                
+            <label class="col-sm-3">Age</label>
+            <div class="col-sm-9 col-lg-9">
+            <%= text_field_tag "investor[age]", nil, type:"text", tabindex: "1", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'Enter Your Age',  required: true %>
+            </div>
+        </div>
+        <div class="form-group">                
+            <label class="col-sm-3">Earning</label>
+            <div class="col-sm-9 col-lg-9">
+            <%= text_field_tag "investor[earn]", nil, type:"text", tabindex: "2", class: "form-control", pattern: "[!-~ ]{1,30}",  placeholder: 'In Rupees',  required: true %>
+            </div>
+        </div>
+        <div class="form-group">                
+            <label class="col-sm-3">Risk appetite</label>
+            <div class="col-sm-9 col-lg-9">
+            <%= select_tag "investor[appetite]", options_for_select(["Conservative","Moderately Conservative","Moderately Aggressive","Aggressive","Very Aggressive"]), tabindex: "3", class: "form-control" %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="actions" id="button_warning">
+                <div class="col-sm-3 col-lg-3"></div>
+                <div class="col-xs-5 col-sm-3 col-lg-3">
+                <%= submit_tag 'Submit', :class => 'btn btn-warning btn-block', tabindex: "4" %>
+                </div>
+                
+                <div class="col-xs-2 col-sm-3 col-lg-4"></div>
+            </div> 
+        </div>                     
+     <% end %> 
+
+                      </div>
+                  </div>  
+              
+              </div>
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div> -->
+          </div>
+      </div>
+    </div>
+
+<!--  MODAL INVESTOR DETAILS FOR HOME PAGE -->
 
    
     <div id="main-slider">
