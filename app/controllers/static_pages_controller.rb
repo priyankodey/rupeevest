@@ -117,7 +117,7 @@ class StaticPagesController < ApplicationController
   end
 
   def elss_params
-      params.require(:investor).permit(:email, :mobile)
+      params.require(:investor).permit(:kname, :email, :kmobile, :name, :mobile)
   end
 
   def home_params
