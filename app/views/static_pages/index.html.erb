@@ -7,33 +7,7 @@
 <!--<![endif]-->
 
 <body>
-    <% if user_signed_in? %>
-    <% if current_user.status == 1 %>
-        <script type="text/javascript">
-        $(window).load(function(){
-            $('#myModal_investor').modal('show');
-        });
-        </script>
-    <% elsif current_user.status == 2 %>
-        <script type="text/javascript">
-        $(window).load(function(){
-            $('#myModal_investor_message').modal('show');
-        });
-        </script>
-    <% elsif current_user.status == 3 %>
-        <script type="text/javascript">
-        $(window).load(function(){
-            $('#myModal_investor_invest').modal('show');
-        });
-        </script>
-        <% end %>
-    <% else %>
-        <script type="text/javascript">
-        $(window).load(function(){
-            $('#myModal_investor_home').modal('show');
-        });
-        </script>
-    <% end %>
+    
 
 
     <% if flash[:notice_invest] -%>
@@ -375,7 +349,7 @@ so, invest before it's too late
         <div class="container">
             <div class="row ">
                 <div class="col-lg-12 col-md-12 ">
-                    <h1>Clients Testimonials</h1>
+                    <h1>Testimonials</h1>
                     <div id="testimonials" class="carousel slide" data-ride="carousel">
 
                         <ol class="carousel-indicators">
@@ -592,6 +566,33 @@ so, invest before it's too late
     <script src="/assets/jquery-1.10.2.js"></script>
     <!--  Core Bootstrap Script -->
     <script src="/assets/bootstrap.js"></script>
+   <% if user_signed_in? %>
+    <% if current_user.status == 1 %>
+        <script type="text/javascript">
+        $(window).load(function(){
+            $('#myModal_investor').modal('show');
+        });
+        </script>
+    <% elsif current_user.status == 2 %>
+        <script type="text/javascript">
+        $(window).load(function(){
+            $('#myModal_investor_message').modal('show');
+        });
+        </script>
+    <% elsif current_user.status == 3 %>
+        <script type="text/javascript">
+        $(window).load(function(){
+            $('#myModal_investor_invest').modal('show');
+        });
+        </script>
+        <% end %>
+    <% else %>
+        <script type="text/javascript">
+        $(window).load(function(){
+            $('#myModal_investor_home').modal('show');
+        });
+        </script>
+    <% end %>
    
 </body>
 </html>
