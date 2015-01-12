@@ -347,9 +347,15 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="/">
+                <!-- <a class="navbar-brand" href="/">
                     <img src="/assets/logo/logo.png" class="navbar-brand-logo " alt="" />
-                </a>
+                    <%= link_to(image_tag("logo.png")+"<br>Logout".html_safe, destroy_user_session_path, class: "align_center", method: :delete) %> 
+                </a> -->
+                 <span class="navbar-brand">
+                    <!-- <img src="/assets/logo/logo.png" class="navbar-brand-logo " alt="" /> -->
+                    <%= link_to(image_tag("/assets/logo/logo.png", class: "navbar-brand-logo"), root_path,  :method => :get) %> 
+                </span>
+
             </div>
             <div class="navbar-collapse collapse" >
                 <ul class="nav navbar-nav navbar-right">
@@ -358,19 +364,19 @@
                         <a href="/objective">WHY US<span class="caret"></span></a>
                         <ul class="dropdown-menu dropdown-menu-left">
                             <li>
-                                <a href="/objective">OBJECTIVE</a>
+                                <%= button_to "OBJECTIVE", objective_path, :method => :get, class: "btn-block nab_button" %>
                             </li>                            
-                            <li>
-                                <a href="/tax_efficient">TAX EFFICIENT INVESTING</a>
+                            <li>                                
+                                <%= button_to "TAX EFFICIENT INVESTING", tax_efficient_path, :method => :get, class: "btn-block nab_button" %>
                             </li>                    
                            <!--  <li>
                                 <a href="/safety">SAFETY</a>
                             </li> -->
                             <li>
-                                <a href="/team">ABOUT US</a>
+                                <%= button_to "ABOUT US", team_path, :method => :get, class: "btn-block nab_button" %>
                             </li>
                             <li>
-                                <a href="/#testi">TESTIMONIALS</a>
+                              <%= button_to "TESTIMONIALS", root_path(:anchor => 'testi') , :method => :get, class: "btn-block nab_button" %>
                             </li>                           
                         </ul>
                     </li>
@@ -378,24 +384,25 @@
                     <li class="dropdown pad_bot6p">
                         <a href="/offer">WHAT WE OFFER<span class="caret"></span></a>
                         <ul class="dropdown-menu dropdown-menu-left">
-                            <li>
-                                <a href="/offer/#o_fd">FIXED DEPOSIT</a>
+                            <li>                               
+                                <%= button_to "FIXED DEPOSIT", offer_path(:anchor => 'o_fd') , :method => :get, class: "btn-block nab_button" %>
                             </li>
                             <li>
-                                <a href="/offer/#o_bd">BONDS</a>
+                                <%= button_to "BONDS", offer_path(:anchor => 'o_bd') , :method => :get, class: "btn-block nab_button" %>
                             </li>
                             <li>
-                                <a href="/offer/#o_bd">NCD'S</a>
+                                <%= button_to "NCD'S", offer_path(:anchor => 'o_bd') , :method => :get, class: "btn-block nab_button" %>
                             </li> 
                                               
                             <li class="dropdown">
-                                <a href="/offer/#o_md">MUTUAL FUNDS<i class="right-caret"></i></a>
+                                <!-- <a href="/offer/#o_md">MUTUAL FUNDS<i class="right-caret"></i></a> -->
+                                <%= button_to "MUTUAL FUNDS", offer_path(:anchor => 'o_md') , :method => :get, class: "btn-block nab_button" %>
                                 <ul class="dropdown-menu sub-menu">                            
                                     <li>
-                                        <a href="/offer/#o_eq">EQUITY</a>
+                                        <%= button_to "EQUITY", offer_path(:anchor => 'o_eq') , :method => :get, class: "btn-block nab_button" %>
                                     </li>
                                     <li>
-                                        <a href="/offer/#o_dt">DEBT</a>
+                                        <%= button_to "DEBT", offer_path(:anchor => 'o_dt') , :method => :get, class: "btn-block nab_button" %>
                                     </li>
                                 </ul>
                             </li>                           
@@ -407,28 +414,30 @@
                     </li>
 
                     <li class="dropdown pad_bot6p">
-                        <a href="/">RESOURCES<span class="caret"></span></a>
+                        <a href="#">RESOURCES<span class="caret"></span></a>
                         <ul class="dropdown-menu dropdown-menu-left">
-                            <li>
-                                <a href="/top_funds">TOP FUNDS</a>                                
+                            <li>                                
+                          <%= button_to "TOP FUNDS", top_funds_path, :method => :get, class: "btn-block nab_button" %>
                             </li>
 
                             <li class="dropdown">
-                                <a href="/risk_profiling">RUPEEVEST TOOLS<i class="right-caret"></i></a>
+
+                                <a href="#">RUPEEVEST TOOLS<i class="right-caret"></i></a>                        
+
                                 <ul class="dropdown-menu sub-menu">                            
-                                    <li>
-                                        <a href="/risk_profiling">INVESTMENT STRATEGY</a>
+                                    <li>                                        
+                        <%= button_to "INVESTMENT STRATEGY", risk_profiling_path, :method => :get, class: "btn-block nab_button" %>
                                     </li>
-                                    <li>
-                                        <a href="/return_expectation">GOAL DRIVEN</a>
+                                    <li>                                        
+                        <%= button_to "GOAL DRIVEN", return_expectation_path, :method => :get, class: "btn-block nab_button" %>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
-                                <a href="/research">RESEARCH</a>                                
+                            <li class="dropdown">                                
+                        <%= button_to "RESEARCH", research_path, :method => :get, class: "btn-block nab_button" %>
                             </li>
-                            <li>
-                                <a href="/academics">VIDEOS</a>
+                            <li>                               
+                        <%= button_to "VIDEOS", academics_path, :method => :get, class: "btn-block nab_button" %>
                             </li>
                             <li>
                                 <a href="http://dhanhitmejari.in/" target = "_blank">BLOG</a>

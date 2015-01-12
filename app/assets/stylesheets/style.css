@@ -118,6 +118,22 @@ font-size: 0.65em;
     border-color: #ff6a50;
 }
 
+.nab_button {
+    padding: 10px 10px;
+    border-bottom: 1px solid #565AB1;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-align: left;
+    color: #fff;
+    background: #15355C;
+}
+
+.dropdown .btn-block:hover {
+    color: #fff;
+    background: #778899;
+}
+
 .dis_inl_blk > li {
     display: inline-block;
 }
