@@ -6,7 +6,7 @@
 <html lang="en">
 <!--<![endif]-->
 
-<body style="margin-top: 135px">
+<body class="mar_top135px">
     <% if flash[:notice_invest] -%>
         <script type="text/javascript">    
           $(window).load(function(){
@@ -225,7 +225,8 @@
 
                 </div>        
                 
-        <a id="o_md"></a>
+        <a id="o_md"></a>        
+        
                 <div class="row">
                 <div class="col-sm-6 column">
                   <h2 class="text-center">Mutual Funds</h2>
@@ -315,8 +316,8 @@
                       <div class="col-sm-4 column">
                         <h4>Large Cap Mutual Funds</h4>
                          <small>Large cap companies are the big Kahunas of the business world. Examples include Reliance, HUL and Infosys. Large Cap funds are oriented to make gains by timely investing in these large cap stocks. These are the lowest risk investment in the equities category and give relatively stable growths over time.
-                        <div class="text-right"> 
-                          <a href="/top_funds"><button type="button" class="btn btn-warning btn-xs">Top Funds</button></a>
+                        <div class="text-right">
+                          <%= link_to "Top Funds", top_funds_path(:anchor => 'panel_E_LCF') , :method => :get, class: "btn btn-warning btn-xs" %>
                         </div>
 
                         </small>
@@ -327,8 +328,8 @@
                       <div class="col-sm-4 column">
                         <h4>Mid Cap Mutual Funds</h4>
                         <small>Most stocks held in a mid-cap fund are firms with established businesses that are still considered developing companies. These funds tend to offer more growth than large-cap stocks and less volatility than the small-cap segment. Some of these companies become multi-baggers and they usually drive growth of this segment.
-                          <div class="text-right"> 
-                          <a href="/top_funds"><button type="button" class="btn btn-warning btn-xs">Top Funds</button></a>
+                          <div class="text-right">
+                          <%= link_to "Top Funds", top_funds_path(:anchor => 'panel_E_MCF') , :method => :get, class: "btn btn-warning btn-xs" %>
                         </div>
                         </small>
                       </div>
@@ -343,8 +344,8 @@
                       <div class="col-sm-4 column">
                         <h4>Small Cap Mutual Funds</h4>
                         <small>The stocks in these funds could be very rewarding but at the same time have a higher risk associated to it. These funds give an investor the opportunity to beat returns made by institutional investors. Hence selection of funds in this category is a little tricky.
-                          <div class="text-right"> 
-                          <a href="/top_funds"><button type="button" class="btn btn-warning btn-xs">Top Funds</button></a>
+                          <div class="text-right">                           
+                          <%= link_to "Top Funds", top_funds_path(:anchor => 'panel_E_MCF') , :method => :get, class: "btn btn-warning btn-xs" %>
                         </div>
                         </small>
                       </div>
@@ -354,8 +355,8 @@
                       <div class="col-sm-4 column">
                         <h4>Sector Specific Funds</h4>
                         <small>The basis of building such a fund is to beat market returns by investing in sectors which are expecting to outperform the market. This fund invests in sector specific companies only.
-                          <div class="text-right"> 
-                          <a href="/top_funds"><button type="button" class="btn btn-warning btn-xs">Top Funds</button></a>
+                          <div class="text-right">
+                          <%= link_to "Top Funds", top_funds_path(:anchor => 'panel_E_SF') , :method => :get, class: "btn btn-warning btn-xs" %>
                         </div>
                         </small>
                       </div>
@@ -370,8 +371,9 @@
                       <div class="col-sm-4 column">
                         <h4>ELSS</h4>
                         <small>Investment in these funds help avail tax rebates under Section 80-C of the Income Tax Act, the limit has been increased from 1 lac to 1.5 lacs from the accounting year 2014-2015.
-                        <div class="text-right"> 
-                          <i>To read more...</i><a href="/tax_efficient"><button type="button" class="btn btn-warning btn-xs">Click here</button></a>
+                        <div class="text-right">                        
+                         <i>To read more...</i><%= link_to "Top Funds", top_funds_path(:anchor => 'panel_E_ELSS') , :method => :get, class: "btn btn-warning btn-xs" %>
+                          <!-- <i>To read more...</i><a href="/tax_efficient"><button type="button" class="btn btn-warning btn-xs">Click here</button></a> -->
                         </div>
                         </small>
                       </div>
@@ -443,8 +445,8 @@
                       <div class="col-sm-4 column">
                         <h4>Long Term Debt Funds</h4>
                          <small>These funds invest in long-term corporate debt papers and government securities usually having a longer maturity period.
-                          <div class="text-right"> 
-                  <a href="/top_funds"><button type="button" class="btn btn-warning btn-xs">Top Funds</button></a>
+                          <div class="text-right">
+                  <%= link_to "Top Funds", top_funds_path(:anchor => 'panel_D_LTDF') , :method => :get, class: "btn btn-warning btn-xs" %>
                           </div>
                         </small>
                       </div>
@@ -454,8 +456,8 @@
                       <div class="col-sm-4 column">
                         <h4>Short Term Debt Funds</h4>
                         <small>These funds invest in short term corporate debt papers, CDs, money market and Government Securities (G-Secs).
-                          <div class="text-right"> 
-                  <a href="/top_funds"><button type="button" class="btn btn-warning btn-xs">Top Funds</button></a>
+                          <div class="text-right">
+                  <%= link_to "Top Funds", top_funds_path(:anchor => 'panel_D_STDF') , :method => :get, class: "btn btn-warning btn-xs" %>
                           </div>
                         </small>
                       </div>
@@ -471,7 +473,7 @@
                         <h4>Ultra Short Term Debt Funds</h4>
                         <small>Ultra short-term funds invest in fixed-income instruments which are mostly liquid and have short-term maturities.
                           <div class="text-right"> 
-                  <a href="/top_funds"><button type="button" class="btn btn-warning btn-xs">Top Funds</button></a>
+                  <%= link_to "Top Funds", top_funds_path(:anchor => 'panel_D_USTDF') , :method => :get, class: "btn btn-warning btn-xs" %>
                          </div>
                         </small>
                       </div>
@@ -481,8 +483,8 @@
                       <div class="col-sm-4 column">
                         <h4>Liquid Fund</h4>
                         <small>Liquid funds invest in money market and debt instruments with a maturity of up to 91 days.
-                          <div class="text-right"> 
-                  <a href="/top_funds"><button type="button" class="btn btn-warning btn-xs">Top Funds</button></a>
+                          <div class="text-right">
+                  <%= link_to "Top Funds", top_funds_path(:anchor => 'panel_D_LF') , :method => :get, class: "btn btn-warning btn-xs" %>
                           </div>
                         </small>
                       </div>

@@ -361,83 +361,84 @@
                 <ul class="nav navbar-nav navbar-right">
 
                     <li class="dropdown pad_bot6p">
-                        <a href="/objective">WHY US<span class="caret"></span></a>
+                        <%= link_to 'WHY US<span class="caret"></span>'.html_safe, objective_path, :method => :get %>
                         <ul class="dropdown-menu dropdown-menu-left">
                             <li>
-                                <%= button_to "OBJECTIVE", objective_path, :method => :get, class: "btn-block nab_button" %>
+                                <%= link_to "OBJECTIVE", objective_path, :method => :get %>
                             </li>                            
                             <li>                                
-                                <%= button_to "TAX EFFICIENT INVESTING", tax_efficient_path, :method => :get, class: "btn-block nab_button" %>
+                                <%= link_to "TAX EFFICIENT INVESTING", tax_efficient_path, :method => :get %>
                             </li>                    
                            <!--  <li>
                                 <a href="/safety">SAFETY</a>
                             </li> -->
                             <li>
-                                <%= button_to "ABOUT US", team_path, :method => :get, class: "btn-block nab_button" %>
+                                <%= link_to "ABOUT US", team_path, :method => :get %>
                             </li>
                             <li>
-                              <%= button_to "TESTIMONIALS", root_path(:anchor => 'testi') , :method => :get, class: "btn-block nab_button" %>
+                              <%= link_to "TESTIMONIALS", root_path(:anchor => 'testi') , :method => :get %>
                             </li>                           
                         </ul>
                     </li>
 
                     <li class="dropdown pad_bot6p">
-                        <a href="/offer">WHAT WE OFFER<span class="caret"></span></a>
+                        <!-- <a href="/offer">WHAT WE OFFER<span class="caret"></span></a> -->
+                        <%= link_to 'WHAT WE OFFER<span class="caret"></span>'.html_safe, offer_path, :method => :get %>
                         <ul class="dropdown-menu dropdown-menu-left">
                             <li>                               
-                                <%= button_to "FIXED DEPOSIT", offer_path(:anchor => 'o_fd') , :method => :get, class: "btn-block nab_button" %>
+                                <%= link_to "FIXED DEPOSIT", offer_path(:anchor => 'o_fd') , :method => :get %>
                             </li>
                             <li>
-                                <%= button_to "BONDS", offer_path(:anchor => 'o_bd') , :method => :get, class: "btn-block nab_button" %>
+                                <%= link_to "BONDS", offer_path(:anchor => 'o_bd') , :method => :get %>
                             </li>
                             <li>
-                                <%= button_to "NCD'S", offer_path(:anchor => 'o_bd') , :method => :get, class: "btn-block nab_button" %>
+                                <%= link_to "NCD'S", offer_path(:anchor => 'o_bd') , :method => :get %>
                             </li> 
                                               
                             <li class="dropdown">
                                 <!-- <a href="/offer/#o_md">MUTUAL FUNDS<i class="right-caret"></i></a> -->
-                                <%= button_to "MUTUAL FUNDS", offer_path(:anchor => 'o_md') , :method => :get, class: "btn-block nab_button" %>
+                                <%= link_to 'MUTUAL FUNDS <b class="right-caret"></b>'.html_safe, offer_path(:anchor => 'o_md') , :method => :get %>
                                 <ul class="dropdown-menu sub-menu">                            
                                     <li>
-                                        <%= button_to "EQUITY", offer_path(:anchor => 'o_eq') , :method => :get, class: "btn-block nab_button" %>
+                                        <%= link_to "EQUITY", offer_path(:anchor => 'o_eq') , :method => :get %>
                                     </li>
                                     <li>
-                                        <%= button_to "DEBT", offer_path(:anchor => 'o_dt') , :method => :get, class: "btn-block nab_button" %>
+                                        <%= link_to "DEBT", offer_path(:anchor => 'o_dt') , :method => :get %>
                                     </li>
                                 </ul>
                             </li>                           
                         </ul>
                     </li>
 
-                    <li class="dropdown pad_bot6p">
-                        <a href="/invest">INVEST NOW</a>                      
+                    <li class="dropdown pad_bot6p">                         
+                        <%= link_to 'INVEST NOW', invest_path, :method => :get %>                     
                     </li>
 
-                    <li class="dropdown pad_bot6p">
-                        <a href="#">RESOURCES<span class="caret"></span></a>
+                    <li class="dropdown pad_bot6p">                        
+                        <%= link_to 'RESOURCES <span class="caret"></span>'.html_safe, top_funds_path, :method => :get %>
                         <ul class="dropdown-menu dropdown-menu-left">
                             <li>                                
-                          <%= button_to "TOP FUNDS", top_funds_path, :method => :get, class: "btn-block nab_button" %>
+                          <%= link_to "TOP FUNDS", top_funds_path, :method => :get %>
                             </li>
 
                             <li class="dropdown">
-
-                                <a href="#">RUPEEVEST TOOLS<i class="right-caret"></i></a>                        
+                                
+                                <%= link_to 'RUPEEVEST TOOLS <b class="right-caret"></b>'.html_safe, risk_profiling_path, :method => :get %>                        
 
                                 <ul class="dropdown-menu sub-menu">                            
                                     <li>                                        
-                        <%= button_to "INVESTMENT STRATEGY", risk_profiling_path, :method => :get, class: "btn-block nab_button" %>
+                        <%= link_to "INVESTMENT STRATEGY", risk_profiling_path, :method => :get %>
                                     </li>
                                     <li>                                        
-                        <%= button_to "GOAL DRIVEN", return_expectation_path, :method => :get, class: "btn-block nab_button" %>
+                        <%= link_to "GOAL DRIVEN", return_expectation_path, :method => :get %>
                                     </li>
                                 </ul>
                             </li>
                             <li class="dropdown">                                
-                        <%= button_to "RESEARCH", research_path, :method => :get, class: "btn-block nab_button" %>
+                        <%= link_to "RESEARCH", research_path, :method => :get %>
                             </li>
                             <li>                               
-                        <%= button_to "VIDEOS", academics_path, :method => :get, class: "btn-block nab_button" %>
+                        <%= link_to "VIDEOS", academics_path, :method => :get %>
                             </li>
                             <li>
                                 <a href="http://dhanhitmejari.in/" target = "_blank">BLOG</a>
@@ -447,8 +448,8 @@
                     </li>            
 
 
-                    <li class="dropdown pad_bot6p">
-                        <a href="/contact">CONTACT</a>
+                    <li class="dropdown pad_bot6p">                        
+                        <%= link_to "CONTACT", contact_path, :method => :get %>
                     </li>
 
                     <% if user_signed_in? %>
@@ -456,8 +457,8 @@
                          <%= link_to "LOGOUT", destroy_user_session_path, :method => :delete %>                 
                     </li>
                     <% else %>
-                    <li class="dropdown pad_bot6p"> 
-                        <a href="/users/sign_in">LOGIN</a>
+                    <li class="dropdown pad_bot6p">
+                        <%= link_to "LOGIN", new_user_session_path, :method => :get %>
                     </li>
                     <% end %>
 

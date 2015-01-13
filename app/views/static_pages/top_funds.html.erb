@@ -757,6 +757,28 @@ var view = new google.visualization.DataView(dataTable);
 
         </script>
 
+<!--   ADDS TAB HREF TO URL  -->
+       <script type="text/javascript">
+          $(function(){
+            var hash = window.location.hash;
+            hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+
+            $('.nav-pills a').click(function (e) {
+              $(this).tab('show');
+              var scrollmem = $('body').scrollTop(0);
+              window.location.hash = this.hash;
+              $('html,body').scrollTop(scrollmem);
+            });
+          });
+       </script>
+
+<!--   LOAD PAGE FROM TOP  -->       
+    <script type="text/javascript">    
+        $(window).load(function(){
+          $("html, body").scrollTop(0);
+        });
+    </script>
+
 </head>
 <body>
 
