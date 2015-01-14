@@ -966,14 +966,17 @@ padding:30px;
     font-size:14px;
 }
 #blog-footer-div {
-     border-right: 0px solid #3D3577;
-      padding-right:10px;
+    border-right: 0px solid #3D3577;
+    padding-right:10px;
 }
 #footser-end {
     text-align:right;
     background-color:#15355C; 
-   color:#fff;
-   padding:10px;
+    color:#fff;
+    padding:10px;
+}
+#footer_list > a:hover {
+    color: #ffffff;
 }
 
 
@@ -1197,6 +1200,11 @@ padding:30px;
     }
 #top_funds_chart .panel-heading {
     background: url(../assets/black.jpg) no-repeat;
+}
+
+.topfund_chart {
+    width: 800px;
+    height: 400px;
 }
 
 /*==========================================
@@ -1610,23 +1618,6 @@ padding: 1px;
     padding-bottom:50px;
 }
 
-       /*=====================================
-   Media Queries
-    ===================================*/
-
-       @media all and (max-width: 786px) and (min-width: 100px) {
-  .carousel-caption{
-   display:none!important;
-  }
-}
-       
-       @media all and (max-width: 845px) and (min-width: 100px) {
-  .div-social-top{
-   display:none!important;
-  }
-}
-
-
 
 
 /* For Chart's Position*/
@@ -1666,3 +1657,27 @@ padding: 1px;
 }
 
 
+/*=====================================
+   Media Queries
+  ===================================*/
+
+       @media all and (max-width: 786px) and (min-width: 100px) {
+  .carousel-caption{
+   display:none!important;
+  }
+}
+       
+       @media all and (max-width: 845px) and (min-width: 100px) {
+  .div-social-top{
+   display:none!important;
+  }
+}
+
+
+/*@media all and (max-width: 786px) and (min-width: 100px) {
+  .topfund_chart {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+  }
+}*/

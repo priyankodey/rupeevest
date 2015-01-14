@@ -371,9 +371,15 @@
                       <div class="col-sm-4 column">
                         <h4>ELSS</h4>
                         <small>Investment in these funds help avail tax rebates under Section 80-C of the Income Tax Act, the limit has been increased from 1 lac to 1.5 lacs from the accounting year 2014-2015.
-                        <div class="text-right">                        
-                         <i>To read more...</i><%= link_to "Top Funds", top_funds_path(:anchor => 'panel_E_ELSS') , :method => :get, class: "btn btn-warning btn-xs" %>
+                        <div class="row" >
+                          <div class="col-sm-6 text-left">                        
+                           <i>To read more...</i>
+                           <%= link_to "Click here", tax_efficient_path , :method => :get, class: "btn btn-warning btn-xs" %>
+                          </div>
+                          <div class="col-sm-6 text-right">
+                         <%= link_to "Top Funds", top_funds_path(:anchor => 'panel_E_ELSS') , :method => :get, class: "btn btn-warning btn-xs" %>
                           <!-- <i>To read more...</i><a href="/tax_efficient"><button type="button" class="btn btn-warning btn-xs">Click here</button></a> -->
+                          </div>                        
                         </div>
                         </small>
                       </div>
