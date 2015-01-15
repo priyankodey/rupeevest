@@ -1016,11 +1016,16 @@ padding:30px;
  /*=====================================
  OUR SERVICES
  ===================================*/
-.general-subhead {
-    background-color: #1c4474;
-    padding: 5px 100px 15px 100px;
+.general-subhead {    
+    padding: 5px 0px 15px 0px;
     color: #fff;
 }
+
+.general-subhead_bg {
+    background-color: #1c4474;
+    margin: 0;
+}
+
  #request-quote {
     background-color: #1c4474;
     padding:20px;
@@ -1431,7 +1436,7 @@ border: 1px solid #e1e1e1;
 }
 
 .divider5 {
-    background-image: url('../assets/contact.jpg');
+    background-image: url('../assets/contact2.jpg');
     background-repeat: no-repeat;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -1694,17 +1699,15 @@ padding: 1px;
    Media Queries
   ===================================*/
 
-       @media all and (max-width: 767px) and (min-width: 100px) {
-  .carousel-caption{
-   display:none!important;
+@media screen and (min-width: 100px) and (max-width: 767px)  {
+  .carousel-caption {
+    display:none!important;
+  }
+  .carousel-inner > .item > img {
+    min-height: 22em;
   }
 }
-       
-       @media all and (max-width: 845px) and (min-width: 100px) {
-  .div-social-top{
-   display:none!important;
-  }
-}
+
 
 
 /*  -----Navbar Media Queries-----  */
@@ -1716,3 +1719,11 @@ padding: 1px;
    font-size: 11px;
   }
 }
+
+/*  -----Image of Contact Page Media Queries-----  */
+@media screen and (max-width: 767px) {
+.section-divider5 {
+    max-height: 735px;
+  }
+}
+

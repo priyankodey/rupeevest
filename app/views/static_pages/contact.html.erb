@@ -7,16 +7,19 @@
 <!--<![endif]-->
 
 <body>
-
-    <div class="general-subhead">
-        <h2>CONTACT US</h2>
-    </div>
+    <section class="general-subhead_bg">
+        <div class="container">
+           <div class="general-subhead">
+               <h2>CONTACT US</h2>
+           </div>
+        </div>
+    </section>
     <!--./ Gereral Subhead End -->
     <section class="section-divider5 textdivider5 divider5">
         <div class="container">
             <div class="row">
 
-                <div class="col-lg-4 col-md-4  col-sm-4">
+                <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
                     <h3>Support</h3>
                     <span class="fa fa-mobile fa-4x color-linkedin"></span><span class="fa font_1p5">&nbsp;+91 987 469 1177  <br />&nbsp;+91 905 174 5006</span>
                     <br />
@@ -31,12 +34,12 @@
                     </p>                    
                     
                 </div>
-                <div class="col-lg-8 col-md-8  col-sm-8">
+                <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
                     
                     <h3>Drop in a message</h3> 
                 
                       <%= form_for @contact do |f| %>
-                      <div class="row">
+                        <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="form-group">
                                     <%= f.text_field :name, type: 'text', class: 'form-control', required: true, placeholder: 'Name',tabindex: '1', pattern: '[a-zA-Z. ]{1,50}'  %>
@@ -61,16 +64,23 @@
                                     <%= f.text_area :message, type: 'text', rows: '4', class: 'form-control', placeholder: 'Message',tabindex: '4' %>
                                 </div>
                                 <div class="form-group">
-                                    <div class="col-sm-2 row">
+                                    <div class="col-xs-12 col-sm-3 col-md-2 row">
                                     <%= f.submit 'Send', :class => 'btn btn-primary', tabindex: "5" %>
                                     </div>
-                                <div class="col-sm-10">
+                                <div class="hidden-xs col-sm-9 col-md-10">
                                     <a href="https://www.facebook.com/rupeevest" target="_blank"><i class="fa fa-facebook-square fa-3x color-facebook"></i></a>
                     <a href="https://www.twitter.com/RupeeVest" target="_blank"><i class="fa fa-twitter-square fa-3x color-twitter"></i></a>
                     <a href="https://plus.google.com/+Rupeevestdotcom" target="_blank"><i class="fa fa-google-plus-square fa-3x color-google-plus"></i></a>
                     <a href="https://www.linkedin.com/company/rupeevest/" target="_blank"><i class="fa fa-linkedin-square fa-3x color-linkedin"></i></a>
                     <a href=" https://www.pinterest.com/rupeevest/" target="_blank"><i class="fa fa-pinterest-square fa-3x color-pinterest"></i></a>
-                    </div>
+                                </div>
+                                <div class="row col-xs-12 hidden-sm hidden-md hidden-lg pad_top1">
+                                    <a href="https://www.facebook.com/rupeevest" target="_blank"><i class="fa fa-facebook-square fa-3x color-facebook"></i></a>
+                    <a href="https://www.twitter.com/RupeeVest" target="_blank"><i class="fa fa-twitter-square fa-3x color-twitter"></i></a>
+                    <a href="https://plus.google.com/+Rupeevestdotcom" target="_blank"><i class="fa fa-google-plus-square fa-3x color-google-plus"></i></a>
+                    <a href="https://www.linkedin.com/company/rupeevest/" target="_blank"><i class="fa fa-linkedin-square fa-3x color-linkedin"></i></a>
+                    <a href=" https://www.pinterest.com/rupeevest/" target="_blank"><i class="fa fa-pinterest-square fa-3x color-pinterest"></i></a>
+                                </div>
                                 </div>
                             </div>
                         </div>

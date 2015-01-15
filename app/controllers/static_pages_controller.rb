@@ -42,6 +42,7 @@ class StaticPagesController < ApplicationController
   def index
       @investor = Investor.new
       @investor_home = HomeContact.new
+      @contact = Contact.new
   end
 
   def offer    
