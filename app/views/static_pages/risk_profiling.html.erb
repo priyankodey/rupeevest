@@ -630,7 +630,7 @@
     <section>
     <div class="container">
       <div class="row">
-          <div class="col-md-3">
+          <div class="col-sm-12 col-md-3">
             <div class="well well-lg">
             <ul id="myTab" class="nav nav-pills nav-stacked">
                 <li class="clr_primary_blue"><span data-toggle="tab"><h4>Risk Appetite</h4></span></li>
@@ -642,7 +642,7 @@
             </ul>
             </div>
             <!-- Invest now button -->
-    <div class="col-sm-12 text-center pad_top1">
+    <div class="col-md-12 hidden-xs hidden-sm text-center pad_top1">
                 <div id="button_warning">
                 <% if user_signed_in? %>            
               
@@ -664,7 +664,7 @@
           </div>
 
 
-          <div class="col-md-9" >
+          <div class="col-sm-12 col-md-9" >
 
           <div id="myTabContent" class="tab-content">      
 
@@ -1784,6 +1784,27 @@
               <!-- end very aggr -->
 
           </div>
+
+          <!-- Invest now button -->
+    <div class="col-xs-12 col-sm-12 hidden-md hidden-lg text-center pad_top1">
+                <div id="button_warning">
+                <% if user_signed_in? %>            
+              
+            <% if current_user.status == 1 %>
+                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 2 %>
+                <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 3 %>
+             <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-warning", target: "_blank" %></span>
+            <% end %>
+
+                <% else %>
+
+                <span><%= link_to "INVEST NOW!", new_user_session_path ,method: :get, class: "btn btn-warning" %></span>
+
+                <% end %>
+                </div>
+    </div>
 
           </div>
       </div>

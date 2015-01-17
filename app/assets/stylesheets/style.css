@@ -97,6 +97,10 @@ section {
     margin-top: 135px;
 }
 
+.mar_top30px {
+    margin-top: 30px;
+}
+
 
 
 .font_1p5 {
@@ -813,6 +817,10 @@ background-color:rgba(158, 158, 158, 0.15);
     
 }
 
+#testimonials .carousel-indicators {
+bottom: -50px;
+}
+
 /*=====================================
   HOME PAGE TWO STYLES GENERAL
     ===================================*/
@@ -861,8 +869,8 @@ background-attachment: fixed;
 background-size: cover;
 width: 100%;
 display: block;
-height: auto;
-min-height: 300px;
+height: 350px;
+/*min-height: 300px;*/
 color: #fff;
 text-align:center;
 padding:30px;
@@ -1699,14 +1707,71 @@ padding: 1px;
    Media Queries
   ===================================*/
 
-@media screen and (min-width: 100px) and (max-width: 767px)  {
-  .carousel-caption {
-    display:none!important;
-  }
-  .carousel-inner > .item > img {
-    min-height: 22em;
-  }
+/*  -----Home Media Queries-----  */
+            /*carousel*/
+@media screen and (min-width: 768px) and (max-width: 991px)  {
+    #main-slider .pad-bot {
+        padding-bottom: 5em;
+    }
 }
+
+@media screen and (min-width: 701px) and (max-width: 767px)  {
+    #main-slider .pad-bot {
+        padding-bottom: 20em;
+    }
+}
+
+@media screen and (min-width: 551px) and (max-width: 700px)  {
+    #main-slider .pad-bot {
+        padding-bottom: 15em;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 500px)  {
+    #main-slider .pad-bot {
+        padding-bottom: 7em;
+    }
+
+  /*.carousel-inner > .item > img {
+    min-height: 22em;
+  }*/
+}
+
+@media screen and (min-width: 385px) and (max-width: 449px)  {
+    #main-slider .pad-bot {
+        padding-bottom: 5em;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    #main-slider .pad-bot {
+        padding-bottom: 2em;
+    }
+}
+
+/*Why RupeeVest*/
+@media screen and (max-width: 991px) {
+    .text_cen {
+        text-align: center;
+    }
+}
+
+/*Testimonial*/
+@media screen and (min-width: 992px) and (max-width: 1199px)  {
+    #testimonials .carousel-indicators {
+        bottom: -30px;
+    }
+}
+
+/*Subscribe*/
+@media screen and (max-width: 767px) {
+    .sub_width {
+        width: 260px;
+    }
+}
+
+
+
 
 
 /*  -----Navbar Media Queries-----  */
@@ -1719,10 +1784,54 @@ padding: 1px;
   }
 }
 
+/*  -----Invest Page Media Queries-----  */
+@media screen and (min-width: 1101px) and (max-width: 1250px) {
+.textdivider6 h1 {
+    padding-top: 2.5em;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1100px) {
+.textdivider6 h1 {
+    padding-top: 3.5em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+.textdivider6 h1 {
+    padding-top: 4.5em;
+  }
+}
+
+@media screen and (min-width: 561px) and (max-width: 660px) {
+.textdivider6 h1 {
+    padding-top: 2em;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 560px) {
+.textdivider6 h1 {
+    padding-top: 4em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+.textdivider6 h1 {
+    padding-top: 5em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+.section-divider6 {
+    padding-top: 50%;
+ }
+}
+
 /*  -----Image of Contact Page Media Queries-----  */
 @media screen and (max-width: 767px) {
 .section-divider5 {
     max-height: 735px;
   }
 }
+
 
