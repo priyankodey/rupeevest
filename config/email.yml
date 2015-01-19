@@ -8,10 +8,9 @@ development:
   :enable_starttls_auto: true        
 
 production:
-  :address: smtp.gmail.com
+  :address: smtp.live.com
   :port: 587
-  :Domain: mail.google.com
   :authentication: plain
-  :user_name: priyanko.dey33@gmail.com
-  :password: priyanko123456
-  :enable_starttls_auto: true 
+  :user_name: info@rupeevest.com
+  :password: betterment1234
+  :enable_starttls_auto: true

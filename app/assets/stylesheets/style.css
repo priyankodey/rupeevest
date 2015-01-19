@@ -1767,6 +1767,33 @@ padding: 1px;
     }
 }
 
+@media screen and (min-width: 450px) and (max-width: 520px)  {
+    #testimon {
+        margin-top: -1em;
+    }
+}
+
+@media screen and (min-width: 420px) and (max-width: 449px)  {
+    #testimon {
+        margin-top: -1em;
+    }
+    #testimon h4 {
+        margin-top: -1em;
+    }
+}
+
+@media screen and (max-width: 420px)  {
+    #testimon {
+        margin-top: -2em;
+    }
+    #testimon h4 {
+        margin-top: -1em;
+    }
+    #testimonials .carousel-indicators {
+        bottom: -35px;
+    }
+}
+
 /*Subscribe*/
 @media screen and (max-width: 767px) {
     .sub_width {
