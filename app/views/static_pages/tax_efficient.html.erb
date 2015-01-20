@@ -8,7 +8,7 @@
 <head>
   <script src="/assets/jquery-1.10.2.js"></script>
   <script src="/assets/bootstrap.js"></script>
-
+<link href='http://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
@@ -37,13 +37,13 @@ var view = new google.visualization.DataView(dataTable);
     },2]);
 
   var options = {
-    title: '5 Years Return', titleTextStyle: {color: '#ffffff'},
+    title: '5 Years Return', titleTextStyle: {color: '#ffffff', fontName: 'Walter Turncoat'},
     titlePosition: 'center',
-    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC'},
+    hAxis: {title: 'Past performances are not indicative of future returns ', titleTextStyle: {color: '#3366CC', fontName: 'Walter Turncoat'},
             textStyle: {
-                    fontName: 'Comic Sans MS',
-                     fontSize: 10,
-                     bold: true,
+                    fontName: 'Walter Turncoat',
+                     fontSize: 12,
+                     //bold: true,
                     // italic: true,
                       color: '#ffffff',     // The color of the text.
                     //opacity: 0.8          // The transparency of the text.
@@ -57,7 +57,7 @@ var view = new google.visualization.DataView(dataTable);
     isStacked: true,
     annotations: {
           textStyle: {
-        fontName: 'Lucida Fax',
+        fontName: 'Walter Turncoat',
          fontSize: 12,
          bold: true,
         // italic: true,

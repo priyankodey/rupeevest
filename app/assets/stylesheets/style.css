@@ -1753,6 +1753,24 @@ padding: 1px;
     }
 }
 
+@media screen and (min-width: 500px) and (max-width: 768px)  {
+    #main-slider .fa-3x {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 499px)  {
+    #main-slider .fa-3x {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+.slide2_cap {
+color: #566581;
+    }
+}
+
 /*Why RupeeVest*/
 @media screen and (max-width: 991px) {
     .text_cen {
