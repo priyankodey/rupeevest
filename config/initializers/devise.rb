@@ -7,13 +7,13 @@ Devise.setup do |config|
    config.secret_key = 'a1707a8cb6b70b35f4980f7b134e65cfcc40b18b8ea9b286f705a91f337a8756540cadb8a71d4f59991ea9288eca47bfbd67ef5215a4c796a6dfa2790785fed8'
   
   require "omniauth-google-oauth2"
-  config.omniauth :google_oauth2, "525153955449-84djekhg545ru7b6nrjcmbd56mmngjrq.apps.googleusercontent.com", "7mC2giYgfhpmaJa4jsqkP8ty", { access_type: "offline", approval_prompt: "", :client_options => {:ssl => {:verify => false}} }
+  config.omniauth :google_oauth2, "525153955449-84djekhg545ru7b6nrjcmbd56mmngjrq.apps.googleusercontent.com", "7mC2giYgfhpmaJa4jsqkP8ty", { access_type: "online", approval_prompt: "", :client_options => {:ssl => {:verify => false}} }
   
   require "omniauth-facebook"
-  config.omniauth :facebook, "1550899085144466", "ee2d55196760919c5c9a334787b02cd9", { access_type: "offline", approval_prompt: "", :client_options => {:ssl => {:verify => false}} }
+  config.omniauth :facebook, "1550899085144466", "ee2d55196760919c5c9a334787b02cd9", { access_type: "online", approval_prompt: "", :client_options => {:ssl => {:verify => false}} }
 
   require "omniauth-twitter"
-  config.omniauth :twitter, "HaaJEMqsZcItTPcpxzQ49Pfp2", "cqO4vVlDglil92D04VJiYIaH0pqA9K0xwum7DoDFrwmK8BgiSm", { access_type: "offline", approval_prompt: "", :client_options => {:ssl => {:verify => false}} }
+  config.omniauth :twitter, "HaaJEMqsZcItTPcpxzQ49Pfp2", "cqO4vVlDglil92D04VJiYIaH0pqA9K0xwum7DoDFrwmK8BgiSm", { access_type: "online", approval_prompt: "", :client_options => {:ssl => {:verify => false}} }
 
 
 

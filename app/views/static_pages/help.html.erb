@@ -6,42 +6,68 @@
 <html lang="en">
 <!--<![endif]-->
 <head>
+  <script src="/assets/jquery-1.10.2.js"></script>
   <script src="/assets/bootstrap.js"></script>
- 
- <script type="text/javascript">
-// Javascript to enable link to tab
-var hash = document.location.hash;
-var prefix = "tab_";
-if (hash) {
-    $('.nav-tabs a[href='+hash.replace(prefix,"")+']').tab('show');
-} 
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="https://rawgit.com/highslide-software/pattern-fill/master/pattern-fill.js"></script>
+<!-- <script src="http://code.highcharts.com/modules/exporting.js"></script> -->
 
-// Change hash for page-reload
-$('.nav-tabs a').on('shown.bs.tab', function (e) {
-    window.location.hash = e.target.hash.replace("#", "#" + prefix);
+<script type="text/javascript">
+$(function () {
+    var chart = new Highcharts.Chart({
+
+    chart: {
+        renderTo: 'r'
+    },
+    
+    title: {
+        text: 'Pattern fill plugin demo'
+    },
+
+    xAxis: {
+
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
+    },
+    
+    yAxis: {
+      gridLineWidth: 0,
+      min: 0,
+      max: 250,
+        plotBands: [{
+            from: 0,
+            to: 250,
+            color: {
+                pattern: 'http://fc08.deviantart.net/fs70/i/2010/012/5/2/Blackboard_by_crisazi.jpg',
+                width: 1400,
+                height: 500
+            }
+        }]
+    },
+
+    series: [ {
+        type: 'column',
+        data: [148.5, 216.4, 194.1, 95.6, 54.4, 29.9],
+        color: {
+            pattern: 'http://www.joomlaworks.net/images/demos/galleries/abstract/7.jpg',
+            width: 56,
+            height: 166,
+            // VML only:
+            color1: 'red',
+            color2: 'yellow'
+        }
+    }]
+    
 });
- </script>
- <script src="/assets/jquery-1.10.2.js"></script>
- 
+
+    
+});
+</script>
   </head>
 
 <body>  
   
- <div class="container">
-<div class="tabbable">
-  <ul class="nav nav-tabs">
-    <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
-    <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
-  </ul>
-  <div class="tab-content">
-    <div class="tab-pane active" id="tab1">
-      <p>I'm in Section 1.</p>
-    </div>
-    <div class="tab-pane" id="tab2">
-      <p>I'm in Section 2.</p>
-    </div>
-  </div>
-</div>
+ <div class="container pad_top4">
+<div id="r" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 </div>
 
   </body>
