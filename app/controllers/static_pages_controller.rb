@@ -113,6 +113,64 @@ class StaticPagesController < ApplicationController
   def top_funds    
   end
 
+  def return_assumptions    
+  end
+
+  def new_funds
+  end
+
+
+#pdf files for new funds
+  def fd_download_pdf
+    send_file(
+      "#{Rails.root}/public/doc/reliance.pdf",
+      filename: "fd.pdf",
+      type: "application/pdf"
+    )
+  end
+
+  def bd_download_pdf
+    send_file(
+      "#{Rails.root}/public/doc/reliance.pdf",
+      filename: "b.pdf",
+      type: "application/pdf"
+    )
+  end
+
+  def mfe_download_pdf
+    send_file(
+      "#{Rails.root}/public/doc/reliance.pdf",
+      filename: "mfe.pdf",
+      type: "application/pdf"
+    )
+  end
+
+  def mfd_download_pdf
+    send_file(
+      "#{Rails.root}/public/doc/icici.pdf",
+      filename: "icici.pdf",
+      type: "application/pdf"
+    )
+  end
+
+  def mfh_download_pdf
+    send_file(
+      "#{Rails.root}/public/doc/reliance.pdf",
+      filename: "mfh.pdf",
+      type: "application/pdf"
+    )
+  end
+
+  def mft_download_pdf
+    send_file(
+      "#{Rails.root}/public/doc/reliance.pdf",
+      filename: "reliance.pdf",
+      type: "application/pdf"
+    )
+  end
+
+
+
   def investor_params
       params.require(:investor).permit(:name, :email, :number)
   end

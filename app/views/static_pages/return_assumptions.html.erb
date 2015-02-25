@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <link href="/assets/style.css" rel="stylesheet" />
+    <!--  Jquery Core Script -->
+    <script src="/assets/jquery-1.10.2.js"></script>
+    <!--  Core Bootstrap Script -->
+    <script src="/assets/bootstrap.js"></script>
+        <!--  Custom Scripts -->
+    <script src="/assets/custom.js"></script>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+
+
+<body>
+   <section class="general-subhead_bg">
+        <div class="container">
+           <div class="general-subhead">
+               <h2>RETURN CALCULATE</h2>
+           </div>
+        </div>
+    </section>
+     <!-- Gereral Subhead End -->
+    
+    <section>
+    <div class="container">
+      <div class="row">          
+            
+            <!-- Invest now button -->
+    <!-- <div class="col-md-12 hidden-xs hidden-sm text-center pad_top1">
+                <div id="button_warning">
+                <% if user_signed_in? %>            
+              
+            <% if current_user.status == 1 %>
+                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 2 %>
+                <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 3 %>
+             <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-warning", target: "_blank" %></span>
+            <% end %>
+
+                <% else %>
+
+                <span><%= link_to "INVEST NOW!", new_user_session_path ,method: :get, class: "btn btn-warning" %></span>
+
+                <% end %>
+                </div>
+    </div> -->         
+
+
+          <div class="col-sm-12" id="button_warning" >
+
+                    <div class="panel panel-default">                                             
+
+                        <div class="panel-heading">
+                            
+                                    
+                                    <div class="row">
+                                      
+                                      <div class="col-sm-7">
+                                          <div class="well well-lg">
+                                              <div class="row pad_right pad_bot1">                   
+
+                      <div class="form-horizontal">
+                              <div class="form-group" id="button_funds">
+                                  <div class="col-xs-12">                                    
+                              <button type="submit" class="btn btn-warning" id="1">Large Cap Funds</button>
+                              <button type="submit" class="btn btn-warning" id="2">Mid Cap Funds</button>
+                              <button type="submit" class="btn btn-warning" id="3">ELSS</button>
+                              <button type="submit" class="btn btn-warning" id="4">Debt Long Term</button>
+                              <button type="submit" class="btn btn-warning" id="5">Liquid Funds</button>
+                  <!-- <button type="submit" class="btn btn-md assump_large" id="5">Liquid Funds</button> -->
+                                  </div>
+                              </div>
+
+                              <script type="text/javascript">
+  var img = document.createElement('img');
+  function calculateF(target) {
+    var amount = parseFloat($('#amount').val());
+    var year = parseFloat($('#year').val());
+
+    if (target == 1) {
+        var tip1 = (1 + 15 / 100);        
+        img.src = "http://rupeevest.com/assets/meter2.png";
+        /*document.body.appendChild(img);*/
+    } 
+    else if (target == 2) {
+        var tip1 = (1 + 21 / 100);
+        img.src = "http://rupeevest.com/assets/meter4.png";
+    }
+    else if (target == 3) {
+        var tip1 = (1 + 17 / 100);
+        img.src = "http://rupeevest.com/assets/meter2.png";
+    }
+    else if (target == 4) {
+        var tip1 = (1 + 8.75 / 100);
+        img.src = "http://rupeevest.com/assets/meter1.png";
+    }
+    else if (target == 5) {
+        var tip1 = (1 + 8.25 / 100);
+        img.src = "http://rupeevest.com/assets/meter1.png";
+    }
+    
+    var tip = Math.pow(tip1, year);
+    var total = amount * tip;
+    $('#tip').val(tip.toFixed(2));
+    $('#total').val(total.toFixed(2));
+    return false;
+}
+
+$('button').click(function(e) {
+    calculateF($(e.target).prop('id'));
+});
+
+</script>
+                           <div class="col-sm-8">
+                              <div class="form-group">
+                                  <label for="inputEmail" class="control-label col-xs-2">Amount</label>
+                                  <div class="col-xs-10">
+                                      <input type="text" class="form-control" id="amount" placeholder="Input Principle Amount">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="inputPassword" class="control-label col-xs-2">Years</label>
+                                  <div class="col-xs-10">
+                                      <input type="text" class="form-control" id="year" placeholder="Input Years">
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="inputPassword" class="control-label col-xs-2">Return</label>
+                                  <div class="col-xs-10">
+                                      <input type="text" class="form-control" id="total" placeholder="Result" disabled="disabled">
+                                  </div>
+                              </div>
+                            </div>
+                              
+                          
+                      </div>
+                            
+                                              </div>
+                                          </div>
+                                      </div>
+
+                                      <div class="col-sm-5">                
+                                          <div class="text-center pad_top1">         
+                                            <div id="ooo" >
+                                                <script type="text/javascript">
+                                                  document.getElementById('ooo').appendChild(img);
+                                                </script>
+                                                <h5>Risk Meter</h5>
+<!-- Invest now button -->
+    <div class="col-md-12 hidden-xs hidden-sm text-center pad_top1">
+                <div id="button_warning">
+                <% if user_signed_in? %>            
+              
+            <% if current_user.status == 1 %>
+                <a data-toggle="modal" href="#myModal_investor"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 2 %>
+                <a data-toggle="modal" href="#myModal_investor_message"><button type="button"  class=" btn btn-warning"><span class="text">INVEST NOW!</span></button></a>
+            <% elsif current_user.status == 3 %>
+             <span><%= link_to "INVEST NOW!", invest_button_path ,method: :post, class: "btn btn-warning", target: "_blank" %></span>
+            <% end %>
+
+                <% else %>
+
+                <span><%= link_to "INVEST NOW!", new_user_session_path ,method: :get, class: "btn btn-warning" %></span>
+
+                <% end %>
+                </div>
+    </div>
+
+
+                                            </div>
+                                          </div>
+                                      </div>
+
+
+                                    </div>                         
+
+
+                        </div>
+                    </div>
+                  
+
+              
+              
+            
+              <!-- end  aggr -->
+
+         
+
+         
+
+          </div>
+      </div>
+    </div>       
+    </section>
+
+
+  
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+ -->
+
+
+   
+</body>
+</html>

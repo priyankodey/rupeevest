@@ -123,6 +123,10 @@ section {
 font-size: 0.65em;
 }
 
+.color_white {
+    color: #ffffff;
+}
+
 #button_warning .btn-warning {
     background-color: #ff6a00;
     border-color: #ff6a00;
@@ -1288,6 +1292,15 @@ padding:30px;
 }
 
 /*==========================================
+   NEW FUNDS STYLES
+=====================================================*/
+
+#button_funds button.btn:focus
+{
+    background: #1c4474;
+}
+
+/*==========================================
    INVEST STYLES
     =====================================================*/
 .divider6 {
@@ -1436,6 +1449,16 @@ RISK PROFILING
     height: 270px;
     width: 100%;   
 }
+
+
+/*==========================================
+RETURN ASSUMPTION
+=====================================================*/
+
+.assump_large {
+     background: url(../assets/tools/large.png) no-repeat;
+}
+
 
 /*==========================================
 CONTACT STYLES
@@ -1699,6 +1722,13 @@ padding: 1px;
   -moz-margin-end: -185px 0 0;*/
 }
 
+#o_mfe::before, #o_mfd::before, #o_mfh::before, #o_mft::before { 
+  content: "";
+  display: inline-block;
+  height: 185px;
+  margin-top: -185px;
+}
+
 #testi::before {
   content: "";
   display: inline-block;
@@ -1882,5 +1912,6 @@ color: #566581;
     max-height: 735px;
   }
 }
+
 
 

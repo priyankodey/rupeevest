@@ -420,7 +420,12 @@
                                         <%= link_to "DEBT", offer_path(:anchor => 'o_dt') , :method => :get %>
                                     </li>
                                 </ul>
-                            </li>                           
+                            </li>
+
+                            <li>                               
+                                <%= link_to "NEW FUNDS", new_funds_path, :method => :get %>
+                            </li>
+
                         </ul>
                     </li>
 
@@ -445,6 +450,9 @@
                                     </li>
                                     <li>                                        
                         <%= link_to "GOAL DRIVEN", return_expectation_path, :method => :get %>
+                                    </li>
+                                    <li>                                        
+                        <%= link_to "RETURN CALCULATE", return_assumptions_path, :method => :get %>
                                     </li>
                                 </ul>
                             </li>

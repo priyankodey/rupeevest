@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<body class="mar_top135px">
+    <% if flash[:notice_invest] -%>
+        <script type="text/javascript">    
+          $(window).load(function(){
+              $('#myModal_investor_message').modal('show');
+          });
+        </script>
+    <% end -%>
+
+   
+   <section class="general-subhead_bg fixed_top">
+        <div class="container">
+           <div class="general-subhead">
+               <h2>NEW FUNDS</h2>
+               <div class="row">
+                  <div class="col-sm-12" id="offer_list">          
+                      <span>|&nbsp;</span><a href="#o_fd">FIXED DEPOSIT</a>
+                      <span>|&nbsp;</span><a href="#o_bd">BONDS AND NCDs'</a>
+                      <span>|&nbsp;</span><a href="#o_mfe">MUTUAL FUNDS EQUITY</a>
+                      <span>|&nbsp;</span><a href="#o_mfd">MUTUAL FUNDS DEBT</a>
+                      <span>|&nbsp;</span><a href="#o_mfh">MUTUAL FUNDS HYBRID</a>
+                      <span>|&nbsp;</span><a href="#o_mft">MUTUAL FUNDS THEMATIC</a>
+                      <span>|</span>
+                  </div>
+                </div>
+           </div>
+        </div>
+    </section>
+   
+     <!-- Gereral Subhead End -->
+    <section>
+        <div class="container">          
+            <div class="row" id="button_warning">
+              <div class="col-sm-12 column text-justify" id="offer_body">        
+              
+        <a id="o_fd"></a>
+
+          <div class="row">
+                  <div class="col-sm-12 column">
+                    <h2 class="pad_top1">Fixed Deposit</h2>
+                  </div>                
+
+                  <div class="col-md-8 column">
+                      <table class="table table-bordered table-condensed">
+                        <thead>
+                          <tr>
+                            <th class="col-md-5">NEW FUNDS</th>                        
+                            <th class="text-center col-md-3">DOWNLOAD</th>                        
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="active">                        
+                            <td>No Update</td>                            
+                            <td class="text-center"><!-- <button type="button" class="btn btn-warning btn-sm"><%= link_to 'PDF', fd_download_pdf_path, class: "color_white" %> <i class="fa fa-download"></i></button> --></td>                        
+                          </tr>
+                        </tbody>
+                      </table>
+                  </div>  
+          </div>
+
+        <a id="o_bd"></a>
+              <div class="row">
+                  <div class="col-sm-12 column">
+                    <h2>Bonds And Non-Convertible Debentures’</h2>
+                  </div>
+                  
+                  <div class="col-md-8 column">
+                      <table class="table table-bordered table-condensed">
+                        <thead>
+                          <tr>
+                            <th class="col-md-5">NEW FUNDS</th>                        
+                            <th class="text-center col-md-3">DOWNLOAD</th>                        
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="active">                        
+                            <td>No Update</td>
+                            <td class="text-center"><!-- <button type="button" class="btn btn-warning btn-sm"><%= link_to 'PDF', bd_download_pdf_path, class: "color_white" %> <i class="fa fa-download"></i></button> --></td>                       
+                          </tr>
+                        </tbody>
+                      </table>
+                  </div>
+              </div>        
+                
+        <a id="o_mfe"></a>        
+              <div class="row">
+                  <div class="col-sm-12 column">
+                    <h2>Mutual Funds: Equity</h2>
+                  </div>
+                  
+                  <div class="col-md-8 column">
+                      <table class="table table-bordered table-condensed">
+                        <thead>
+                          <tr>
+                            <th class="col-md-5">NEW FUNDS</th>                        
+                            <th class="text-center col-md-3">DOWNLOAD</th>                        
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="active">                        
+                            <td>No Update</td>                            
+                            <td class="text-center"><!-- <button type="button" class="btn btn-warning btn-sm"><%= link_to 'PDF', mfe_download_pdf_path, class: "color_white" %> <i class="fa fa-download"></i> --></button></td>                        
+                          </tr>
+                        </tbody>
+                      </table>
+                  </div>
+              </div>
+
+        <a id="o_mfd"></a>        
+              <div class="row">
+                  <div class="col-sm-12 column">
+                    <h2>Mutual Funds: Debt</h2>
+                  </div>
+                  
+                  <div class="col-md-8 column">
+                      <table class="table table-bordered table-condensed">
+                        <thead>
+                          <tr>
+                            <th class="col-md-5">NEW FUNDS</th>                        
+                            <th class="text-center col-md-3">DOWNLOAD</th>                        
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="active">                        
+                            <td>ICICI Regular Savings Fund</td>                            
+                            <td class="text-center"></i><button type="button" class="btn btn-warning btn-sm"><%= link_to 'PDF', mfd_download_pdf_path, class: "color_white" %> <i class="fa fa-download"></button></td>                        
+                          </tr>
+                        </tbody>
+                      </table>
+                  </div>
+              </div>
+
+        <a id="o_mfh"></a>        
+              <div class="row">
+                  <div class="col-sm-12 column">
+                    <h2>Mutual Funds: Hybrid</h2>
+                  </div>
+                  
+                  <div class="col-md-8 column">
+                      <table class="table table-bordered table-condensed">
+                        <thead>
+                          <tr>
+                            <th class="col-md-5">NEW FUNDS</th>                        
+                            <th class="text-center col-md-3">DOWNLOAD</th>                        
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="active">                        
+                            <td>No Update</td>                            
+                            <td class="text-center"><!-- <button type="button" class="btn btn-warning btn-sm"><%= link_to 'PDF', mfh_download_pdf_path, class: "color_white" %> <i class="fa fa-download"></i></button> --></td>                        
+                          </tr>
+                        </tbody>
+                      </table>
+                  </div>
+              </div>
+
+          <a id="o_mft"></a>        
+              <div class="row">
+                  <div class="col-sm-12 column">
+                    <h2>Mutual Funds: Thematic</h2>
+                  </div>
+                  
+                  <div class="col-md-8 column">
+                      <table class="table table-bordered table-condensed">
+                        <thead>
+                          <tr>
+                            <th class="col-md-5">NEW FUNDS</th>                        
+                            <th class="text-center col-md-3">DOWNLOAD</th>                        
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr class="active">                        
+                            <td>Reliance Retirement Fund</td>                            
+                            <td class="text-center"><button type="button" class="btn btn-warning btn-sm"><%= link_to 'PDF', mft_download_pdf_path, class: "color_white" %> <i class="fa fa-download"></i></button></td>                        
+                          </tr>
+                        </tbody>
+                      </table>
+                  </div>
+              </div>
+               
+
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+  </body>
+
+  <!--  Jquery Core Script -->
+    <script src="/assets/jquery-1.10.2.js"></script>
+    <!--  Core Bootstrap Script -->
+    <script src="/assets/bootstrap.js"></script>
+       
+</html>
+
+

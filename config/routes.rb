@@ -55,7 +55,15 @@ RupeeVest::Application.routes.draw do
   match '/top_funds', to: 'static_pages#top_funds', via: 'get'
   match '/investor_details_elss', to: 'static_pages#investor_details_elss', via: 'post'
   match '/investor_home_contact', to: 'static_pages#investor_home_contact', via: 'post'
-
+  match '/return_assumptions', to: 'static_pages#return_assumptions', via: 'get'
+  match '/new_funds', to: 'static_pages#new_funds', via: 'get'
+  match '/fd_download_pdf', to: 'static_pages#fd_download_pdf', via: 'get'
+  match '/bd_download_pdf', to: 'static_pages#bd_download_pdf', via: 'get'
+  match '/mfe_download_pdf', to: 'static_pages#mfe_download_pdf', via: 'get'
+  match '/mfd_download_pdf', to: 'static_pages#mfd_download_pdf', via: 'get'
+  match '/mfh_download_pdf', to: 'static_pages#mfh_download_pdf', via: 'get'
+  match '/mft_download_pdf', to: 'static_pages#mft_download_pdf', via: 'get'
+           
 
   #match '/index',    to: 'static_pages#index',    via: 'get'
 
