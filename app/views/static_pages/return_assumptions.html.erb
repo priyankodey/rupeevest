@@ -23,7 +23,7 @@
    <section class="general-subhead_bg">
         <div class="container">
            <div class="general-subhead">
-               <h2>RETURN CALCULATE</h2>
+               <h2>RETURN CALCULATOR</h2>
            </div>
         </div>
     </section>
@@ -64,99 +64,175 @@
                                     
                                     <div class="row">
                                       
-                                      <div class="col-sm-7">
-                                          <div class="well well-lg">
-                                              <div class="row pad_right pad_bot1">                   
-
-                      <div class="form-horizontal">
-                              <div class="form-group" id="button_funds">
-                                  <div class="col-xs-12">                                    
-                              <button type="submit" class="btn btn-warning" id="1">Large Cap Funds</button>
+                                      <div class="col-sm-12">
+                                          <div class="">
+                                            <div id="button_funds">
+                                            
+                        <div class="row">
+                                  
+                              <div class="col-sm-2"> 
+                                  <div class="form-group">                                    
+                                    <label class="pad_top2p4">Amount invested p.a</label>
+                                 </div>                              
+                              </div> 
+                              <div class="col-sm-2 text-center"> 
+                                  <div class="form-group">
+                                    <label for="name">Large Cap Funds</label>
+                                    <input type="text" class="form-control" id="amount_lcf" value=0 placeholder="Input Principle Amount">
+                                 </div>                              
+                              </div>
+                              <div class="col-sm-2 text-center">
+                                  <div class="form-group">
+                                    <label for="name">Mid Cap Funds</label>
+                                    <input type="text" class="form-control" id="amount_mcf" value=0 placeholder="Input Principle Amount">
+                                 </div>                              
+                              </div>
+                              <div class="col-sm-2 text-center">
+                                  <div class="form-group">
+                                    <label for="name">ELSS</label>
+                                    <input type="text" class="form-control" id="amount_elss" value=0  placeholder="Input Principle Amount">
+                                 </div>                              
+                              </div>
+                              <div class="col-sm-2 text-center">
+                                  <div class="form-group">
+                                    <label for="name">Debt Long Term</label>
+                                    <input type="text" class="form-control" id="amount_dlt" value=0  placeholder="Input Principle Amount">
+                                 </div>                              
+                              </div>
+                              <div class="col-sm-2 text-center">
+                                  <div class="form-group">
+                                    <label for="name">Liquid Funds</label>
+                                    <input type="text" class="form-control" id="amount_lf" value=0  placeholder="Input Principle Amount">
+                                 </div>                              
+                              </div>
+                        <!-- <button type="submit" class="btn btn-warning" id="1">Large Cap Funds</button>
                               <button type="submit" class="btn btn-warning" id="2">Mid Cap Funds</button>
                               <button type="submit" class="btn btn-warning" id="3">ELSS</button>
                               <button type="submit" class="btn btn-warning" id="4">Debt Long Term</button>
-                              <button type="submit" class="btn btn-warning" id="5">Liquid Funds</button>
+                              <button type="submit" class="btn btn-warning" id="5">Liquid Funds</button> -->
                   <!-- <button type="submit" class="btn btn-md assump_large" id="5">Liquid Funds</button> -->
-                                  </div>
-                              </div>
+                                  
+                        </div>
 
-                              <script type="text/javascript">
-  var img = document.createElement('img');
-  function calculateF(target) {
-    var amount = parseFloat($('#amount').val());
-    var year = parseFloat($('#year').val());
-
-    if (target == 1) {
-        var tip1 = (1 + 15 / 100);        
-        img.src = "http://rupeevest.com/assets/meter2.png";
-        /*document.body.appendChild(img);*/
-    } 
-    else if (target == 2) {
-        var tip1 = (1 + 21 / 100);
-        img.src = "http://rupeevest.com/assets/meter4.png";
-    }
-    else if (target == 3) {
-        var tip1 = (1 + 17 / 100);
-        img.src = "http://rupeevest.com/assets/meter2.png";
-    }
-    else if (target == 4) {
-        var tip1 = (1 + 8.75 / 100);
-        img.src = "http://rupeevest.com/assets/meter1.png";
-    }
-    else if (target == 5) {
-        var tip1 = (1 + 8.25 / 100);
-        img.src = "http://rupeevest.com/assets/meter1.png";
-    }
-    
-    var tip = Math.pow(tip1, year);
-    var total = amount * tip;
-    $('#tip').val(tip.toFixed(2));
-    $('#total').val(total.toFixed(2));
-    return false;
-}
-
-$('button').click(function(e) {
-    calculateF($(e.target).prop('id'));
-});
-
-</script>
-                           <div class="col-sm-8">
-                              <div class="form-group">
-                                  <label for="inputEmail" class="control-label col-xs-2">Amount</label>
-                                  <div class="col-xs-10">
-                                      <input type="text" class="form-control" id="amount" placeholder="Input Principle Amount">
-                                  </div>
+                        <div class="row">
+                              <div class="col-sm-2"> 
+                                  <div class="form-group">                                    
+                                    <label>Years invest for</label>
+                                 </div>                              
+                              </div> 
+                              <div class="col-sm-10"> 
+                                  <div class="form-group">                                    
+                                    <input type="text" class="form-control" id="year" value=0 placeholder="Input Years">
+                                 </div>                              
                               </div>
-                              <div class="form-group">
-                                  <label for="inputPassword" class="control-label col-xs-2">Years</label>
-                                  <div class="col-xs-10">
-                                      <input type="text" class="form-control" id="year" placeholder="Input Years">
-                                  </div>
+                        </div>
+
+                        <div class="row">
+                              <div class="col-sm-2"> 
+                                  <div class="form-group">                                    
+                                    <label>Amount at the end of invested year</label>
+                                 </div>                              
+                              </div> 
+                              <div class="col-sm-10"> 
+                                  <div class="form-group">                                    
+                                    <input type="text" class="form-control" id="total" value=0 placeholder="Result" disabled="disabled">
+                                 </div>                              
                               </div>
-                              <div class="form-group">
-                                  <label for="inputPassword" class="control-label col-xs-2">Return</label>
-                                  <div class="col-xs-10">
-                                      <input type="text" class="form-control" id="total" placeholder="Result" disabled="disabled">
-                                  </div>
-                              </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-sm-2"></div>                                
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-warning" id="1">Submit</button>
+                                    <button type="submit" class="btn btn-warning" onclick="clearTextArea()">Clear</button>
+                                </div>
                             </div>
-                              
+                        </div>
+
+                      
+                  </div>                                                  
                           
-                      </div>
+                      
+
+        <script type="text/javascript">
+          var img = document.createElement('img');
+          function calculateF(target) {
+            if (target == 1) {
+            var year = parseFloat($('#year').val());
+               
+                var amount1 = parseFloat($('#amount_lcf').val());
+                var tip_lcf = (1 + 15 / 100);
+                var tip1 = Math.pow(tip_lcf, year);
+                var total1 = amount1 * tip1;        
+                /*img.src = "http://rupeevest.com/assets/meter2.png";*/
+                /*document.body.appendChild(img);*/            
+            
+                var amount2 = parseFloat($('#amount_mcf').val());
+                var tip_mcf = (1 + 21 / 100);
+                var tip2 = Math.pow(tip_mcf, year);
+                var total2 = amount2 * tip2;             
+           
+                var amount3 = parseFloat($('#amount_elss').val());
+                var tip_elss = (1 + 17 / 100);
+                var tip3 = Math.pow(tip_elss, year);
+                var total3 = amount3 * tip3;             
+            
+                var amount4 = parseFloat($('#amount_dlt').val());
+                var tip_dlt = (1 + 8.75 / 100);
+                var tip4 = Math.pow(tip_dlt, year);
+                var total4 = amount4 * tip4;             
+            
+                var amount5 = parseFloat($('#amount_lf').val());
+                var tip_lf = (1 + 8.25 / 100);
+                var tip5 = Math.pow(tip_lf, year);
+                var total5 = amount5 * tip5;             
+                
+                if ((year <= 0) || (amount1 < 0) || (amount2 < 0) || (amount3 < 0) || (amount4 < 0) || (amount5 < 0  ))
+                {
+                  var total = "Wrong input";
+                  $('#total').val(String(total));
+                }
+                else {
+                  var total = total1 + total2 + total3 + total4 + total5 ; 
+                  $('#total').val(total.toFixed(2));
+                }                
+                
+            
+            
+          }
+            return false;
+        }
+
+        $('button').click(function(e) {
+            calculateF($(e.target).prop('id'));
+        });
+
+        function clearTextArea(){
+            document.getElementById("amount_lcf").value='0';
+            document.getElementById("amount_mcf").value='0';
+            document.getElementById("amount_elss").value='0';
+            document.getElementById("amount_dlt").value='0';
+            document.getElementById("amount_lf").value='0';
+            document.getElementById("year").value='0';
+            document.getElementById("total").value='0';          
+          }
+
+        </script>
                             
-                                              </div>
+                                              
                                           </div>
                                       </div>
 
-                                      <div class="col-sm-5">                
+                                      <div class="col-sm-12">                
                                           <div class="text-center pad_top1">         
                                             <div id="ooo" >
                                                 <script type="text/javascript">
-                                                  document.getElementById('ooo').appendChild(img);
+                                                  /*document.getElementById('ooo').appendChild(img);*/
                                                 </script>
-                                                <h5>Risk Meter</h5>
+                                                <!-- <h5>Risk Meter</h5> -->
 <!-- Invest now button -->
-    <div class="col-md-12 hidden-xs hidden-sm text-center pad_top1">
+    <div class="col-md-12 text-center pad_top1">
                 <div id="button_warning">
                 <% if user_signed_in? %>            
               
