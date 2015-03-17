@@ -51,7 +51,7 @@ RupeeVest::Application.routes.draw do
   # match '/testimonials', to: 'static_pages#testimonials', via: 'get'
   match '/invest_button', to: 'static_pages#invest_button', via: 'post'
   match '/investor_details', to: 'static_pages#investor_details', via: 'post'
-  match '/details', to: 'static_pages#details', via: 'get'
+  # match '/details', to: 'static_pages#details', via: 'get'
   match '/top_funds', to: 'static_pages#top_funds', via: 'get'
   match '/investor_details_elss', to: 'static_pages#investor_details_elss', via: 'post'
   match '/investor_home_contact', to: 'static_pages#investor_home_contact', via: 'post'
