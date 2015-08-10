@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en">
-<!--<![endif]-->
-<head>
-    <title>RupeeVest | Our Objective</title>
-    <meta name="description" content="Our vision is to empower every Indian to plan and execute simple investment decisions for themselves. Now sit in the comfort of your homes, plan for you life's financial goals, save and invest for them online.">
-    <meta name="keywords" content="Financial goals, Selection of best mutual funds, How to select best mutual funds, Asset allocation, Tax efficient investment, Investment Strategy, Portfolio Management, Retirement planning, goal planning, Funds by best fund managers, portfolio of assets, Best portfolio of Mutual Fund, MF Investment India, Best Funds to Buy, Invest online in mutual funds, Investing in Mutual Funds, Top mutual funds, Best mutual funds, Tax saving mutual funds, Financial Planning, Indian Mutual Funds, Best Funds, Equities, Fixed Deposit, Corporate Deposits, FDs, NCDs'">
-    <meta name="author" content="RupeeVest">
-</head>
-<body>
+<% meta title: "RupeeVest | Our Objective",
+          description: "Our vision is to empower every Indian to plan and execute simple investment decisions for themselves. Now sit in the comfort of your homes, plan for you life's financial goals, save and invest for them online."
+  %>
+<% metamagic keywords: [:keywords, "Financial goals, Selection of best mutual funds, How to select best mutual funds, Asset allocation, Tax efficient investment, Investment Strategy, Portfolio Management, Retirement planning, goal planning, Funds by best fund managers, portfolio of assets, Best portfolio of Mutual Fund, MF Investment India, Best Funds to Buy, Invest online in mutual funds, Investing in Mutual Funds, Top mutual funds, Best mutual funds, Tax saving mutual funds, Financial Planning, Indian Mutual Funds, Best Funds, Equities, Fixed Deposit, Corporate Deposits, FDs, NCDs"] %>
 
-     <% if flash[:notice_invest] -%>
+    <% if flash[:notice_invest] -%>
         <script type="text/javascript">    
           $(window).load(function(){
               $('#myModal_investor_message').modal('show');
@@ -71,14 +61,5 @@
         </div> 
     </section>
         
-       
-    
-    <!--  Jquery Core Script -->
     <script src="/assets/jquery-1.10.2.js"></script>
-    <!--  Core Bootstrap Script -->
     <script src="/assets/bootstrap.js"></script>
-        <!--  Custom Scripts -->
-    
-   
-</body>
-</html>

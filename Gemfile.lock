@@ -123,6 +123,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     maruku (0.7.2)
+    metamagic (3.1.7)
+      rails (>= 3.0.0)
     mime-types (1.25.1)
     minitest (4.7.5)
     money (6.2.1)
@@ -249,6 +251,7 @@ DEPENDENCIES
   jquery-rails (= 3.0.4)
   less-rails-bootstrap
   mail
+  metamagic
   money
   omniauth
   omniauth-facebook

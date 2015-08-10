@@ -1,27 +1,21 @@
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en">
-<!--<![endif]-->
-<head>
-    <title>RupeeVest | Investing made easier</title>
-    <meta name="description" content="India's first self-help investment platform to invest online in a portfolio of Top Performing Mutual Funds, FD's, NCD's, Corporate Deposits and many more">
-    <meta name="keywords" content="Mutual Fund, MF Investment India, Best Funds to Buy, Invest online in mutual funds, Investing in Mutual Funds, Top mutual funds, Best mutual funds, Tax saving mutual funds, 80c Investment, Portfolio Management, Financial Planning, Returns Calculator, Compare Funds, Indian Mutual Funds, Best Funds, Tax efficient investing, Equities, Fixed Deposit, Corporate Deposits, FDs, NCDs', Investment Strategy">
-    <meta name="author" content="RupeeVest">
-</head>
-<body>
-    
+<% meta title: "RupeeVest | Investing made easier",
+          description: "India's first self-help investment platform to invest online in a portfolio of Top Performing Mutual Funds, FD's, NCD's, Corporate Deposits and many more."
+  %>
+<% metamagic keywords: [:keywords, "Mutual Fund", "MF Investment India", "Best Funds to Buy", "Invest online in mutual funds", "Investing in Mutual Funds", "Top mutual funds", "Best mutual funds", "Tax saving mutual funds", "80c Investment", "Portfolio Management", "Financial Planning", "Returns Calculator", "Compare Funds", "Indian Mutual Funds", "Best Funds", "Tax efficient investing", "Equities", "Fixed Deposit", "Corporate Deposits", "FDs", "NCDs", "Investment Strategy"] %>
+<% meta copyright: "RupeeVest" %>
+<% meta owner: "RupeeVest" %>
+<% meta author: "RupeeVest" %>
+<% meta distribution: "global" %>
+<% meta rating: "general" %>
+<% meta rel: { canonical: "http://www.rupeevest.com/" } %>
 
-
-    <% if flash[:notice_invest] -%>
-        <script type="text/javascript">    
-          $(window).load(function(){
-              $('#myModal_investor_message').modal('show');
-          });
-        </script>
-    <% end -%>
+<% if flash[:notice_invest] -%>
+    <script type="text/javascript">    
+      $(window).load(function(){
+          $('#myModal_investor_message').modal('show');
+      });
+    </script>
+<% end -%>
 
     <!-- MODAL INVESTOR DETAILS FOR HOME PAGE-->
 
@@ -610,6 +604,3 @@ so, invest before it's too late
         </script>
         <% end %>
     <% end %>
-   
-</body>
-</html>

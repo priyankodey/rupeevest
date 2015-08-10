@@ -25,6 +25,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem 'mail'
+gem 'metamagic'
 
 group :assets do
   gem 'less-rails-bootstrap'
