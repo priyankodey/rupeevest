@@ -17,6 +17,13 @@
 <link href="/assets/prettyPhoto.css" rel="stylesheet" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 <link href="/assets/style.css" rel="stylesheet" />
+<%= yield :tax_efficient %>
+<%= yield :top_funds %>
+<%= yield :risk_profiling %>
+<%= yield :return_expectation %>
+<%= yield :return_calculator %>
+
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -35,7 +42,7 @@
 </script>
 
 </head>
-<body>
+<body <%= yield :margin_top %>>
  
     <!-- MODAL INVESTOR DETAILS -->
 

@@ -2,12 +2,12 @@
           description: "Our selection of the best available funds in different asset classes."
   %>
 <% metamagic keywords: [:keywords, "Top mutual funds, Compare Funds, Compare Funds in India, Best mutual funds, Best Peforming Mutual Funds, Fixed Deposit, Best Mutual Funds in India, Highest return mutual funds, Best large cap Mutual funds, Best Mid And Small Cap Mutual funds, Best ELSS Mutual funds, Best Sectoral Mutual funds, Best Long Term Debt Funds, Best Short Term Debt Funds, Best Ultra Short Term Debt Funds, Best Liquid Funds, Mutual Fund, MF Investment India, Mutual Fund Equity, Investment in equity, Large Cap Mutual Funds, Mid Cap Mutual Funds, ELSS MF, ElSS Mutual Funds, Invest online in mutual funds, Investing in Mutual Funds, Financial Planning, Indian Mutual Funds, Best Funds, good funds to invest, Tax efficient investing, Equities"] %>
-<head>
-    
-    <link href='http://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script src="/assets/jquery-1.10.2.js"></script>
-    <script src="/assets/bootstrap.js"></script>
+
+<% content_for :top_funds do %>
+<link href='http://fonts.googleapis.com/css?family=Walter+Turncoat' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="/assets/jquery-1.10.2.js"></script>
+<script src="/assets/bootstrap.js"></script>
     
 
 <!-- EQUITY FUNDS -->
@@ -757,7 +757,7 @@ var view = new google.visualization.DataView(dataTable);
         });
     </script>
 
-</head>
+<% end %>
 
     <section class="general-subhead_bg">
         <div class="container">

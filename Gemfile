@@ -2,10 +2,8 @@ source 'http://rubygems.org'
 #gem 'ruby' '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
 group :development do
   gem 'sqlite3', '1.3.8'
 end
@@ -26,6 +24,7 @@ gem 'omniauth-google-oauth2'
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem 'mail'
 gem 'metamagic'
+gem "dynamic_sitemaps"
 
 group :assets do
   gem 'less-rails-bootstrap'

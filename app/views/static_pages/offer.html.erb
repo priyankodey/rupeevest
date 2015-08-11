@@ -3,7 +3,10 @@
   %>
 <% metamagic keywords: [:keywords, "Fixed Deposit, FD, Bonds, NCDs , Mutual Fund, MF Investment India, Best FD to Buy, Fixed deposit rates, fixed interest instruments, Mutual Fund Equity, Investment in equity,Large Cap Mutual Funds, Mid Cap Mutual Funds, ELSS MF, ElSS Mutual Funds, Long Term Debt Funds, Liquid Fund, NAV, Best Fixed Deposit to Buy, Invest online in mutual funds, Investing in Mutual Funds, Top mutual funds, Best mutual funds, Portfolio Management, Financial Planning, Compare Funds, Indian Mutual Funds, Best Funds, Tax efficient investing, Equities, Corporate Deposits"] %>
 
-<body class="mar_top135px">
+<% content_for :margin_top do %>
+class="mar_top135px"
+<% end %>
+ 
     <% if flash[:notice_invest] -%>
         <script type="text/javascript">    
           $(window).load(function(){
@@ -505,8 +508,6 @@
 
     </section>
 
-
-  </body>
 
     <script src="/assets/jquery-1.10.2.js"></script>
     <script src="/assets/bootstrap.js"></script>

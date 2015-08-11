@@ -3,7 +3,10 @@
   %>
 <% metamagic keywords: [:keywords, "New Mutual Funds, New Funds, Suggest best funds, Selection of best mutual funds, Equity, Equities, Fixed Deposit, FD, FDs, Bonds, NCDs, Non Convertible Debentures, Debt, Debt Mutual Funds, Hybrid Mutual Funds, Thematic Mutual Funds, How to select best mutual funds, Funds by best fund managers, Best portfolio of Mutual Fund, MF Investment India, Best Funds to Buy, Invest online in mutual funds, Investing in Mutual Funds, Top mutual funds, Best mutual funds, Indian Mutual Funds, Best Funds, Corporate Deposits"] %>
 
-<body class="mar_top135px">
+<% content_for :margin_top do %>
+class="mar_top135px"
+<% end %>
+
     <% if flash[:notice_invest] -%>
         <script type="text/javascript">    
           $(window).load(function(){
@@ -12,7 +15,6 @@
         </script>
     <% end -%>
 
-   
    <section class="general-subhead_bg fixed_top">
         <div class="container">
            <div class="general-subhead">
@@ -189,12 +191,7 @@
         </div>
     </section>
 
-
-  </body>
-
-  <!--  Jquery Core Script -->
     <script src="/assets/jquery-1.10.2.js"></script>
-    <!--  Core Bootstrap Script -->
     <script src="/assets/bootstrap.js"></script>
        
 

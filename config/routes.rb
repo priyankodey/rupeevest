@@ -26,7 +26,7 @@ RupeeVest::Application.routes.draw do
   # get "static_pages/testimonials"
   # post "static_pages/invest_button"
   # post "static_pages/investor_details"
-  match '/', to: 'static_pages#index', via: 'get'
+  #match '/', to: 'static_pages#index', via: 'get'
   match '/offer', to: 'static_pages#offer', via: 'get'
   match '/invest', to: 'static_pages#invest', via: 'get'
   match '/invest', to: 'static_pages#invest', via: 'post'
