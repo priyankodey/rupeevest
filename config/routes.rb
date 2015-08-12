@@ -3,60 +3,25 @@ RupeeVest::Application.routes.draw do
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
   
   root :to => 'static_pages#index'
-  # get "static_pages/index"
-  # get "static_pages/invest"
-  # post "static_pages/invest"
-  # get "static_pages/blog_home"
-  # get "static_pages/blog_single"
-  # get "static_pages/contact"
-  # get "static_pages/error"
-  # get "static_pages/pricing"
-  # get "static_pages/team"
-  # get "static_pages/risk_profiling"
-  # get "static_pages/return_expectation"
-  # get "static_pages/academics"
-  # get "static_pages/sign_in"
-  # get "static_pages/sign_up"
-  # get "static_pages/dashboard"
-  # get "static_pages/help"
-  # get "static_pages/objective"
-  # get "static_pages/portfolio"
-  # get "static_pages/tax_efficient"
-  # get "static_pages/safety"
-  # get "static_pages/testimonials"
-  # post "static_pages/invest_button"
-  # post "static_pages/investor_details"
-  #match '/', to: 'static_pages#index', via: 'get'
+  
   match '/offer', to: 'static_pages#offer', via: 'get'
   match '/invest', to: 'static_pages#invest', via: 'get'
-  match '/invest', to: 'static_pages#invest', via: 'post'
-  # match '/blog_home', to: 'static_pages#blog_home', via: 'get'
-  # match '/blog_single', to: 'static_pages#blog_single', via: 'get'
-  match '/contact', to: 'static_pages#contact', via: 'get'
-  # match '/error', to: 'static_pages#error', via: 'get'
-  # match '/pricing', to: 'static_pages#pricing', via: 'get'
+  match '/invest', to: 'static_pages#invest', via: 'post'  
+  match '/contact', to: 'static_pages#contact', via: 'get' 
   match '/team', to: 'static_pages#team', via: 'get'
-  match '/risk_profiling', to: 'static_pages#risk_profiling', via: 'get'
-  match '/return_expectation', to: 'static_pages#return_expectation', via: 'get'
+  match '/optimum-portfolio', to: 'static_pages#risk_profiling', via: 'get', as: :risk_profiling
+  match '/investment-strategy', to: 'static_pages#return_expectation', via: 'get', as: :return_expectation
   match '/research', to: 'static_pages#research', via: 'get'
-  match '/academics', to: 'static_pages#academics', via: 'get'
-  match '/sign_in', to: 'static_pages#sign_in', via: 'get'
-  # match '/sign_up', to: 'static_pages#sign_up', via: 'get'
-  # match '/dashboard', to: 'static_pages#dashboard', via: 'get'
-  # match '/help', to: 'static_pages#help', via: 'get'
-  match '/objective', to: 'static_pages#objective', via: 'get'
-  #match '/portfolio', to: 'static_pages#portfolio', via: 'get'
-  match '/tax_efficient', to: 'static_pages#tax_efficient', via: 'get'
-  # match '/safety', to: 'static_pages#safety', via: 'get'
-  # match '/testimonials', to: 'static_pages#testimonials', via: 'get'
+  match '/gallery', to: 'static_pages#academics', via: 'get', as: :academics
+  match '/objective', to: 'static_pages#objective', via: 'get'  
+  match '/tax-efficient-investing', to: 'static_pages#tax_efficient', via: 'get', as: :tax_efficient  
   match '/invest_button', to: 'static_pages#invest_button', via: 'post'
-  match '/investor_details', to: 'static_pages#investor_details', via: 'post'
-  # match '/details', to: 'static_pages#details', via: 'get'
-  match '/top_funds', to: 'static_pages#top_funds', via: 'get'
+  match '/investor_details', to: 'static_pages#investor_details', via: 'post'  
+  match '/top-funds', to: 'static_pages#top_funds', via: 'get', as: :top_funds
   match '/investor_details_elss', to: 'static_pages#investor_details_elss', via: 'post'
   match '/investor_home_contact', to: 'static_pages#investor_home_contact', via: 'post'
-  match '/return_calculator', to: 'static_pages#return_assumptions', via: 'get'
-  match '/new_funds', to: 'static_pages#new_funds', via: 'get'
+  match '/calculator', to: 'static_pages#return_assumptions', via: 'get', as: :return_calculator
+  match '/new-funds', to: 'static_pages#new_funds', via: 'get', as: :new_funds
   match '/fd_download_pdf', to: 'static_pages#fd_download_pdf', via: 'get'
   match '/bd_download_pdf', to: 'static_pages#bd_download_pdf', via: 'get'
   match '/mfe_download_pdf', to: 'static_pages#mfe_download_pdf', via: 'get'
@@ -64,8 +29,18 @@ RupeeVest::Application.routes.draw do
   match '/mfh_download_pdf', to: 'static_pages#mfh_download_pdf', via: 'get'
   match '/mft_download_pdf', to: 'static_pages#mft_download_pdf', via: 'get'
            
-
-  #match '/index',    to: 'static_pages#index',    via: 'get'
+  # match '/blog_home', to: 'static_pages#blog_home', via: 'get'
+  # match '/blog_single', to: 'static_pages#blog_single', via: 'get'
+  # match '/error', to: 'static_pages#error', via: 'get'
+  # match '/pricing', to: 'static_pages#pricing', via: 'get'
+  # match '/sign_up', to: 'static_pages#sign_up', via: 'get'
+  # match '/dashboard', to: 'static_pages#dashboard', via: 'get'
+  # match '/help', to: 'static_pages#help', via: 'get'
+  # match '/portfolio', to: 'static_pages#portfolio', via: 'get'
+  # match '/safety', to: 'static_pages#safety', via: 'get'
+  # match '/testimonials', to: 'static_pages#testimonials', via: 'get'
+  # match '/details', to: 'static_pages#details', via: 'get'
+  # match '/sign_in', to: 'static_pages#sign_in', via: 'get'  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
