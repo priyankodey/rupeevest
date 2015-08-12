@@ -335,7 +335,7 @@
                   <div class="modal-body button_warning">
                       <div class="row">
                           <div class="col-lg-12">
-                        Please <a href="/users/sign_in"><b>LOGIN</b></a> to Invest.                        
+                        Please <a href="/users/sign_in"><strong>LOGIN</strong></a> to Invest.                        
                           </div>
                       </div> 
                   </div>              
@@ -360,7 +360,7 @@
                 </a> -->
                  <span class="navbar-brand">
                     <!-- <img src="/assets/logo/logo.png" class="navbar-brand-logo " alt="" /> -->
-                    <%= link_to(image_tag("/assets/logo/logo.png", class: "navbar-brand-logo"), root_path,  :method => :get) %> 
+                    <%= link_to(image_tag("/assets/logo/logo.png", class: "navbar-brand-logo", alt: "Logo"), root_path,  :method => :get) %> 
                 </span>
 
             </div>
@@ -404,7 +404,7 @@
                                               
                             <li class="dropdown">
                                 <!-- <a href="/offer/#o_md">MUTUAL FUNDS<i class="right-caret"></i></a> -->
-                                <%= link_to 'MUTUAL FUNDS <b class="right-caret"></b>'.html_safe, offer_path(:anchor => 'o_md') , :method => :get %>
+                                <%= link_to 'MUTUAL FUNDS <strong class="right-caret"></strong>'.html_safe, offer_path(:anchor => 'o_md') , :method => :get %>
                                 <ul class="dropdown-menu sub-menu">                            
                                     <li>
                                         <%= link_to "EQUITY", offer_path(:anchor => 'o_eq') , :method => :get %>
@@ -435,7 +435,7 @@
 
                             <li class="dropdown">
                                 
-                                <%= link_to 'RUPEEVEST TOOLS <b class="right-caret"></b>'.html_safe, risk_profiling_path, :method => :get %>                        
+                                <%= link_to 'RUPEEVEST TOOLS <strong class="right-caret"></strong>'.html_safe, risk_profiling_path, :method => :get %>                        
 
                                 <ul class="dropdown-menu sub-menu">                            
                                     <li>                                        
@@ -576,7 +576,7 @@
 
     <div class="div-social-top">
         <div class="container">
-        <i class="fa fa-envelope"></i><a href="mailto:info@rupeevest.com">info@rupeevest.com&nbsp;&nbsp;</a>  <i class="fa fa-mobile "></i>+91 987 469 1177  &nbsp;<a href= "http://maps.google.com/maps?ll=22.571411,88.350815&z=15&t=m&hl=en-US&gl=IN&mapclient=embed&cid=18209202087708110679" target="_blank" ><image src="/assets/logo/google_map_logo.png" class="img-rounded"></a>&nbsp;
+        <i class="fa fa-envelope"></i><a href="mailto:info@rupeevest.com">info@rupeevest.com&nbsp;&nbsp;</a><i class="fa fa-mobile "></i>+91 987 469 1177  &nbsp;<a href= "http://maps.google.com/maps?ll=22.571411,88.350815&amp;z=15&amp;t=m&amp;hl=en-US&amp;gl=IN&amp;mapclient=embed&amp;cid=18209202087708110679" target="_blank" ><img src="/assets/logo/google_map_logo.png" class="img-rounded" alt="Google Map"></a>&nbsp;
               <a href="https://www.facebook.com/rupeevest" target="_blank">
                   <i class="fa fa-facebook-square "></i>
               </a>
@@ -600,7 +600,7 @@
         <div class="container">
             <div class="row">
                 <div  class="col-lg-8 col-md-8 col-sm-12">
-                    <i class="font_p83">Mutual Funds are subject to market risk. Please read the offer document carefully before investing. | ARN-86752</i>
+                    <em class="font_p83">Mutual Funds are subject to market risk. Please read the offer document carefully before investing. | ARN-86752</em>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
                     © 2014 All Rights Reserved                    
