@@ -18,16 +18,16 @@ RupeeVest::Application.routes.draw do
   match '/invest_button', to: 'static_pages#invest_button', via: 'post'
   match '/investor_details', to: 'static_pages#investor_details', via: 'post'  
   match '/top-funds', to: 'static_pages#top_funds', via: 'get', as: :top_funds
-  match '/investor_details_elss', to: 'static_pages#investor_details_elss', via: 'post'
+  match '/investor_details_elss', to: 'static_pages#investor_details_elss', via: 'post', as: :investor_details_elss
   match '/investor_home_contact', to: 'static_pages#investor_home_contact', via: 'post'
   match '/calculator', to: 'static_pages#return_assumptions', via: 'get', as: :return_calculator
   match '/new-funds', to: 'static_pages#new_funds', via: 'get', as: :new_funds
-  match '/fd_download_pdf', to: 'static_pages#fd_download_pdf', via: 'get'
-  match '/bd_download_pdf', to: 'static_pages#bd_download_pdf', via: 'get'
-  match '/mfe_download_pdf', to: 'static_pages#mfe_download_pdf', via: 'get'
-  match '/mfd_download_pdf', to: 'static_pages#mfd_download_pdf', via: 'get'
-  match '/mfh_download_pdf', to: 'static_pages#mfh_download_pdf', via: 'get'
-  match '/mft_download_pdf', to: 'static_pages#mft_download_pdf', via: 'get'
+  match '/fd-download-pdf', to: 'static_pages#fd_download_pdf', via: 'get', as: :fd_download_pdf
+  match '/bd-download-pdf', to: 'static_pages#bd_download_pdf', via: 'get', as: :bd_download_pdf
+  match '/mfe-download-pdf', to: 'static_pages#mfe_download_pdf', via: 'get', as: :mfe_download_pdf
+  match '/mfd-download-pdf', to: 'static_pages#mfd_download_pdf', via: 'get', as: :mfd_download_pdf
+  match '/mfh-download-pdf', to: 'static_pages#mfh_download_pdf', via: 'get', as: :mfh_download_pdf
+  match '/mft-download-pdf', to: 'static_pages#mft_download_pdf', via: 'get', as: :mft_download_pdf
            
   # match '/blog_home', to: 'static_pages#blog_home', via: 'get'
   # match '/blog_single', to: 'static_pages#blog_single', via: 'get'
