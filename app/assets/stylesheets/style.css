@@ -1232,11 +1232,11 @@ padding:30px;
         color: #fff;
     }
 
-    #offer_body ul > li {
+    .offer_body ul > li {
         font-size: 12px;
     }
 
-   /* #offer_body h2, h3, h4, h5 {
+   /* .offer_body h2, h3, h4, h5 {
         text-transform:capitalize;
         font-variant:small-caps;
     }*/
