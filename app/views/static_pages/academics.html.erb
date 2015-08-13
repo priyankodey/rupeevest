@@ -23,8 +23,8 @@
                         <div class="dis_inl_blk text-right">
                         <li>
                             <!-- Invest now button -->
-    <div class="col-sm-12 text-right">
-                <div class ="button_warning">
+    <span class="col-sm-12 text-right">
+                <span class ="button_warning">
                 <% if user_signed_in? %>            
               
             <% if current_user.status == 1 %>
@@ -40,9 +40,9 @@
                 <span><%= link_to "INVEST NOW!", new_user_session_path ,method: :get, class: "btn btn-warning" %></span>
 
                 <% end %>
-                </div>
+                </span>
 
-    </div>
+    </span>
                         </li>
                         </div>
                      </ul>
