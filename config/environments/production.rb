@@ -80,5 +80,5 @@ RupeeVest::Application.configure do
 
    # config.action_mailer.default_url_options = { :host => 'https://www.rupeevest.com' }
   config.action_mailer.default_url_options = { :host => 'http://www.herokuapp.com/' }
-  config.action_mailer.delivery_method = :smtp 
+  config.action_mailer.delivery_method = :smtp
 end
