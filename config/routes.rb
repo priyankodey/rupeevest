@@ -1,7 +1,6 @@
 RupeeVest::Application.routes.draw do
   
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
-  
   root :to => 'static_pages#index'
   
   match '/offer', to: 'static_pages#offer', via: 'get'
